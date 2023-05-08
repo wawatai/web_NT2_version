@@ -1,0 +1,454 @@
+header {
+    width: 100%;
+    height: 125px;
+    background: $backgroundColor_1;
+    position: relative;
+
+    //上部
+    .top {
+        width: 1400px;
+        height: 45px;
+        margin: 0px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        //左
+        .langBox {
+            width: auto;
+            height: 100%;
+            padding: 0 20px;
+            border: solid 1px $borderColor_1;
+            border-width: 0 1px;
+            display: flex;
+            align-items: center;
+
+            select {
+                width: auto;
+                height: auto;
+                @include langStyle;
+            }
+        }
+
+        //右
+        .user {
+            width: auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            color: $fontColor_1;
+            font-size: 14px;
+
+            &.login {
+
+                .loginPart {
+                    display: flex;
+                }
+            }
+            &.userInfo {
+
+                .infoPart {
+                    display: flex;
+                }
+            }
+
+            li:not(.platform) {
+                display: none;
+                width: auto;
+                height: 100%;
+                padding: 0 20px;
+                border-right: solid 1px $borderColor_1;
+                align-items: center;
+
+                //未登入選單
+                .loginForm {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    div {
+                        position: relative;
+
+                        i {
+                            width: 16px;
+                            height: 16px;
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+
+                            &.acc_ic {
+                                left: 19px;
+                            }
+                            &.pass_ic {
+                                width: 12px;
+                                left: 21px;
+                            }
+                            &.forget {
+                                right: 15px;
+                                cursor: pointer;
+                            }
+                        }
+
+                        input {
+                            width: 152px;
+                            height: 30px;
+                            margin: 0 10px;
+                            @include inputStyle_1;
+                        }
+                    }
+
+                    button {
+                        width: auto;
+                        height: 30px;
+                        @include buttonStyle_1;
+                    }
+                }
+
+                //等級
+                .lv {
+                    color: $fontColor_5;
+                    padding-right: 15px;
+                }
+
+                //icon
+                .icon {
+                    display: inline-block;
+                    margin-right: 10px;
+
+                    &.member_ic {
+                        width: 19px;
+                        height: 22px;
+                    }
+                    &.mail_ic {
+                        width: 23px;
+                        height: 18px;
+                    }
+                    &.logout_ic {
+                        width: 22px;
+                        height: 22px;
+                    }
+                }
+
+                //註冊
+                &.register {
+                    font-size: 14px;
+                    cursor: pointer;
+
+                    &:hover,&:active,&.active {
+                        background: $backgroundColor_5;
+                    }
+
+                    .register_ic {
+                        width: 27px;
+                        height: 27px;
+                        margin-right: 10px;
+                    }
+                }
+
+                //transfer
+                &.moneyTotal {
+                    position: relative;
+                    color: $fontColor_6;
+                    cursor: pointer;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 16px;
+                        width: 0px;
+                        height: 0px;
+                        border-style: solid;
+                        border-width: 5px 3px 0px 3px;
+                        border-color: $borderColor_6 transparent;
+                    }
+
+                    .total {
+                        padding-right: 8px;
+                    }
+
+                    .transferInfo {
+                        display: none;
+                        width: 290px;
+                        height: auto;
+                        font-weight: bold;
+                        background: $backgroundColor_6;
+                        border: solid 1px $borderColor_4;
+                        position: absolute;
+                        top: 45px;
+                        left: 0px;
+                        z-index: 2;
+
+                        &.display {
+                            display: block;
+                        }
+
+                        li {
+                            width: 100%;
+                            height: 47px;
+                            padding: 11px 16px;
+                            border-bottom: solid 1px $borderColor_4;
+                            box-sizing: border-box;
+                            color: $fontColor_1;
+
+                            div {
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                position: relative;
+
+                                .money {
+                                    
+                                    i {
+                                        display: none;
+                                        position: absolute;
+                                        width: 20px;
+                                        height: 20px;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        right: -6px;
+                                        animation: circle 1s linear infinite;
+
+                                        &.display {
+                                            display: block;
+                                        }
+                                    }
+
+                                    @keyframes circle {
+                                        0% {
+                                            transform: translateY(-50%) rotate(0deg);
+                                        }
+
+                                        100% {
+                                            transform: translateY(-50%) rotate(360deg);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.infoPart {
+                    cursor: pointer;
+
+                    &:nth-of-type(3) {
+                        cursor: default;
+                        
+                        &:hover,&:active,&.active {
+                            background: none;
+                        }
+                    }
+                    &:nth-of-type(4) {
+
+                        &:hover,&:active,&.active {
+                            background: none;
+                        }
+                    }
+
+                    &:hover,&:active,&.active {
+                        background: $backgroundColor_5;
+                    }
+                }
+                
+                //線上客服
+                &.service {
+                    display: flex;
+                    cursor: pointer;
+
+                    &:hover,&:active,&.active {
+                        background: $backgroundColor_5;
+                    }
+                    
+                    a {
+                        color: $fontColor_1;
+                        font-size: 14px;
+                        font-weight: bold;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    //選單
+    .gameNav {
+        width: 100%;
+        height: 80px;
+        background: $backgroundColor_2;
+
+        .center {
+            width: 1400px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            ul {
+                width: auto;
+                height: 100%;
+                display: flex;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    width: auto;
+                    height: 100%;
+                    padding: 0 30px;
+                    font-size: 18px;
+                    letter-spacing: 1px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    color: $fontColor_1;
+                }
+            }
+        }
+    }
+
+    //跑馬燈
+    .marqueeArea {
+        width: 100%;
+        height: auto;
+        background: $backgroundColor_3;
+        box-shadow: 0 5px 10px -5px $boxShadow_3;
+
+        .center {
+            width: 1400px;
+            height: 35px;
+            margin: 0 auto;
+
+            .marqueeWrap {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                .marquee_ic {
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 8px;
+                }
+
+                .marquee {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+
+                    pre {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        animation: marquee 30s linear infinite;
+                        padding-left: 50%;
+
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+
+                    @keyframes marquee {
+                        0% {
+                            transform: translate(0%);
+                        }
+
+                        100% {
+                            transform: translate(-100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //下拉式選單
+    .topGameList {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        left: 0px;
+        bottom: -226px;
+        z-index: 1;
+
+        &.display {
+            height: auto;
+        }
+
+        .listWrap {
+            width: 100%;
+            height: 226px;
+            box-sizing: border-box;
+            border-top: solid 1px $borderColor_2;
+            background: $backgroundColor_3;
+
+            .center {
+                width: 1400px;
+                height: 100%;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                i {
+                    display: none;
+                    width: 15px;
+                    height: 30px;
+                    cursor: pointer;
+
+                    &.prev {
+                        margin-right: 10px;
+                    }
+
+                    &.next {
+                        transform: scaleX(-1);
+                        margin-left: 10px;
+                    }
+
+                    &.display {
+                        display: block;
+                    }
+                }
+
+                .container {
+                    width: 1320px;
+                    height: 100%;
+                    overflow: hidden;
+
+                    ul {
+                        display: none;
+                        width: 100%;
+                        height: 100%;
+                        transition: 0.6s ease;
+
+                        &.display {
+                            display: flex;
+                        }
+
+                        li {
+                            cursor: pointer;
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+
+                            p {
+                                font-size: 16px;
+                                font-weight: bold;
+                                padding-top: 4px;
+                                text-align: center;
+                                color: $fontColor_2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

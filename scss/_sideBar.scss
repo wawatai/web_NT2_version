@@ -1,0 +1,53 @@
+.sideBar {
+
+    .download {
+        position: fixed;
+        left: 0px;
+        top: 495px;
+        z-index: 1;
+        width: 60px;
+        height: 190px;
+        font-size: 20px;
+        font-weight: bold;
+        writing-mode: vertical-lr;
+        letter-spacing: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        cursor: pointer;
+        color: $fontColor_1;
+        background: $backgroundColor_2;
+        box-shadow: 1px 1px 7px 1px $boxShadow_1;
+
+        i {
+            width: 30px;
+            height: 32px;
+        }
+    }
+
+    .rightSide {
+        position: fixed;
+        right: 0px;
+        top: 495px;
+        z-index: 1;
+        width: 60px;
+        height: auto;
+
+        li {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5px;
+            background: $backgroundColor_2;
+            box-shadow: 1px 1px 7px 1px $boxShadow_1;
+            cursor: pointer;
+
+            i {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}

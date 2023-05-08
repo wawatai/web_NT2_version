@@ -1,0 +1,366 @@
+.gameWrap {
+    padding-bottom: 66px;
+    background: $backgroundColor_4;
+
+    //主內容
+    .content {
+        width: 100%;
+        min-width: 1400px;
+        height: auto;
+        margin-bottom: 48px;
+
+        &.slotPage {
+            width: 1400px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .center {
+            width: 1400px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 70px 0 0 100px;
+            box-sizing: border-box;
+        }
+
+        .textBox {
+            width: 684px;
+            height: auto;
+
+            .title {
+                display: flex;
+                align-items: flex-end;
+                font-weight: bold;
+
+                .big {
+                    font-size: 58px;
+                    letter-spacing: 17px;
+                    color: $fontColor_11;
+                }
+
+                .small {
+                    font-size: 40px;
+                    padding-bottom: 5px;
+                    color: $fontColor_11;
+                }
+            }
+
+            .mainCnt {
+                margin: 50px 0;
+                width: 630px;
+                letter-spacing: 1px;
+                line-height: 24px;
+                font-size: 14px;
+                font-weight: bold;
+                color: $fontColor_10;
+            }
+        }
+
+        .btnBox {
+            width: auto;
+            height: auto;
+
+            .innBox {
+                width: 660px;
+                height: auto;
+
+                ul {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                    
+                    li {
+                        cursor: pointer;
+                        margin: 0 15px 35px 0;
+
+                        &:hover,&.active,&.active {
+
+                            img {
+                                object-position: bottom;
+                            }
+                        }
+
+                        p {
+                            width: 100%;
+                            text-align: center;
+                            font-size: 16px;
+                            font-weight: bold;
+                            color: $fontColor_10;
+                            padding-top: 5px;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //slot+fish+board
+    .slotCenter {
+        width: 1400px;
+        height: auto;
+        margin: 0 auto;
+        padding: 25px 0;
+
+        .slotBody {
+            background: $backgroundColor_3;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px $boxShadow_3;
+
+            .nav {
+                margin: 0 26px;
+                height: 70px;
+                border-bottom: solid 1px $borderColor_2;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                ul {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+
+                    li {
+                        color: $fontColor_7;
+                        width: auto;
+                        height: calc(100% - 3px);
+                        padding: 0 50px;
+                        font-size: 18px;
+                        display: flex;
+                        align-items: center;
+                        border-bottom: solid 3px transparent;
+                        cursor: pointer;
+                        justify-content: center;
+                        position: relative;
+    
+                        &:hover,&:active,&.active {
+                            color: $fontColor_4;
+                            border-color: $borderColor_8;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                width: 0px;
+                                height: 0px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                bottom: 0;
+                                border-style: solid;
+                                border-width: 0 6px 6px;
+                                border-color: $borderColor_8 transparent;
+                            }
+                        }
+                    }
+                }
+
+                .search {
+                    position: relative;
+                    width: auto;
+                    height: auto;
+
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 7px;
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    input {
+                        width: 330px;
+                        height: 40px;
+                        @include inputStyle_1;
+                    }
+                }
+            }
+
+            .gameBox {
+                padding: 24px 48px 40px;
+
+                .platformBox {
+                    width: 100%;
+                    height: auto;
+
+                    .platforms {
+                        margin-bottom: 50px;
+                        display: none;
+
+                        &.display {
+                            display: block;
+                        }
+
+                        .pfName {
+                            width: 100%;
+                            height: 70px;
+                            margin-bottom: 15px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            &.active {
+                                justify-content: flex-start;
+
+                                .back {
+                                    display: block;
+                                }
+
+                                .all {
+                                    display: none;
+                                }
+                            }
+
+                            .back {
+                                display: none;
+                                width: 18px;
+                                height: 32px;
+                                margin-right: 20px
+                            }
+
+                            .all {
+                                @include buttonStyle_3;
+                                width: 137px;
+                                height: 40px;
+                                font-size: 18px;
+
+                                i {
+                                    display: inline-block;
+                                    width: 8px;
+                                    height: 15px;
+                                    transform: scaleX(-1);
+                                    margin-left: 20px;
+                                }
+                            }
+                        }
+
+                        .gameList {
+                            width: 100%;
+                            height: 200px;
+                            justify-content: flex-start;
+                            flex-wrap: wrap;
+                            overflow: hidden;
+                            display: flex;
+
+                            &.active {
+                                height: auto;
+                            }
+
+                            li {
+                                width: 250px;
+                                height: 200px;
+                                border: solid 1px $borderColor_7;
+                                border-radius: 5px;
+                                overflow: hidden;
+                                cursor: pointer;
+                                box-sizing: border-box;
+                                font-size: 0px;
+                                position: relative;
+                                margin: 0 13px 13px 0;
+
+                                &:nth-of-type(5n) {
+                                    margin-right: 0;
+                                }
+
+                                &:hover,&:active,&.active {
+                                    
+                                    .btnBox {
+                                        opacity: 1;
+                                    }
+                                }
+
+                                .textBox {
+                                    width: 100%;
+                                    height: 35px;
+                                    display: flex;
+                                    align-items: center;
+                                    padding: 0 20px;
+                                    box-sizing: border-box;
+                                    justify-content: space-between;
+                                    background: $backgroundColor_3;
+                                    position: relative;
+                                    z-index: 1;
+
+                                    p {
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                        color: $fontColor_2;
+                                    }
+
+                                    .love {
+                                        width: 23px;
+                                        height: 21px;
+                                    }
+                                }
+
+                                .btnBox {
+                                    opacity: 0;
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 165px;
+                                    background: $backgroundColor_7;
+                                    top: 0px;
+                                    left: 0px;
+                                    display: flex;
+                                    align-items: center;
+                                    flex-direction: column;
+                                    justify-content: space-evenly;
+                                    box-sizing: border-box;
+                                    padding: 30px 0;
+                                    transition: 0.3s all;
+
+                                    button {
+                                        width: 140px;
+                                        height: 40px;
+                                        @include buttonStyle_4;
+
+                                        &:last-child {
+                                            @include buttonStyle_4_2;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //下橫條選單
+    .downBar {
+        width: 1400px;
+        height: 120px;
+        border-radius: 10px;
+        background: $linear_1;
+        box-shadow: 0px 5px 10px 0px $boxShadow_2;
+        display: flex;
+        margin: 0 auto;
+
+        li {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            font-weight: bold;
+            color: $fontColor_2;
+            border-right: solid 1px $borderColor_2;
+            cursor: pointer;
+
+            &:last-child {
+                border: none;
+            }
+
+            i {
+                width: 46px;
+                height: 46px;
+                margin-bottom: 14px;
+            }
+        }
+    }
+}

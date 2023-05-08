@@ -1,0 +1,200 @@
+.eventWrap {
+    background: $backgroundColor_4;
+
+    .eventTitle {
+        width: 100%;
+        height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        p {
+            font-size: 61px;
+            color: $fontColor_1;
+            font-weight: bold;
+        }
+    }
+    
+    .eventBody {
+        width: 1400px;
+        height: auto;
+        min-height: 350px;
+        padding: 28px 0 56px;
+        margin: 0 auto;
+        display: flex;
+
+        .side {
+            width: 357px;
+            margin-right: 13px;
+            height: auto;
+            background: $backgroundColor_3;
+            box-shadow: 0 5px 10px -5px $boxShadow_3;
+
+            ul {
+                width: 100%;
+                height: auto;
+
+                li {
+                    width: 100%;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: solid 1px $borderColor_2;
+                    position: relative;
+                    cursor: pointer;
+
+                    &:hover,&:active,&.active {
+                        background: $backgroundColor_10;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 3px;
+                            height: 100%;
+                            left: 0px;
+                            top: 0px;
+                            background: $backgroundColor_2;
+                        }
+                    }
+
+                    i {
+                        display: block;
+                        width: 23px;
+                        height: 23px;
+                        margin: 0 28px;
+                    }
+
+                    span {
+                        font-weight: bold;
+                        font-size: 22px;
+                        color: $fontColor_2;
+                    }
+                }
+            }
+        }
+
+        .eventList {
+            display: none;
+            width: 1028px;
+
+            &.display {
+                display: block;
+            }
+
+            .eventBox {
+                background: $backgroundColor_3;
+                box-shadow: 0 5px 10px -5px $boxShadow_3;
+                display: flex;
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                ul {
+                    width: 252px;
+                    min-height: 185px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin: 30px 27px;
+
+                    .title {
+                        font-size: 29px;
+                        font-weight: bold;
+                        letter-spacing: 3px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+
+                    .btnBox {
+                        width: 100%;
+                        height: auto;
+
+                        button {
+                            width: 117px;
+                            height: 37px;
+                            @include buttonStyle_5;
+                        }
+                    }
+                }
+            }
+        }
+
+        .eventDetail {
+            display: none;
+            width: 1028px;
+            background: $backgroundColor_3;
+            box-shadow: 0px 5px 10px -5px $boxShadow_3;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                padding: 22px 40px 18px;
+
+                p {
+                    font-size: 34px;
+                    font-weight: bold;
+                    color: $fontColor_3;
+                }
+
+                button {
+                    width: 135px;
+                    height: 36px;
+                    margin-top: 18px;
+                    @include buttonStyle_6;
+
+                    i {
+                        display: inline-block;
+                        width: 17px;
+                        height: 17px;
+                        margin: 0 10px -2px 0;
+                    }
+                }
+            }
+
+            .date {
+                margin: 0 40px;
+                padding: 28px 0 30px;
+                display: flex;
+                flex-direction: column;
+                border-bottom: solid 1px $borderColor_2;
+
+                span {
+                    color: $fontColor_10;
+                    font-size: 20px;
+
+                    &.dateTitle {
+                        font-size: 26px;
+                        font-weight: bold;
+                        margin-bottom: 28px;
+                    }
+                }
+            }
+
+            .info {
+                padding: 25px 40px;
+                
+                p {
+                    font-size: 16px;
+                    color: $fontColor_10;
+
+                    &.infoTitle {
+                        font-size: 26px;
+                        font-weight: bold;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+
+            .detailFooter {
+                width: 100%;
+                height: 130px;
+                padding-bottom: 60px;
+            }
+        }
+    }
+}
