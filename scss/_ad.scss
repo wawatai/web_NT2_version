@@ -1,50 +1,156 @@
+//ad
 .ad {
     width: 100%;
-    min-width: 1400px;
-    height: 500px;
+    height: auto;
+    position: relative;
 
+    //圖片輪播
     .single-item {
+        width: 100%;
+        height: auto;
         margin: 0;
 
-        .slick-slide {
-            outline: none;
+        img {
+            cursor: pointer;
         }
 
-        button {
-            z-index: 1;
-            width: 60px;
-            height: 110px;
+        .slick-list {
+            height: auto;
+
+            .slick-track {
+                height: auto;
+
+                img {
+                    outline: none;
+                }
+            }
+        }
+        
+        .slick-dots {
+            bottom: 0;
+
+            li {
+                margin: 0;
+                
+                button {
+
+                    &::before {
+                        width: 8px;
+                        height: 8px;
+                        background: $ad_Dot_BG;
+                        border-radius: 50%;
+                        color: transparent;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        opacity: 1;
+                    }
+                }
+
+                &.slick-active {
+
+                    button {
+
+                        &::before {
+                            background: $ad_Dot_Active;
+                            border: solid 1px $ad_Dot_Border;
+                        }
+                    }
+                }
+            }
+        }
+
+        // .slick-prev,.slick-next {
+        //     top: 0;
+        //     transform: translate(0);
+        //     width: 13vw;
+        //     height: 45vw;
+        //     z-index: 1;
+
+        //     &::before {
+        //         content: "";
+        //         position: absolute;
+        //         width: 8px;
+        //         height: 8px;
+        //         border-style: solid;
+        //         border-width: 0 0 6px 6px;
+        //         border-color: $mainBG_1;
+        //         top: 50%;
+        //         left: 50%;
+        //         transform: translate(-50%,-50%) rotate(45deg);
+        //     }
+        // }
+
+        // .slick-prev {
+        //     left: 0;
+        // }
+        // .slick-next {
+        //     right: 0;
+
+        //     &::before {
+        //         transform: translate(-50%,-50%) rotate(-45deg) scaleX(-1);
+        //     }
+        // }
+    }
+
+    //跑馬燈
+    .marquee {
+        width: 270px;
+        height: 335px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 25px;
+        padding: 20px 17px;
+        background: $marquee_bg;
+        border: 1px $marquee_border solid ;
+        border-radius: 5px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            color:$marquee_title;
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 18px;
+            flex-shrink: 0;
 
             &::before {
                 content: "";
-                background: $backgroundColor_2;
                 position: absolute;
-                width: 100%;
+                top: 60%;
+                transform: translateY(-50%);
+                left: 0px;
+                width: 5px;
                 height: 100%;
-                left: 0px;
-                top: 0px;
-                opacity: 1;
+                background: $marquee_border;
+            }
+        }
+
+        .textBox {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            p {
+                display: inline-block;
+                color:$marquee_content;
+                font-size: 15px;
+                line-height: 25px;
+                padding-top: 120%;
+                animation: marquee 5s linear 0s infinite;
             }
 
-            &::after {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%,-50%);
-                width: 16px;
-                height: 27px;
-            }
+            @keyframes marquee {
+                0% {
+                    transform: translateY(0%);
+                }
 
-            &.slick-prev {
-                left: 0px;
-            }
-
-            &.slick-next {
-                right: 0px;
-                
-                &::after {
-                    transform: translate(-50%,-50%) scaleX(-1);
+                100% {
+                    transform: translateY(-100%);
                 }
             }
         }

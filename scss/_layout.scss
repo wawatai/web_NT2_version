@@ -1,0 +1,294 @@
+.innerPage {
+    padding: 120px 0 40px;
+
+    .center {
+        width: 1400px;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+
+        section {
+            display: flex;
+            width: 100%;
+        }
+    
+        //左列
+        .innerSide {
+            width: 245px;
+            height: auto;
+            @include bgStyle_1;
+            margin-right: 15px;
+            flex-shrink: 0;
+    
+            //上部
+            .userInfo {
+                width: 100%;
+                height: auto;
+                padding: 20px 0;
+                border-bottom: solid 1px $main-Border_1;
+    
+                //帳號名稱
+                .account {
+                    color: $light-font;
+                    font-size: 14px;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .lv {
+                        @include lvStyle;
+                        margin-left: 10px;
+                    }
+                }
+
+                //加入天數
+                .days {
+                    color: $subs-font;
+                    font-size: 14px;
+                    text-align: center;
+                    margin-top: 10px;
+                }
+
+                //快速選單
+                .quickSelect {
+                    width: 160px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 20px auto 10px;
+
+                    li {
+
+                        p {
+                            text-align: center;
+
+                            &:last-child {
+                                margin-top: 10px;
+                                font-size: 14px;
+                                font-weight: bold;
+                                color: $main-font;
+                            }
+
+                            &.btn {
+                                width: 40px;
+                                height: 40px;
+                                @include secondBtn;
+                                font-size: 20px;
+                                border-radius: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            //下部
+            .innerNav {
+                width: 100%;
+                height: auto;
+
+                li {
+                    width: 100%;
+                    height: 50px;
+                    @include chooseStyle;
+                    font-size: 14px;
+                    position: relative;
+                    padding-left: 64px;
+
+                    &:not(:nth-of-type(8)) {
+                        border: none;
+                    }
+
+                    &:hover,&:active,&.active {
+
+                        i {
+                            background: none;
+
+                            &::before {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    i {
+                        width: 18px;
+                        height: 18px;
+                        position: absolute;
+                        left: 25px;
+
+                        &::before {
+                            display: none;
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            left: 0;
+                            top: 0;
+                        }
+                    }
+
+                    //信件提醒
+                    .remind {
+                        @include mailRemind;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        //rightSide
+        .rightSide {
+            width: 245px;
+            height: auto;
+            margin-left: 15px;
+            flex-shrink: 0;
+
+            .smallBoard {
+                width: 100%;
+                height: auto;
+                @include bgStyle_1;
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                .title {
+                    width: 100%;
+                    height: 42px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 20px;
+                    border-bottom: solid 1px $main-Border_1;
+
+                    p {
+                        color: $main-font;
+                        font-size: 16px;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+
+                        &.more {
+                            color: $subs-font;
+                            font-size: 14px;
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+
+                            .arrow_ic {
+                                width: 9px;
+                                height: 16px;
+                                margin-left: 8px;
+                            }
+                        }
+                    }
+                }
+
+                .list {
+                    width: 100%;
+                    height: 295px;
+                    @include scrollBar;
+                    overflow-y: auto;
+
+                    //條列
+                    .smallList {
+                        width: 100%;
+                        height: auto;
+                        padding: 12px 18px;
+                        border-bottom: solid 1px $main-Border_1;
+
+                        &:last-child {
+                            border: none;
+                        }
+
+                        .smallTitle {
+                            color: $main-font;
+                            font-size: 14px;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                            margin-bottom: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            span {
+                                color: $light-font;
+                            }
+                        }
+
+                        ul {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+
+                            li {
+                                width: 50%;
+                                height: auto;
+
+                                p {
+                                    font-weight: bold;
+                                    letter-spacing: 1px;
+                                    
+                                    &:nth-of-type(1) {
+                                        font-size: 12px;
+                                        color: $subs-font;
+                                    }
+
+                                    &:last-child {
+                                        color: $light-font;
+                                        font-size: 14px;
+                                        margin-top: 6px;
+
+                                        &.win {
+                                            color: $remind_sp;
+                                        }
+                                        &.lose {
+                                            color: $remind;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .transText {
+                            color: $subs-font;
+                            font-size: 16px;
+                            font-weight: bold;
+                            display: flex;
+                            align-items: center;
+
+                            i {
+                                width: 16px;
+                                height: 16px;
+                                margin: 0 10px;
+                            }
+                        }
+                    }
+
+                    //目前無資料
+                    .noData {
+                        display: none;
+                        width: 100%;
+                        height: 295px;
+                        color: $subs-font;
+                        font-size: 15px;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        align-items: center;
+                        justify-content: center;
+
+                        &.display {
+                            display: flex;
+                        }
+                    }
+
+                    .eventBox {
+                        width: 100%;
+                        height: auto;
+                        margin: 10px auto;
+                    }
+                }
+            }
+        }
+    }
+}

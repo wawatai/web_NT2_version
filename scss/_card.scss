@@ -1,0 +1,207 @@
+//bankCard
+.cardWrap {
+    width: 100%;
+    height: auto;
+
+    .top {
+        width: 100%;
+        height: auto;
+        @include bgStyle_2;
+
+        .title {
+            @include innerTitleStyle;
+        }
+
+        .content {
+            width: 100%;
+            height: auto;
+
+            .smallTitle {
+                @include innerTitleStyle;
+                font-size: 16px;
+                border: none;
+                justify-content: space-between;
+                padding-right: 16px;
+
+                .sub {
+                    color: $subs-font;
+                    font-size: 14px;
+
+                    span {
+                        color: $light-font;
+                    }
+                }
+            }
+
+            //卡片樣式
+            .cardBox {
+                width: 100%;
+                height: 170px;
+                overflow-x: auto;
+                padding: 0 16px;
+
+                .slider {
+                    display: flex;
+
+                    .card {
+                        width: 251px;
+                        height: 150px;
+                        background-position-y: 100%;
+                        box-shadow: 1px 2px 5px 0 $card_shadow;
+                        border-radius: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        margin-right: 15px;
+                        padding: 16px 0 0 16px;
+
+                        &:last-child {
+                            margin: 0;
+                        }
+                        
+                        &.empty {
+                            background-position-y: 0;
+                            justify-content: flex-end;
+
+                            .text {
+                                width: 100%;
+                                color: $main-font;
+                                font-size: 14px;
+                                font-weight: bold;
+                                text-shadow: 1px 2px 0 $card_shadow;
+                                text-align: center;
+                                margin-bottom: 30px;
+                            }
+                        }
+
+                        .name {
+                            color: $dark-font;
+                            font-size: 20px;
+                            font-weight: bold;
+                            margin-bottom: 15px;
+                        }
+
+                        .branch {
+                            color: $dark-font;
+                            font-size: 13px;
+                            font-weight: bold;
+                            margin-bottom: 20px;
+                        }
+
+                        .account {
+                            color: $dark-font;
+                            font-size: 18px;
+                            font-weight: bold;
+                            margin-bottom: 10px;
+                        }
+
+                        .review {
+                            width: 100%;
+                            height: 21px;
+                            display: flex;
+                            align-items: center;
+                            position: relative;
+
+                            span {
+                                color: $main-font;
+                                font-size: 14px;
+                                font-weight: bold;
+                                position: absolute;
+                                right: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom {
+        width: 100%;
+        height: auto;
+        @include bgStyle_2;
+        margin-top: 15px;
+
+        .title {
+            @include innerTitleStyle;
+            font-size: 16px;
+            border: none;
+        }
+
+        form {
+            width: 100%;
+            height: auto;
+            padding: 0 16px;
+
+            ul {
+                width: 100%;
+                height: auto;
+
+                li {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 40px;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+
+                    &:last-child {
+                        margin: 60px 0 40px;
+                    }
+
+                    label {
+                        width: 120px;
+                        height: auto;
+                        color: $main-font;
+                        font-size: 14px;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        display: flex;
+                        align-items: center;
+
+                        em {
+                            color: $remind;
+                            font-size: 14px;
+                            margin-right: 5px;
+                        }
+                    }
+
+                    input {
+                        width: 257px;
+                        height: 42px;
+                        @include mainInput;
+                    }
+
+                    .remind {
+                        width: auto;
+                        color: $remind;
+                        font-size: 14px;
+                        font-weight: bold;
+                        position: absolute;
+                        top: 50px;
+                        left: 120px;
+
+                        &.second {
+                            top: 35px;
+                            line-height: 20px;
+                        }
+                    }
+
+                    .upImg {
+                        width: auto;
+                        height: 28px;
+                        @include secondBtn;
+                        border-radius: 0;
+                        padding: 0 10px;
+                    }
+
+                    .check {
+                        width: 257px;
+                        height: 42px;
+                        @include mainBtn;
+                        margin-left: 120px;
+                    }
+                }
+            }
+        }
+    }
+}

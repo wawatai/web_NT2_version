@@ -1,0 +1,391 @@
+//vip
+.vipWrap {
+    display: none;
+    width: 100%;
+    height: auto;
+    @include bgStyle_2;
+
+    &.display {
+        display: block;
+    }
+
+    .top {
+        width: 100%;
+        height: auto;
+        padding: 0 16px 32px;
+        border-bottom: solid 1px $main-Border_1;
+
+        .vipHeader {
+            width: 100%;
+            height: auto;
+            display: flex;
+
+            .medal {
+                width: 73px;
+                height: 116px;
+                margin: 0 30px;
+                flex-shrink: 0;
+            }
+
+            .rightBox {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                justify-content: center;
+
+                .lv {
+                    color: $main-font;
+                    font-size: 20px;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                    margin-bottom: 20px;
+                }
+
+                .money {
+                    color: $subs-font;
+                    font-size: 14px;
+                    font-weight: bold;
+
+                    span {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        .lvGraph {
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            margin-top: 20px;
+
+            .text {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                margin-bottom: 8px;
+
+                li {
+                    width: auto;
+                    color: $subs-font;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+            }
+
+            .bar {
+                width: 100%;
+                height: 14px;
+                @include lvBar;
+
+                li {
+                    width: 12%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .nextBox {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+
+            .title {
+                color: $main-font;
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            .nextBar {
+                width: auto;
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                p {
+                    color: $main-font;
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                }
+
+                .bar {
+                    width: 400px;
+                    height: 8px;
+                    @include lvBar;
+                    margin: 0 10px;
+
+                    li {
+                        width: 20%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .levelEnjoy {
+        width: 100%;
+        height: auto;
+
+        .title {
+            @include innerTitleStyle;
+            font-size: 16px;
+            border: none;
+        }
+
+        ul {
+            width: 100%;
+            height: auto;
+            display: flex;
+            padding: 0 16px;
+
+            li {
+                width: 34%;
+                height: auto;
+                border-right: solid 1px $main-Border_1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 12px 0;
+
+                &:last-child {
+                    border: none;
+                }
+
+                .text {
+                    color: $subs-font;
+                    font-size: 14px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    margin-bottom: 10px;
+                }
+
+                .num {
+                    color: $main-font;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .more {
+            width: 360px;
+            height: 42px;
+            @include mainBtn;
+            display: block;
+            margin: 80px auto 0;
+        }
+    }
+
+    &.innerMode {
+        width: 1140px;
+
+        .title {
+            @include innerTitleStyle;
+            font-size: 18px;
+            border: none;
+
+            i {
+                width: 9px;
+                height: 16px;
+                transform: scaleX(-1);
+                margin-right: 10px;
+                cursor: pointer;
+            }
+
+            p {
+                cursor: pointer;
+            }
+        }
+    
+        .cardBox {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            margin-bottom: 20px;
+    
+            i {
+                width: 9px;
+                height: 16px;
+                cursor: pointer;
+                flex-shrink: 0;
+    
+                &.prev {
+                    margin-right: 16px;
+                    transform: scaleX(-1);
+                }
+    
+                &.next {
+                    margin-left: 16px;
+                }
+            }
+    
+            .wrap {
+                width: 100%;
+                height: auto;
+                overflow: hidden;
+    
+                ul {
+                    width: auto;
+                    height: 159px;
+                    display: flex;
+                    transition: all 0.6s ease;
+    
+                    li {
+                        margin-right: 5px;
+    
+                        &:last-child {
+                            margin: 0;
+                        }
+    
+                        .cardBg {
+                            width: 289px;
+                            height: 159px;
+                            display: flex;
+                            align-items: flex-end;
+                            padding: 0 16px;
+    
+                            .content {
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                justify-content: space-around;
+                                margin-bottom: 20px;
+    
+                                div {
+                                    width: auto;
+                                    height: auto;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+    
+                                    p {
+                                        color: $light-font;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        text-shadow: 1px 2px 0 $vip_shadow;
+    
+                                        &.text {
+                                            margin-bottom: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .tableBox {
+            width: 100%;
+            height: auto;
+            padding: 0 16px 40px 16px;
+
+            table {
+                width: 100%;
+                height: auto;
+        
+                tr {
+        
+        
+                    th {
+                        height: 50px;
+                        vertical-align: middle;
+                        border-bottom: solid 1px $main-Border_2;
+        
+                        &:last-child {
+        
+                            p {
+                                border: none;
+                            }
+                        }
+        
+                        p {
+                            width: 100%;
+                            height: 24px;
+                            color: $main-font;
+                            font-size: 14px;
+                            font-weight: bold;
+                            border-right: solid 1px $main-Border_1;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            @include textHidden;
+                        }
+                    }
+        
+                    td {
+                        width: 10%;
+                        height: 50px;
+                        vertical-align: middle;
+                        border-bottom: solid 1px $main-Border_1;
+        
+                        &:last-child {
+        
+                            p {
+                                border: none;
+                            }
+                        }
+        
+                        p {
+                            width: 100%;
+                            color: $subs-font;
+                            font-size: 14px;
+                            font-weight: bold;
+                            border-right: solid 1px $main-Border_1;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            @include textHidden;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .remindBox {
+            width: 100%;
+            height: auto;
+            padding: 0 16px;
+
+            p {
+                color: $subs-font;
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+    
+            ul {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                padding-left: 32px;
+                padding-bottom: 30px;
+    
+                li {
+                    color: $subs-font;
+                    font-size: 15px;
+                    font-weight: bold;
+                    line-height: 20px;
+                    margin-bottom: 15px;
+                    list-style: decimal;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,525 @@
+//背景樣式
+@mixin bgStyle_1 {
+    background: #252525;
+    border: 1px solid #fed792;
+    border-radius: 5px;
+}
+@mixin bgStyle_2 {
+    background: #303030;
+    border: 1px solid #fed792;
+    border-radius: 5px;
+}
+@mixin bgStyle_3 {
+    background: #1f1f1f;
+    border: solid 1px #ba985f;
+    border-radius: 5px;
+}
+$mainBG_1: #1c1c1c;
+$mainBG_2: #303030;
+$mainBG_3: #252525;
+
+//主字色
+$main-font: #fed792;
+$subs-font:#eaeaea;
+$light-font:#ffffff;
+$dark-font: #101010;
+
+//主提醒色
+$title_1: #f5eecc;
+
+//主邊框
+$main-Border_1: #5c5c5c;
+$main-Border_2: #fed792;
+
+//提醒色
+$remind: #ff2c2c;
+$remind_sp: #4afe2c;
+$remind_point: #06b925;
+
+
+
+//個別區塊
+
+
+
+//header色
+$header_BG_1: #1b1b1b;
+$header_BG_2: linear-gradient(to top, #242424 0%, #171717 24%,#333333 100%);
+$header_accWord:#FFFFFF;
+$header_Nav_Word: #fed792;
+$header_Nav_ActiveBG: linear-gradient(to top,#fed792 0%,#62553f 5%,#1e1e1e 31%,#171717 100%);
+$header_Money_BG: #313131;
+$header_Money_innerBG: #242424;
+$header_Money_Border: #fed792;
+$header_Money_innerBorder: #9f9f9f;
+$header_Money_moneyWord: #ffffff;
+$header_dropdownBG: linear-gradient(to top, #25221c 0%,#101010 76%);
+$header_dropdown_border:#fed792;
+$header_dropdown_font:#fed792;
+@mixin headerBtn_1 {
+    background: linear-gradient(to top,#b9b9b9 0%,#e6e6e6 100%);
+    border: none;
+    border-radius: 5px;
+    color: #101010;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 15px;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to bottom,#8a8a8a 0%,#e6e6e6 100%);
+    }
+}
+@mixin headerBtn_2 {
+    background: linear-gradient(to top,#bc9c64 4%,#f3d197 93%);
+    border: none;
+    border-radius: 5px;
+    color: #101010;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 15px;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to bottom,#92794e 4%,#f3d197 93%);
+    }
+}
+@mixin headerBtn_3 {
+    background: linear-gradient(to top, #333333 0%,#424242 100%);
+    border: none;
+    border-radius: 5px;
+    color: #fed792;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 15px;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to bottom,#92794e 4%,#f3d197 93%);
+        color:#101010;
+    }
+}   
+
+//eventPage 優惠活動
+$eventPage_pageBtnBG: #fed792;
+
+//ad
+$ad_Dot_BG: #ffffff80;
+$ad_Dot_Active: #bf9b5b;
+$ad_Dot_Border: #ffffff;
+
+//marquee
+$marquee_bg:#313131d7;
+$marquee_border:#fed792;
+$marquee_title:#fed792;
+$marquee_content:#eaeaea;
+
+//service
+$service_BG: linear-gradient(to top, #101010 0%, #2a2723 100%);
+$service_Border: #ba985f;
+$service_innerBorder: #4b4b4b;
+$service_lightMask: #fff4c715;
+
+//footer
+$footerBG: #0b0b0b;
+$footer_Top_BG: linear-gradient(to top, #242424 0%, #171717 24%,#333333 100%);
+$footer_Top_Word: #d9d9d9;
+$footer_Top_Active: #fed792;
+$footer_Bottom_Word: #828282;
+
+//platformGame 遊戲廠商頁面
+$pfGame_subTitle: #b38f4f;
+$pfGame_textBox: #fff8d4;
+@mixin slotBtn_1 {
+    background: linear-gradient(to top,#aa0b1a 0%,#e50f23 100%);
+    border-radius: 5px;
+    border: solid 1px #ff203a;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to bottom,#870713 0%,#aa0b1a 100%);
+    }
+}
+@mixin slotBtn_2  {
+    background: linear-gradient(to top,#004ba0 0%,#006ae2 100%);
+    border-radius: 5px;
+    border: solid 1px #1a70ff;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to bottom,#003173 0%,#004ba0 100%);
+    }
+}
+
+//jumpWindow
+$coverBg: #000000b3;
+$jpWBG: #252525;
+$jpW_TitleBG:linear-gradient(to top, #fed792 0%, #dfb975 23%,#fed792 65%);
+$jpW_Title: #252525;
+$jpW_OuterBorder: #fed792;
+
+//helpPage
+$helpPage_link: #b38f4f;
+$helpPage_linkBG: rgba(7, 7, 7, 0.548);
+
+//bettingRecord
+@mixin tableStyle_1 {
+    background: #363636;
+    box-shadow: 0 0 0 1px #ba985f;
+    border-radius: 5px;
+    overflow: hidden;
+    user-select: none;
+
+    tr {
+
+        &:first-child {
+            background: linear-gradient(to right,#d7ad6d 3%,#f3d197 66%,#d7ad6d 88%,#f3d197 100%);
+        }
+    }
+}
+
+//card
+$card_shadow: #00000080;
+
+//member
+$sercurity_low: #ff2626;
+$sercurity_middle: #ff7b2c;
+$sercurity_high: #19ff13;
+$sercurity_Check: #05b900;
+$sercurity_noCheck: #5e5e5e;
+
+//vip
+@mixin lvBar {
+    background: #1d1d1d;
+    border-radius: 30px;
+    position: relative;
+
+    li {
+        background: linear-gradient(to left,#d7ad6d 0%,#fed792 87%);
+        border-radius: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+$vip_shadow: #00000080;
+
+//eventApply
+@mixin tableStyle_2 {
+    background: #1a1a1a;
+    box-shadow: 0 0 0 1px #ba985f;
+    border-radius: 5px;
+    overflow: hidden;
+    user-select: none;
+
+    tr {
+        
+        th,td {
+
+            &:first-child {
+                background: #212121;
+            }
+        }
+    }
+}
+
+//mail
+$mail_read: #1cb302;
+$mail_delete: #ff2c2c;
+$mail_readedBG: #262626;
+$mail_hoverBG: #fed792;
+@mixin checkBox {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom,#080808 0%,#1c1c1c 100%);
+        border: solid 1px #121212;
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    &.active {
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 70%;
+            height: 70%;
+            background: linear-gradient(to bottom,#fed792 0%,#d7ad6d 100%);
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
+
+//register
+@mixin registerBG {
+    background: linear-gradient(-10deg,#ffe8bf 10%,#d8b475 29%,#ffe8bf 47%,#ffe8bf 88%,#fff7e2 100%);
+    border-radius: 16px;
+    border: solid 1px #fed792;
+    overflow: hidden;
+    display: flex;
+}
+
+//asideBtn
+$asideBtn_BG: linear-gradient(-25deg,#fed792 28%,#bc9c64 44%,#fed792 56%,#fed792 88%,#ffe1ac 100%);
+$asideBtn_HoverBG: linear-gradient(to bottom,#9c7631 0%,#d2a95f 100%);
+$asideBtn_Border: #101010;
+$asideBtn_Word: #101010;
+$asideBtn_Hover: #ffffff;
+$asideBtn_Shadow: #ffffff80;
+$asideBtn_goTop_BG: linear-gradient(to top,#fed792 21%,#bc9c64 40%,#fed792 59%,#ffe1ac 100%);
+$asideBtn_goTop_HoverBG: linear-gradient(to top,#e7c68b 0%,#af8d50 100%);
+
+
+
+//共用樣式
+
+
+
+//滑軸樣式
+@mixin scrollBar {
+    overscroll-behavior: none;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #dbb271;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #4b4b4b;
+        border-radius: 10px;
+    }
+}
+
+//大列選擇樣式
+@mixin chooseStyle {
+    border-bottom: 1px solid #5c5c5c;
+    color: #fed792;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to left,#fed792 63%,#d7ad6d 100%);
+        color: #101010;
+    }
+}
+$chooseStyle_Word_1: #fed792;
+$chooseStyle_Word_2: #bf9b5b;
+
+//LV樣式
+@mixin lvStyle {
+    background: linear-gradient(-45deg,#c39d63 0%,#f0d19d 100%);
+    border-radius: 20px;
+    color: #101010;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 10px;
+}
+
+//mail提醒
+@mixin mailRemind {
+    min-width: 18px;
+    min-height: 18px;
+    background: #f73232;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:0 5px 2px;
+}
+
+//內頁title樣式
+@mixin innerTitleStyle {
+    width: 100%;
+    height: 50px;
+    border-bottom: solid 1px #5c5c5c;
+    color: #fed792;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+
+
+
+//按鈕樣式
+
+
+
+// --黃漸層底|黑字--
+@mixin mainBtn {
+    background: linear-gradient(to top, #fed792 0%, #dfb975 23%,#fed792 65%);
+    border: none;
+    border-radius: 5px;
+    color: #101010;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover,&:active,&:active {
+        background: linear-gradient(to bottom, #bc9c64 4% , #f3d197 93%);
+    }
+}
+
+// --黑漸層底|黃字--
+@mixin secondBtn {
+    background:linear-gradient(to top, #0f0f0f 0% , #1f1f1f 62% , #2b2823 100%);
+    border: 1px solid #ba985f;
+    border-radius: 5px;
+    color: #fed792;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding-bottom: 2px;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to top,#fed792 0%,#ba985f 100%);
+        border-color: #fed792;
+        color: #101010;
+    }
+}
+
+//--頁籤式切換按鈕--
+@mixin pageBtn {
+    display: block;
+    background: linear-gradient(to top, #2f2f2f 0%,#404040 100%);
+    border: solid 1px transparent;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    color: #b4b4b4;
+    font-size: 16px;
+    position: relative;
+    cursor: pointer;
+    padding: 11px 39px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 1px;
+        background: #252525;
+        display: none;
+    }
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to top, #252525 0%, #2c2c2c 69%, #4f4534 100%);
+        border-color: #5c5c5c;
+        color: #fed792;
+        
+        &::before {
+            display: block;
+        }
+    }
+}
+@mixin innerPageBtn {
+    background: linear-gradient(to top,#2f2f2f 0%,#404040 100%);
+    border-radius: 5px 5px 0 0;
+    color: #b4b4b4;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to top,#fed792 13%,#d6ad68 33%,#fed792 54%,#fed792 84%,#ffe9c1 100%);
+        color: #101010;
+    }
+}
+
+button:disabled {
+    background: #5e5e5e !important;
+    border: none !important;
+    color: #b9b9b9 !important;
+    pointer-events: none !important;
+}
+
+
+
+//input樣式
+
+
+
+@mixin mainInput {
+    background: #121212;
+    border: 1px solid #ba985f;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 15px;
+
+    &::placeholder {
+        color: #b4b4b4;
+    }
+}
+
+input:disabled {
+    pointer-events: none !important;
+    user-select: none !important;
+}
+
+
+
+//select樣式
+
+
+
+@mixin mainSelect {
+    background-color: #121212;
+    border: solid 1px #ba985f;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    background-image: linear-gradient(45deg,transparent 50%,#fed792 0),linear-gradient(135deg,#fed792 50%,transparent 0);
+    background-position: calc(100% - 20px) calc(1em + 5px),calc(100% - 15px) calc(1em + 5px);
+    background-size: 5px 5px,5px 5px;
+    background-repeat: no-repeat; 
+    padding-left: 15px;
+    appearance: none;
+}
+
+
+
+//套件樣式
+
+
+
+@mixin textHidden {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

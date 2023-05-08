@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=0.25"> -->
+    <link rel="icon" href="../images/favicon64x64.ico" sizes="16x16">
+    <title>大黃金</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="../js/javascript.js"></script>
+</head>
+<body>
+    <!--header-->
+    <header>
+        <!--上部-->
+        <section class="top">
+            <!--logo-->
+            <div class="logo">
+                <a href="#">
+                    <img src="../images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="accountBox">
+                <!--會員資訊列-->
+                <div class="member">
+                    <p class="level">一般會員</p>
+                    <p class="memberId">opp122</p>
+                </div>
+                <!--滑入錢包-->
+                <div class="moneyBox">
+                    <p class="moneyBtn">
+                        1000
+                        <i class="arrow_ic"></i>
+                    </p>
+                    <ul class="moneyList">
+                        <li>
+                            BNG
+                            <p class="num">0</p>
+                        </li>
+                        <li>
+                            BWIN
+                            <p class="num">0</p>
+                        </li>
+                        <li>
+                            DG真人
+                            <p class="num">0</p>
+                        </li>
+                        <li>
+                            歐博
+                            <p class="num">0</p>
+                        </li>
+                        <li>
+                            WM
+                            <p class="num">0</p>
+                        </li>
+                        <li>
+                            RSG
+                            <p class="num">0</p>
+                        </li>
+                        <li>
+                            GR
+                            <p class="num">0</p>
+                        </li>
+                        <li>
+                            福星電子
+                            <p class="num">0</p>
+                        </li>
+                        <li>
+                            京彩
+                            <p class="num">0</p>
+                        </li>
+                        <li>
+                            SG88
+                            <p class="num">0</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--按鈕-->
+                <div class="btnLine">
+                    <button class="save" onclick="window.location.href='./deposit.html'">存款</button>
+                    <button class="transfer" onclick="window.location.href='./transfer.html'">轉帳</button>
+                    <button class="withdrawal" onclick="window.location.href='./withdrawal.html'">提款</button>
+                    <button class="memberCenter" onclick="window.location.href='./member.html'">
+                        <i class="member_ic"></i>
+                        會員中心
+                    </button>
+                    <button class="message" onclick="window.location.href='./mail.html'">
+                        <i class="mail_ic"></i>
+                        站內信
+                        <div class="messageAlarm">
+                            99+
+                        </div>
+                    </button>
+                    <button class="logout" onclick="window.location.href='../index.html'">登出</button>
+                </div>
+            </div>
+        </section>
+        <!--導航列-->
+        <section class="nav">
+            <ul>
+                <li>
+                    <a href="./indexInner.html">首頁</a>
+                </li>
+                <li>
+                    <a href="./sportPage.html">體育賽事</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox callSport">
+                                <img src="../images/dropDown/SPORT/36588.png">
+                                <p>36588</p>
+                            </li>
+                        </ol>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./livePage.html">真人娛樂</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox callLive">
+                                <img src="../images/dropDown/LIVE/AB.png">
+                                <p>歐博真人娛樂</p>
+                            </li>
+                            <li class="platformBox callLive">
+                                <img src="../images/dropDown/LIVE/DG.png">
+                                <p>DG真人娛樂</p>
+                            </li>
+                            <li class="platformBox callLive">
+                                <img src="../images/dropDown/LIVE/WM.png">
+                                <p>WM真人娛樂</p>
+                            </li>
+                        </ol>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./lotteryPage.html">彩票</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox callLottery">
+                                <img src="../images/dropDown/LOTTERY/京彩.png">
+                                <p>京彩彩票</p>
+                            </li>
+                            <li class="platformBox callLottery">
+                                <img src="../images/dropDown/LOTTERY/SG88.png">
+                                <p>SG88六合、大樂、539</p>
+                            </li>
+                        </ol>
+                    </ul>
+                 </li>
+                <li class="active">
+                    <a href="./slotPage.html">老虎機</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox" onclick="window.location.href='./slotPage_gameList.html'">
+                                <img src="../images/dropDown/SLOT/BNG.png">
+                                <p>BNG電子娛樂</p>
+                            </li>
+                            <li class="platformBox" onclick="window.location.href='./slotPage_gameList.html'">
+                                <img src="../images/dropDown/SLOT/BWIN.png">
+                                <p>BWIN電子娛樂</p>
+                            </li>
+                            <li class="platformBox" onclick="window.location.href='./slotPage_gameList.html'">
+                                <img src="../images/dropDown/SLOT/GR.png">
+                                <p>好路電子娛樂</p>
+                            </li>
+                            <li class="platformBox" onclick="window.location.href='./slotPage_gameList.html'">
+                                <img src="../images/dropDown/SLOT/RSG.png">
+                                <p>RSG電子娛樂</p>
+                            </li>
+                            <li class="platformBox" onclick="window.location.href='./slotPage_gameList.html'">
+                                <img src="../images/dropDown/SLOT/FUNTA.png">
+                                <p>福星電子娛樂</p>
+                            </li>
+                        </ol>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./fishPage.html">捕魚機</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox disabled">
+                                <img src="../images/dropDown/toBeContinue.png">
+                                <p>敬請期待!</p>
+                            </li>
+                            <li class="platformBox disabled">
+                                <img src="../images/dropDown/toBeContinue.png">
+                                <p>敬請期待!</p>
+                            </li>
+                        </ol>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./chessPage.html">棋牌遊戲</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox disabled">
+                                <img src="../images/dropDown/toBeContinue.png">
+                                <p>敬請期待!</p>
+                            </li>
+                            <li class="platformBox disabled">
+                                <img src="../images/dropDown/toBeContinue.png">
+                                <p>敬請期待!</p>
+                            </li>
+                        </ol>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./eventPage.html">優惠中心</a>
+                </li>
+            </ul>
+        </section>
+    </header>
+    <!--main-->
+    <main>
+        <article class="platformGame">
+            <div class="listAll">
+                <div class="top">
+                    <!-- 分類tab -->
+                    <ul class="filterTab">
+                        <li class="active">全部</li>
+                        <li>熱門遊戲</li>
+                        <li>我的最愛</li>
+                    </ul>
+                    <!-- 搜尋欄 -->
+                        <div class="searchBox">
+                            <input class="search" type="text" placeholder="搜尋遊戲名稱">
+                            <i class="searchIc"></i>
+                        </div>
+                </div>
+                <!-- 遊戲平台logo+返回按鈕 -->
+                <div class="upArea">
+                    <div class="gameLogo">
+                        <img src="../images/gameList/platformLogo/BNG.png">
+                    </div> 
+                    <button class="back" onclick="window.location.href='./slotPage.html'">
+                        <i class="Arrow_ic"></i>
+                        <p>返回</p>
+                    </button>
+                </div>
+                <!-- 遊戲總覽 -->
+                <div class="gameCloum">
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/運財彌勒.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">運財彌勒Megaways</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/黑狼-集鴻運.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">黑狼-集鴻運</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/金禧迎獅-集鴻運.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">金禧迎獅-集鴻運</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/轟炸糖果.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">轟炸糖果</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/黃金特快車-集鴻運.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">黃金特快車-集鴻運</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/巫師之書.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">巫師之書</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/叢林之王-集鴻運.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">叢林之王-集鴻運</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/招財金象神-集鴻運.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">招財金象神-集鴻運</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/月夜狼嚎-集鴻運.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">月夜狼嚎-集鴻運</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/聖甲蟲大三元-集鴻運.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">聖甲蟲大三元-集鴻運</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/運財彌勒.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">運財彌勒Megaways</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/黑狼-集鴻運.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">黑狼-集鴻運</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/金禧迎獅-集鴻運.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">金禧迎獅-集鴻運</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/轟炸糖果.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">轟炸糖果</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/黃金特快車-集鴻運.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">黃金特快車-集鴻運</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/巫師之書.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">巫師之書</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/叢林之王-集鴻運.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">叢林之王-集鴻運</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/招財金象神-集鴻運.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">招財金象神-集鴻運</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/月夜狼嚎-集鴻運.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">月夜狼嚎-集鴻運</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                    <div class="gameBlock">
+                        <div class="picBox">
+                            <img src="../images/gameList/gameBNG/聖甲蟲大三元-集鴻運.png">
+                            <div class="mask">
+                                <button class="callSlot">進入遊戲</button>
+                                <button>試玩看看</button>
+                            </div>
+                        </div>
+                        <div class="itemLine">
+                            <p class="gameName">聖甲蟲大三元-集鴻運</p>
+                            <i class="addLike"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <!-- 懸浮按鈕 -->
+    <aside>
+        <div class="appD" onclick="window.location.href='./help.html'">
+            <i class="download_ic"></i>
+            手機下載
+        </div>
+        <div class="cs-service">
+            <button class="cs1" onclick="window.location.href='./help.html'">
+                <i class="service_ic"></i>
+            </button>
+            <button class="cs2" onclick="window.location.href='./help.html'">
+                <i class="line_ic"></i>
+            </button>
+        </div>
+        <div class="bkTop"></div>
+    </aside>
+    <!--footer-->
+    <footer>
+        <div class="top">
+            <ul>
+                <li class="callNews">最新公告</li>
+                <li onclick="window.location.href='./vip.html'">VIP會員</li>
+                <li onclick="window.location.href='./help.html'">幫助中心</li>
+                <li onclick="window.location.href='./help.html'">關於我們</li>
+                <li>加入我們</li>
+            </ul>
+        </div>
+        <div class="bottom-platform">
+            <ul>
+                <li><img class="platform" src="../images/platform/AB.png" alt="AB"></li>
+                <li><img class="platform" src="../images/platform/WM.png" alt="WM"></li>
+                <li><img class="platform" src="../images/platform/DG.png" alt="DG"></li>
+                <li><img class="platform" src="../images/platform/BNG.png" alt="BNG"></li>
+                <li><img class="platform" src="../images/platform/RSG.png" alt="RSG"></li>
+                <li><img class="platform" src="../images/platform/SG88.png" alt="SG88"></li>
+                <li><img class="platform" src="../images/platform/36588.png" alt="36588"></li>
+                <li><img class="platform" src="../images/platform/GR.png" alt="GR"></li>
+                <li><img class="platform" src="../images/platform/bwin.png" alt="BWIN"></li>
+                <li><img class="platform" src="../images/platform/FUNTA.png" alt="FUNTA"></li>
+                <li><img class="platform" src="../images/platform/京彩.png" alt="gintai"></li>
+            </ul>
+        </div>
+        <div class="bottom-copy">
+            <p>&copy&nbsp;2022 BWG.COM ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+    <!-- 彈跳視窗 -->
+    <div class="coverBg">
+        <!-- 快速轉帳 -->
+        <div class="jumpWindow quickTransfer sport">
+            <!-- 標題 -->
+            <div class="titleArea">
+                <p class="title">快速轉帳</p>
+                <i class="closeBtn"></i>
+            </div>
+            <!-- 內容 -->
+            <div class="tabsContent">
+                <div class="platform Line">
+                    <p class="mainFont">平台</p>
+                    <p class="transPlatform">36588</p>
+                </div>
+                <div class="wallet Line">
+                    <p class="mainFont">中心錢包</p>
+                    <input class="transfNum" name="" type="text" value="$4700" disabled>
+                </div>
+                <div class="wallet Line">
+                    <p class="mainFont">&ensp;</p>
+                    <div class="iconBox">
+                        <i class="transfer"></i>
+                    </div>
+                </div>
+                <div class="gameName Line">
+                    <p class="mainFont">SG彩票</p>
+                    <input class="transfNum" name="" type="text" value="$0">
+                </div>
+                <div class="transferNum Line">
+                    <p class="mainFont">轉帳金額</p>
+                    <input class="transfNum" name="" type="text" value="$100">
+                </div>
+                <div class="Line">
+                    <p class="mainFont">&ensp;</p>
+                    <div class="btnBox">
+                        <!-- 轉帳金額按鈕塊 -->
+                        <div class="moneyBtn">
+                            <button class="myBlock">$100</button>
+                            <button class="myBlock">$500</button>
+                            <button class="myBlock">$1000</button>
+                            <button class="myBlock">$3000</button>
+                            <button class="myBlock">$5000</button>
+                            <button class="myBlock">$10000</button>
+                            <button class="myBlock">全部</button>
+                        </div>
+                        <button class="checkBtn">確認</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <button class="checkBtn closeBtn">進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow quickTransfer live">
+            <!-- 標題 -->
+            <div class="titleArea">
+                <p class="title">快速轉帳</p>
+                <i class="closeBtn"></i>
+            </div>
+            <!-- 內容 -->
+            <div class="tabsContent">
+                <div class="platform Line">
+                    <p class="mainFont">平台</p>
+                    <p class="transPlatform">AB真人</p>
+                </div>
+                <div class="wallet Line">
+                    <p class="mainFont">中心錢包</p>
+                    <input class="transfNum" name="" type="text" value="$4700" disabled>
+                </div>
+                <div class="wallet Line">
+                    <p class="mainFont">&ensp;</p>
+                    <div class="iconBox">
+                        <i class="transfer"></i>
+                    </div>
+                </div>
+                <div class="gameName Line">
+                    <p class="mainFont">SG彩票</p>
+                    <input class="transfNum" name="" type="text" value="$0">
+                </div>
+                <div class="transferNum Line">
+                    <p class="mainFont">轉帳金額</p>
+                    <input class="transfNum" name="" type="text" value="$100">
+                </div>
+                <div class="Line">
+                    <p class="mainFont">&ensp;</p>
+                    <div class="btnBox">
+                        <!-- 轉帳金額按鈕塊 -->
+                        <div class="moneyBtn">
+                            <button class="myBlock">$100</button>
+                            <button class="myBlock">$500</button>
+                            <button class="myBlock">$1000</button>
+                            <button class="myBlock">$3000</button>
+                            <button class="myBlock">$5000</button>
+                            <button class="myBlock">$10000</button>
+                            <button class="myBlock">全部</button>
+                        </div>
+                        <button class="checkBtn">確認</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <button class="checkBtn closeBtn">進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow quickTransfer lottery">
+            <!-- 標題 -->
+            <div class="titleArea">
+                <p class="title">快速轉帳</p>
+                <i class="closeBtn"></i>
+            </div>
+            <!-- 內容 -->
+            <div class="tabsContent">
+                <div class="platform Line">
+                    <p class="mainFont">平台</p>
+                    <p class="transPlatform">SG彩票</p>
+                </div>
+                <div class="wallet Line">
+                    <p class="mainFont">中心錢包</p>
+                    <input class="transfNum" name="" type="text" value="$4700" disabled>
+                </div>
+                <div class="wallet Line">
+                    <p class="mainFont">&ensp;</p>
+                    <div class="iconBox">
+                        <i class="transfer"></i>
+                    </div>
+                </div>
+                <div class="gameName Line">
+                    <p class="mainFont">SG彩票</p>
+                    <input class="transfNum" name="" type="text" value="$0">
+                </div>
+                <div class="transferNum Line">
+                    <p class="mainFont">轉帳金額</p>
+                    <input class="transfNum" name="" type="text" value="$100">
+                </div>
+                <div class="Line">
+                    <p class="mainFont">&ensp;</p>
+                    <div class="btnBox">
+                        <!-- 轉帳金額按鈕塊 -->
+                        <div class="moneyBtn">
+                            <button class="myBlock">$100</button>
+                            <button class="myBlock">$500</button>
+                            <button class="myBlock">$1000</button>
+                            <button class="myBlock">$3000</button>
+                            <button class="myBlock">$5000</button>
+                            <button class="myBlock">$10000</button>
+                            <button class="myBlock">全部</button>
+                        </div>
+                        <button class="checkBtn">確認</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <button class="checkBtn closeBtn">進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow quickTransfer slot">
+            <!-- 標題 -->
+            <div class="titleArea">
+                <p class="title">快速轉帳</p>
+                <i class="closeBtn"></i>
+            </div>
+            <!-- 內容 -->
+            <div class="tabsContent">
+                <div class="platform Line">
+                    <p class="mainFont">平台</p>
+                    <p class="transPlatform">運財彌勒Megaways</p>
+                </div>
+                <div class="wallet Line">
+                    <p class="mainFont">中心錢包</p>
+                    <input class="transfNum" name="" type="text" value="$4700" disabled>
+                </div>
+                <div class="wallet Line">
+                    <p class="mainFont">&ensp;</p>
+                    <div class="iconBox">
+                        <i class="transfer"></i>
+                    </div>
+                </div>
+                <div class="gameName Line">
+                    <p class="mainFont">SG彩票</p>
+                    <input class="transfNum" name="" type="text" value="$0">
+                </div>
+                <div class="transferNum Line">
+                    <p class="mainFont">轉帳金額</p>
+                    <input class="transfNum" name="" type="text" value="$100">
+                </div>
+                <div class="Line">
+                    <p class="mainFont">&ensp;</p>
+                    <div class="btnBox">
+                        <!-- 轉帳金額按鈕塊 -->
+                        <div class="moneyBtn">
+                            <button class="myBlock">$100</button>
+                            <button class="myBlock">$500</button>
+                            <button class="myBlock">$1000</button>
+                            <button class="myBlock">$3000</button>
+                            <button class="myBlock">$5000</button>
+                            <button class="myBlock">$10000</button>
+                            <button class="myBlock">全部</button>
+                        </div>
+                        <button class="checkBtn">確認</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <button class="checkBtn closeBtn">進入遊戲</button>
+            </div>
+        </div>
+        <!--最新消息-->
+        <div class="jumpWindow news">
+            <div class="titleArea">
+                <p class="title">最新公告</p>
+                <i class="closeBtn"></i>
+            </div>
+            <ul class="tabs">
+                <li class="active">熱門</li>
+                <li>一般</li>
+                <li>存款</li>
+            </ul>
+            <div class="tabsContent hot display">
+                <ul>
+                    <li>
+                        <p>親愛的會員您好： 《BGW》營運團隊在此重申打擊外掛的決心，同時也呼籲利用BUG、不法程親愛的會員您好： 《BGW》營運團隊在此重申打擊外掛的決心，同時也呼籲利用BUG、不法程</p>
+                        <p class="date">2021/09/26</p>
+                    </li>
+                    <li>
+                        <p>★敬請注意★ 1.本公司對於任何個人或團體以外掛軟件程式同時在同一項目投注相同內容的注親愛的會員您好： 《BGW》營運團隊在此重申打擊外掛的決心，同時也呼籲利用BUG、不法程</p>
+                        <p class="date">2021/09/26</p>
+                    </li>
+                    <li>
+                        <p>近期有部分有心人士，於網路上張貼惡意連結或是騙取會員的帳號密碼連結</p>
+                        <p class="date">2021/09/26</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabsContent general">
+                <ul>
+                    <li>
+                        <p>親愛的會員您好： 《BGW》營運團隊在此重申打擊外掛的決心，同時也呼籲利用BUG、不法程親愛的會員您好： 《BGW》營運團隊在此重申打擊外掛的決心，同時也呼籲利用BUG、不法程</p>
+                        <p class="date">2021/09/26</p>
+                    </li>
+                    <li>
+                        <p>★敬請注意★ 1.本公司對於任何個人或團體以外掛軟件程式同時在同一項目投注相同內容的注親愛的會員您好： 《BGW》營運團隊在此重申打擊外掛的決心，同時也呼籲利用BUG、不法程</p>
+                        <p class="date">2021/09/26</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabsContent deposit">
+                <ul>
+                    <li>
+                        <p>親愛的會員您好： 《BGW》營運團隊在此重申打擊外掛的決心，同時也呼籲利用BUG、不法程親愛的會員您好： 《BGW》營運團隊在此重申打擊外掛的決心，同時也呼籲利用BUG、不法程</p>
+                        <p class="date">2021/09/26</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--BG-->
+    <div class="bg"></div>
+</body>
+</html>

@@ -1,0 +1,311 @@
+//withdrawal
+.withdrawalWrap {
+    width: 100%;
+    height: auto;
+
+    .top {
+        width: 100%;
+        height: auto;
+        @include bgStyle_2;
+        margin-bottom: 15px;
+
+        .title {
+            @include innerTitleStyle;
+        }
+
+        .walletBox {
+            width: 100%;
+            height: auto;
+            border-bottom: solid 1px $main-Border_1;
+            display: flex;
+            padding: 16px;
+
+            .smallBox {
+                width: 34%;
+                height: auto;
+                position: relative;
+                padding: 0 16px;
+
+                &:last-child {
+                    
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 0;
+                    width: 1px;
+                    height: 80%;
+                    background: $main-Border_1;
+                }
+
+                .smallTitle {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    p {
+                        width: auto;
+                        height: 28px;
+                        color: $main-font;
+                        font-size: 17px;
+                        font-weight: bold;
+                        letter-spacing: 2px;
+                        display: flex;
+                        align-items: center;
+
+                        i {
+                            width: 16px;
+                            height: 16px;
+                            margin-left: 5px;
+                        }
+                    }
+
+                    button {
+                        width: auto;
+                        height: 28px;
+                        @include mainBtn;
+                        padding: 0 10px;
+                    }
+                }
+
+                .money {
+                    color: $light-font;
+                    font-size: 32px;
+                    font-weight: bold;
+                    margin-top: 20px;
+                    padding-left: 10px;
+                }
+            }
+        }
+
+        .platformBox {
+            width: 100%;
+            height: auto;
+            
+            .smallTitle {
+                @include innerTitleStyle;
+                font-size: 16px;
+                border: none;
+            }
+
+            ul {
+                width: 100%;
+                height: 98px;
+                overflow: hidden;
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap: 10px;
+                padding: 0 16px;
+                
+                &.active {
+                    height: auto;
+                }
+    
+                li {
+                    width: auto;
+                    height: auto;
+                    @include bgStyle_3;
+                    padding: 24px 16px;
+    
+                    .name {
+                        color: $main-font;
+                        font-size: 14px;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+    
+                    .money {
+                        color: $light-font;
+                        font-size: 24px;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .open {
+                width: 100%;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+    
+                &.active {
+    
+                    p {
+    
+                        i {
+                            transform: scaleY(-1);
+                        }
+                    }
+                }
+    
+                p {
+                    color: $subs-font;
+                    font-size: 15px;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+    
+                    i {
+                        width: 16px;
+                        height: 16px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom {
+        width: 100%;
+        height: auto;
+        @include bgStyle_2;
+
+        .title {
+            @include innerTitleStyle;
+            font-size: 16px;
+        }
+
+        ul {
+            width: 96%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 0 10px;
+            margin: 10px auto 32px;
+
+            li {
+                width: auto;
+                height: auto;
+                @include bgStyle_3;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 8px 0;
+
+                .name {
+                    color: $subs-font;
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+
+                .num {
+                    color: $main-font;
+                    font-size: 42px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+
+                .notice {
+                    color: $subs-font;
+                    font-size: 15px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+
+        form {
+            width: 100%;
+            height: auto;
+
+            .row {
+                display: flex;
+                padding: 0 16px;
+                margin-bottom: 40px;
+                position: relative;
+
+                label {
+                    width: 120px;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    color: $main-font;
+                    font-size: 14px;
+                    font-weight: bold;
+
+                    em {
+                        color: $remind;
+                        font-size: 14px;
+                        margin-right: 5px;
+                    }
+                }
+
+                select {
+                    width: 257px;
+                    height: 42px;
+                    @include mainSelect;
+                }
+
+                input {
+                    width: 257px;
+                    height: 42px;
+                    @include mainInput;
+                }
+
+                .remind {
+                    width: auto;
+                    color: $remind;
+                    font-size: 14px;
+                    font-weight: bold;
+                    position: absolute;
+                    left: 136px;
+                    top: 50px;
+
+                    &.second {
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            .check {
+                width: 257px;
+                height: 42px;
+                margin: 60px 0 0 136px;
+                @include mainBtn;
+            }
+        }
+
+        .remindBox {
+            width: 96%;
+            height: auto;
+            @include bgStyle_3;
+            padding: 16px;
+            margin: 24px auto;
+
+            .smallTitle {
+                color: $main-font;
+                font-size: 16px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                margin-bottom: 16px;
+            }
+
+            p:not(.smallTitle) {
+                color: $subs-font;
+                font-size: 14px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                line-height: 20px;
+                margin-bottom: 10px;
+
+                &.remind {
+                    color: $remind;
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
