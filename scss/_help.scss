@@ -2,7 +2,7 @@
     width: 100%;
     height: auto;
     min-height: 565px;
-    padding-bottom: 42px;
+    padding: 35px 0 42px;
 
     .center {
         width: 1400px;
@@ -124,10 +124,10 @@
                 h2 {
                     margin: 49px 0;
                     color: $fontColor_3;
-                    font-size: 22px;
+                    font-size: 1.5em;
                     font-weight: bold;
 
-                    &:nth-of-type(1) {
+                    &:first-child {
                         margin-top: 0;
                     }
                 }
@@ -140,15 +140,37 @@
                 }
 
                 p {
-                    margin-bottom: 23px;
+                    margin-bottom: 10px;
                     color: $fontColor_10;
                     font-size: 16px;
                     line-height: 24px;
+
+                    &.smallTitle {
+                        font-weight: bold;
+                        margin-bottom: 32px;
+                    }
+
+                    &.mar {
+                        margin-bottom: 32px;
+                    }
+
+                    .remind {
+                        color: $fontColor_4;
+                    }
+                }
+                .Bold {
+                    font-weight: bold;
+                    margin-right: 2px;
                 }
 
                 a {
                     color: $fontColor_14;
+                    font-size: 14px;
                     text-decoration: none;
+                }
+
+                img {
+                    margin-bottom: 30px;
                 }
 
                 .teachList {
@@ -204,6 +226,15 @@
                             width: 100%;
                             height: auto;
                             background: $backgroundColor_4;
+                            box-sizing: border-box;
+                            padding: 0 32px;
+
+                            p {
+                                color: $fontColor_3;
+                                font-size: 14px;
+                                font-weight: bold;
+                                margin-bottom: 10px;
+                            }
                         }
                     }
                 }
@@ -236,6 +267,259 @@
                         width: 275px;
                         height: 379px;
                         margin: 10px 0 20px 55px;
+                    }
+
+                    &.download01 {
+                        width: 693px;
+                        height: 410px;
+                        margin-bottom: 20px;
+                    }
+
+                    &.download02 {
+                        width: 693px;
+                        height: 410px;
+                    }
+
+                    &.download03 {
+                        width: 750px;
+                        height: 939px;
+                    }
+
+                    &.download04 {
+                        width: 793px;
+                        height: 1116px;
+                    }
+
+                    &.download05 {
+                        width: 591px;
+                        height: 410px;
+                        margin-bottom: 20px;
+                    }
+
+                    &.download06 {
+                        width: 645px;
+                        height: 393px;
+                    }
+
+                    &.license {
+                        width: 800px;
+                        height: 1071px;
+                    }   
+                }
+
+                button {
+                    width: 190px;
+                    height: 42px;
+                    @include buttonStyle_3;
+                    margin-top: 20px;
+                }
+                .h-signip01 {
+                    width: 621px;
+                    height: 119px;
+                }
+                .h-signip02 {
+                    width: 860px;
+                    height: 706px;
+                }
+                .h-signip03 {
+                    width: 837px;
+                    height: 486px;
+                }
+                .h-PW01 {
+                    width: 624px;
+                    height: 130px;
+                }
+                .h-PW02 {
+                    width: 524px;
+                    height: 291px;
+                }
+                .h-PW03 {
+                    width: 500px;
+                    height: 383px;
+                }
+                .h-PW04 {
+                    width: 520px;
+                    height: 234px;
+                }
+                .h-changePW01 {
+                    width: 615px;
+                    height: 121px;
+                }
+                .h-changePW02 {
+                    width: 245px;
+                    height: 371px;
+                }
+                .h-changePW03 {
+                    width: 462px;
+                    height: 188px;
+                }
+                .h-changePW04 {
+                    width: 634px;
+                    height: 419px;
+                }
+                .h-changePW05 {
+                    width: 555px;
+                    height: 251px;
+                }
+                .h-depositCV01 {
+                    width: 609px;
+                    height: 125px;
+                }
+                .h-depositCV02 {
+                    width: 736px;
+                    height: 651px;
+                }
+                .h-depositCV03 {
+                    width: 554px;
+                    height: 484px;
+                }
+                .h-virtualAC-01 {
+                    width: 609px;
+                    height: 125px;
+                }
+                .h-virtualAC-02 {
+                    width: 881px;
+                    height: 643px;
+                }
+                .h-virtualAC-03 {
+                    width: 444px;
+                    height: 406px;
+                }
+                .h-ATM-01 {
+                    width: 609px;
+                    height: 125px;
+                }
+                .h-ATM-02 {
+                    width: 881px;
+                    height: 643px;
+                }
+                .h-ATM-03 {
+                    width: 816px;
+                    height: 580px;
+                }
+                .h-ATM-04 {
+                    width: 640px;
+                    height: 904px;
+                }
+                .h-ATM-05 {
+                    width: 640px;
+                    height: 1052px;
+                }
+                .h-banktransfer-01 {
+                    width: 609px;
+                    height: 125px;
+                }
+                .h-banktransfer-02 {
+                    width: 860px;
+                    height: 600px;
+                }
+                .h-banktransfer-03 {
+                    width: 860px;
+                    height: 690px;
+                }
+                .h-withdraw-01 {
+                    width: 610px;
+                    height: 127px;
+                }
+                .h-withdraw-02 {
+                    width: 860px;
+                    height: 680px;
+                }
+                .h-withdraw-03 {
+                    width: 860px;
+                    height: 397px;
+                }
+                .h-transfer-01 {
+                    width: 540px;
+                    height: 126px;
+                }
+                .h-transfer-02 {
+                    width: 876px;
+                    height: 793px;
+                }
+                .h-dealRecord-01 {
+                    width: 543px;
+                    height: 121px;
+                }
+                .h-dealRecord-02 {
+                    width: 248px;
+                    height: 467px;
+                }
+                .h-dealRecord-03 {
+                    width: 860px;
+                    height: 467px;
+                }
+                .h-betRecord-01 {
+                    width: 543px;
+                    height: 121px;
+                }
+                .h-betRecord-02 {
+                    width: 255px;
+                    height: 490px;
+                }
+                .h-betRecord-03 {
+                    width: 860px;
+                    height: 319px;
+                }
+                .h-betRecord-04 {
+                    width: 640px;
+                    height: 907px;
+                }
+                .h-message-01 {
+                    width: 542px;
+                    height: 127px;
+                }
+                .h-message-02 {
+                    width: 860px;
+                    height: 323px;
+                }
+                .h-message-03 {
+                    width: 860px;
+                    height: 195px;
+                }
+                .h-bankcard-01 {
+                    width: 545px;
+                    height: 123px;
+                }
+                .h-bankcard-02 {
+                    width: 714px;
+                    height: 715px;
+                }
+                .h-bankcard-03 {
+                    width: 888px;
+                    height: 625px;
+                }
+                .h-bankcard-04 {
+                    width: 883px;
+                    height: 484px;
+                }
+
+                .usdt-01 {
+                    width: 896px;
+                    height: 626px;
+                }
+                .usdt-02 {
+                    width: 447px;
+                    height: 894px;
+                }
+
+                .android {
+                    height: 800px;
+                    margin-bottom: 10px;
+
+                    &.img_8 {
+                        height: 107px;
+                    }
+                }
+
+                .ios {
+                    height: 1280px;
+                    margin-bottom: 10px;
+
+                    &.img_10,
+                    &.img_11,
+                    &.img_12 {
+                        height: 1268px;
                     }
                 }
             }

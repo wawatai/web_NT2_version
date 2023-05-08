@@ -1,5 +1,5 @@
 .gameWrap {
-    padding-bottom: 66px;
+    padding-top: 35px;
     background: $backgroundColor_4;
 
     //主內容
@@ -7,91 +7,161 @@
         width: 100%;
         min-width: 1400px;
         height: auto;
-        margin-bottom: 48px;
-
-        &.slotPage {
-            width: 1400px;
-            height: auto;
-            margin: 0 auto;
-        }
 
         .center {
             width: 1400px;
             height: 100%;
             margin: 0 auto;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            padding: 70px 0 0 100px;
+            padding: 70px 0 70px 90px;
             box-sizing: border-box;
-        }
 
-        .textBox {
-            width: 684px;
-            height: auto;
-
-            .title {
-                display: flex;
-                align-items: flex-end;
-                font-weight: bold;
-
-                .big {
-                    font-size: 58px;
-                    letter-spacing: 17px;
-                    color: $fontColor_11;
-                }
-
-                .small {
-                    font-size: 40px;
-                    padding-bottom: 5px;
-                    color: $fontColor_11;
-                }
-            }
-
-            .mainCnt {
-                margin: 50px 0;
-                width: 630px;
-                letter-spacing: 1px;
-                line-height: 24px;
-                font-size: 14px;
-                font-weight: bold;
-                color: $fontColor_10;
-            }
-        }
-
-        .btnBox {
-            width: auto;
-            height: auto;
-
-            .innBox {
-                width: 660px;
+            .textBox {
+                width: 100%;
                 height: auto;
-
-                ul {
+                padding-top: 80px;
+    
+                .title {
+                    font-weight: bold;
+    
+                    .big {
+                        width: 100%;
+                        font-size: 58px;
+                        color: $fontColor_11;
+                    }
+    
+                    .small {
+                        width: 100%;
+                        font-size: 40px;
+                        text-align: end;
+                        box-sizing: border-box;
+                        padding: 10px 60px 0 0;
+                        letter-spacing: 5px;
+                        background: $linear_5;
+                        background-clip: text;
+                        color: transparent;
+                    }
+                }
+    
+                .mainCnt {
+                    width: 100%;
+                    letter-spacing: 1px;
+                    line-height: 24px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: $fontColor_10;
+                    box-sizing: border-box;
+                    padding: 50px 60px 50px 0;
+                }
+            }
+    
+            .btnBox {
+                width: 100%;
+                height: auto;
+    
+                .innBox {
                     width: 100%;
                     height: auto;
-                    display: flex;
-                    flex-wrap: wrap;
-                    
-                    li {
-                        cursor: pointer;
-                        margin: 0 15px 35px 0;
+    
+                    ul {
+                        width: 100%;
+                        height: auto;
+                        display: grid;
+                        grid-template-columns: repeat(3,189px);
+                        grid-auto-rows: 185px;
+                        grid-gap: 30px 15px;
+                        
+                        li {
+                            width: auto;
+                            height: auto;
+                            cursor: pointer;
+                            position: relative;
 
-                        &:hover,&.active,&.active {
+                            &.disable {
+                                cursor: not-allowed;
 
-                            img {
-                                object-position: bottom;
+                                &:hover,&.active,&.active {
+    
+                                    img {
+                                        object-position: top;
+                                    }
+                                }
                             }
-                        }
+    
+                            &:hover,&.active,&.active {
+    
+                                img {
+                                    object-position: bottom;
+                                }
+                            }
+    
+                            p {
+                                width: 100%;
+                                text-align: center;
+                                font-size: 16px;
+                                font-weight: bold;
+                                color: $fontColor_17;
+                            }
 
-                        p {
-                            width: 100%;
-                            text-align: center;
-                            font-size: 16px;
-                            font-weight: bold;
-                            color: $fontColor_10;
-                            padding-top: 5px;
-                            letter-spacing: 1px;
+                            .fixBox {
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                display: none;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                background: $backgroundColor_14;
+                                border-radius: 8px;
+
+                                &.display {
+                                    display: flex;
+                                }
+
+                                .title {
+                                    color: $fontColor_1;
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    margin-bottom: 15px;
+                                }
+                
+                                .timeBox {
+                                    width: 100%;
+                                    height: auto;
+                                    box-sizing: border-box;
+                                    padding: 0 16px;
+                                    display: flex;
+                                    justify-content: space-between;
+                
+                                    div {
+                                        display: block;
+                                        width: auto;
+                                        height: auto;
+
+                                        &:nth-of-type(2) {
+                                            display: flex;
+                                            align-items: center;
+                                        }
+                
+                                        span {
+                                            display: block;
+                                            color: $fontColor_1;
+                                            font-size: 14px;
+                                            font-weight: bold;
+                                            margin-bottom: 10px;
+                                        }
+                
+                                        p {
+                                            color: $fontColor_1;
+                                            font-size: 18px;
+                                            font-weight: bold;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -326,40 +396,6 @@
                         }
                     }
                 }
-            }
-        }
-    }
-
-    //下橫條選單
-    .downBar {
-        width: 1400px;
-        height: 120px;
-        border-radius: 10px;
-        background: $linear_1;
-        box-shadow: 0px 5px 10px 0px $boxShadow_2;
-        display: flex;
-        margin: 0 auto;
-
-        li {
-            width: 25%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            font-weight: bold;
-            color: $fontColor_2;
-            border-right: solid 1px $borderColor_2;
-            cursor: pointer;
-
-            &:last-child {
-                border: none;
-            }
-
-            i {
-                width: 46px;
-                height: 46px;
-                margin-bottom: 14px;
             }
         }
     }

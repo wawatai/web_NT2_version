@@ -1,7 +1,6 @@
 .mainWrap {
     width: 100%;
     height: auto;
-    padding-bottom: 50px;
     background: $backgroundColor_4;
 
     //跑馬燈
@@ -60,85 +59,195 @@
         }
     }
 
+    //下橫條選單
+    .downBar {
+        width: 1400px;
+        height: 200px;
+        border-radius: 35px;
+        background: $linear_1;
+        box-shadow: 0px 5px 10px 0px $boxShadow_2;
+        display: flex;
+        margin: 0 auto;
+
+        li {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            font-weight: bold;
+            color: $fontColor_2;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+
+            &:hover,&:active,&.active {
+
+                i {
+                    background-position-y: 100%;
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 140px;
+                top: 50%;
+                right: -1px;
+                transform: translateY(-50%);
+                background: $borderColor_10;
+            }
+
+            &:last-child {
+                
+                &::before {
+                    display: none;
+                }
+            }
+
+            i {
+                width: 150px;
+                height: 150px;
+
+                &.depositTeach {
+                    background-position-x: 0;
+                }
+                &.withdrawalTeach {
+                    background-position-x: 25%;
+                }
+                &.walletTeach {
+                    background-position-x: 50%;
+                }
+                &.vip {
+                    background-position-x: 75%;
+                }
+            }
+        }
+    }
+
     .center {
         width: 1400px;
         height: auto;
-        margin: 0 auto;
+        margin: 40px auto 0;
 
         //中間選單
         .typeList {
             width: 100%;
             height: auto;
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 28px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 36px 0;
 
             li {
                 width: auto;
                 height: auto;
-                margin: 0 22px 36px 0;
-                position: relative;
                 cursor: pointer;
+                position: relative;
 
-                &:nth-of-type(3n) {
-                    margin-right: 0px;
+                &:hover,&:active,&.active {
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        bottom: 21px;
+                        transform: translateX(-50%);
+                        width: 40%;
+                        height: 2px;
+                        background: $borderColor_3;
+                    }
                 }
 
-                .wordBox {
-                    position: absolute;
-                    top: 53%;
-                    transform: translateY(-50%);
-                    right: 0px;
-                    width: 46%;
+                &.sportLive,
+                &.av {
 
-                    p {
-                        text-align: center;
-                        padding-top: 8px;
-                        font-weight: bold;
+                    &:hover,&:active,&.active {
 
-                        &.game {
-                            font-size: 42px;
-                            color: $fontColor_3;
-                        }
-
-                        &.type {
-                            font-size: 23px;
-                            color: $fontColor_4;
+                        &::before {
+                            bottom: 20px;
                         }
                     }
                 }
             }
         }
+    }
 
-        //下橫條選單
-        .downBar {
-            width: 100%;
-            height: 120px;
-            border-radius: 10px;
-            background: $linear_1;
-            box-shadow: 0px 5px 10px 0px $boxShadow_2;
+    .downBox {
+        width: 100%;
+        height: 240px;
+        margin-top: 86px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $backgroundColor_3;
+        box-shadow: 0 -10px 15px $boxShadow_3;
+
+        ul {
+            width: 1400px;
+            height: auto;
             display: flex;
 
             li {
                 width: 25%;
-                height: 100%;
+                height: auto;
                 display: flex;
                 align-items: center;
-                flex-direction: column;
-                justify-content: center;
-                font-weight: bold;
-                color: $fontColor_2;
-                border-right: solid 1px $borderColor_2;
-                cursor: pointer;
+                position: relative;
 
-                &:last-child {
-                    border: none;
+                &:nth-of-type(2) {
+                    
+                    .textBox {
+                        left: 145px;
+                    }
+                }
+                &:nth-of-type(3) {
+                    
+                    .textBox {
+                        left: 155px;
+                    }
                 }
 
                 i {
-                    width: 46px;
-                    height: 46px;
-                    margin-bottom: 14px;
+                    display: block;
+                    width: 170px;
+                    height: 170px;
+                    
+                    &.trust_ic {
+                        background-position-x: 0;
+                    }
+                    &.promise_ic {
+                        background-position-x: 25%;
+                    }
+                    &.product_ic {
+                        background-position-x: 50%;
+                    }
+                    &.service_ic {
+                        background-position-x: 75%;
+                    }
+                }
+
+                .textBox {
+                    width: auto;
+                    height: auto;
+                    position: absolute;
+                    left: 135px;
+                    margin-top: 15px;
+
+                    .title {
+                        color: $fontColor_15;
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+
+                    p:not(.title) {
+                        color: $fontColor_2;
+                        font-size: 1rem;
+                        margin-bottom: 10px;
+                    }
                 }
             }
         }

@@ -1,6 +1,6 @@
 .innerPage {
     background: $backgroundColor_4;
-    padding: 20px 0 40px;
+    padding: 55px 0 40px;
 
     .center {
         width: 1400px;
@@ -27,6 +27,7 @@
             width: 245px;
             height: auto;
             margin-right: 15px;
+            overflow: hidden;
     
             .userInfo {
                 width: 100%;
@@ -162,9 +163,21 @@
                             width: 13px;
                             height: 18px;
                         }
+                        &.special_ic {
+                            width: 15px;
+                            height: 16px;
+                        }
                         &.mail_ic {
                             width: 14px;
                             height: 11px;
+                        }
+                        &.fixing_ic {
+                            width: 17px;
+                            height: 17px;
+                        }
+                        &.recFriend_ic {
+                            width: 17px;
+                            height: 17px;
                         }
                     }
                 }
@@ -530,54 +543,72 @@
                 box-sizing: border-box;
 
                 .medal {
-                    width: 80px;
+                    width: 90px;
                     height: 116px;
-                    display: flex;
-                    align-items: flex-end;
-                    justify-content: center;
+                    // display: flex;
+                    // align-items: flex-end;
+                    // justify-content: center;
                     margin-right: 30px;
 
-                    div {
-                        width: 100%;
-                        height: 92px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
+                    // div {
+                    //     width: 100%;
+                    //     height: 92px;
+                    //     display: flex;
+                    //     align-items: center;
+                    //     justify-content: center;
 
-                        p {
-                            width: 76px;
-                            font-weight: bold;
-                            font-size: 22px;
-                            text-align: center;
-                            color: $fontColor_2;
-                        }
-                    }
+                    //     p {
+                    //         width: 76px;
+                    //         font-weight: bold;
+                    //         font-size: 22px;
+                    //         text-align: center;
+                    //         color: $fontColor_2;
+                    //     }
+                    // }
                 }
 
                 .rightBox {
                     width: 100%;
                     display: flex;
-                    align-items: flex-start;
-                    flex-direction: column;
-                    justify-content: center;
+                    align-items: center;
+                    justify-content: space-between;
 
-                    .lv {
-                        margin: 17px 0 10px;
-                        font-size: 20px;
-                        font-weight: bold;
-                        letter-spacing: 2px;
-                        color: $fontColor_2;
+                    div {
+
+                        .lv {
+                            margin: 10px 0;
+                            font-size: 20px;
+                            font-weight: bold;
+                            letter-spacing: 2px;
+                            color: $fontColor_2;
+                        }
+    
+                        .money {
+    
+                            span {
+                                font-size: 14px;
+                                letter-spacing: 1px;
+                                color: $fontColor_10;
+                                font-weight: bold;
+                                margin-right: 10px;
+                            }
+                        }
                     }
 
-                    .money {
-
-                        span {
-                            font-size: 14px;
-                            letter-spacing: 1px;
-                            color: $fontColor_10;
-                            font-weight: bold;
-                            margin-right: 10px;
-                        }
+                    .btn {
+                        width: auto;
+                        height: 36px;
+                        background: $backgroundColor_15;
+                        border-radius: 25px;
+                        color: $fontColor_1;
+                        font-size: 14px;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+                        justify-content: baseline;
+                        padding: 0 10px;
+                        margin-right: 50px;
+                        cursor: pointer;
                     }
                 }
             }
@@ -817,48 +848,48 @@
                                 width: 281px;
                                 height: 152px;
                                 box-sizing: border-box;
-                                padding: 0 10px;
+                                padding: 0 24px;
 
-                                &.active {
+                                // &.active {
 
-                                    .content {
+                                //     .content {
 
-                                        div {
+                                //         div {
 
-                                            .text {
-                                                color: $fontColor_1;
-                                            }
+                                //             .text {
+                                //                 color: $fontColor_1;
+                                //             }
 
-                                            .num {
-                                                color: $fontColor_1;
-                                            }
-                                        }
-                                    }
-                                }
+                                //             .num {
+                                //                 color: $fontColor_1;
+                                //             }
+                                //         }
+                                //     }
+                                // }
 
                                 .medal {
-                                    width: 54px;
-                                    height: 77px;
-                                    display: flex;
-                                    align-items: flex-end;
-                                    justify-content: center;
+                                    width: 66px;
+                                    height: 96px;
+                                    // display: flex;
+                                    // align-items: flex-end;
+                                    // justify-content: center;
 
-                                    div {
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        width: 100%;
-                                        height: 61px;
+                                    // div {
+                                    //     display: flex;
+                                    //     align-items: center;
+                                    //     justify-content: center;
+                                    //     width: 100%;
+                                    //     height: 61px;
 
-                                        p {
-                                            width: 76px;
-                                            height: auto;
-                                            text-align: center;
-                                            font-size: 16px;
-                                            font-weight: bold;
-                                            color: $fontColor_2;
-                                        }
-                                    }
+                                    //     p {
+                                    //         width: 76px;
+                                    //         height: auto;
+                                    //         text-align: center;
+                                    //         font-size: 16px;
+                                    //         font-weight: bold;
+                                    //         color: $fontColor_2;
+                                    //     }
+                                    // }
                                 }
 
                                 .content {
@@ -866,26 +897,27 @@
                                     height: auto;
                                     display: flex;
                                     justify-content: space-between;
-                                    margin-top: 19px;
 
                                     div {
-                                        width: 33.3%;
+                                        width: auto;
                                         height: auto;
 
                                         p {
-                                            width: 100%;
+                                            width: auto;
                                             height: auto;
                                             text-align: center;
+                                            font-weight: bold;
 
                                             &.text {
                                                 font-size: 12px;
-                                                margin-bottom: 8px;
-                                                color: $fontColor_7;
+                                                margin-bottom: 3px;
+                                                line-height: 15px;
+                                                color: $fontColor_1;
                                             }
 
                                             &.num {
                                                 font-size: 15px;
-                                                color: $fontColor_3;
+                                                color: $fontColor_1;
                                             }
                                         }
                                     }
@@ -908,40 +940,97 @@
             }
 
             .fakeTable {
-                width: 100%;
+                width: 96%;
                 height: auto;
-                box-sizing: border-box;
-                margin-top: 10px;
-                padding: 0 18px;
+                margin: 10px auto 0;
+
+                &.fourWrap {
+                    
+                    td {
+                        width: 25%;
+                    }
+                }
+                &.sixWrap {
+
+                    td {
+                        width: 16.7%;
+                    }
+                }
+                &.sevenWrap {
+
+                    td {
+                        width: 14.3%;
+                    }
+                }
                 
-                li {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    height: 50px;
+                tr {
                     border-bottom: solid 1px $borderColor_2;
 
-                    &.header {
+                    &:first-child {
                         border-bottom: solid 2px $borderColor_8;
                     }
 
-                    div {
-                        width: 120px;
-                        text-align: center;
-                        font-size: 13px;
-                        letter-spacing: 1px;
-                        color: $fontColor_2;
-                        border-right: solid 1px $borderColor_2;
-                        box-sizing: border-box;
-                        font-weight: bold;
+                    th {
+                        height: 52px;
+                        vertical-align: middle;
 
                         &:last-child {
-                            border: none;
+
+                            p {
+                                border: none;
+                            }
                         }
 
-                        &:nth-of-type(1) {
-                            width: 190px;
+                        p {
+                            color: $fontColor_2;
+                            font-size: 16px;
+                            font-weight: bold;
                         }
+                    }
+
+                    td {
+                        height: 52px;
+                        vertical-align: middle;
+
+                        &:last-child {
+
+                            p {
+                                border: none;
+                            }
+                        }
+
+                        p {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            height: 30px;
+                            color: $fontColor_11;
+                            font-size: 14px;
+                            font-weight: bold;
+                            border-right: solid 1px $borderColor_2;
+                        }
+                    }
+                }
+            }
+
+            .remindBox {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                padding: 30px 18px 0;
+
+                p {
+                    color: $fontColor_3;
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    line-height: 18px;
+
+                    &.title {
+                        color: $fontColor_9;
+                        font-size: 20px;
+                        margin-bottom: 20px;
                     }
                 }
             }
@@ -987,9 +1076,10 @@
                         .total {
                             width: 50%;
                             box-sizing: border-box;
-                            padding: 14px 0 0 24px;
-                            height: 203px;
+                            padding: 14px 0 0 25px;
+                            height: 154px;
                             border-right: solid 1px $borderColor_2;
+                            position: relative;
                             
                             .totalTitle {
                                 display: flex;
@@ -1047,6 +1137,15 @@
                                         }
                                     }
                                 }
+
+                                button {
+                                    width: 71px;
+                                    height: 23px;
+                                    @include buttonStyle_3;
+                                    position: absolute;
+                                    top: 14px;
+                                    right: 25px;
+                                }
                             }
 
                             .amount {
@@ -1065,7 +1164,7 @@
                             width: 50%;
                             box-sizing: border-box;
                             padding: 14px 0 0 24px;
-                            height: 203px;
+                            height: 154px;
                             border-right: solid 1px $borderColor_2;
                             
                             .ableTitle {
@@ -1143,8 +1242,15 @@
                                 color: $fontColor_2;
                                 font-weight: bold;
 
-                                p {
+                                .notice {
+                                    width: 18px;
+                                    height: 18px;
                                     margin-right: 23px;
+                                    cursor: pointer;
+                                }
+
+                                p {
+                                    margin-right: 6px;
                                     color: $fontColor_10;
                                 }
                             }
@@ -1473,7 +1579,7 @@
                                             letter-spacing: 1px;
                                             color: $fontColor_1;
                                             font-weight: bold;
-                                            margin-top: 25px;
+                                            //margin-top: 25px;
                                         }
                                     }
 
@@ -2273,6 +2379,19 @@
                                             &.cur {
                                                 color: $fontColor_12;
                                             }
+
+                                            &.limit {
+                                                height: 34px;
+                                                white-space: nowrap;
+                                                padding: 10px 5px;
+                                                box-sizing: border-box;
+                                                margin-right: 25px;
+                                            } 
+
+                                            &.platform {
+                                                width: auto;
+                                                padding: 10px 5px;
+                                            }
                                         }
                                     }
                                 }
@@ -2446,6 +2565,74 @@
                             }
                         }
                     }
+                }
+            }
+        }
+
+        //specialActivity
+        .specialWrap {
+            width: 1140px;
+            height: auto;
+            background: $backgroundColor_3;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px -5px $boxShadow_3;
+            display: grid;
+            grid-template-columns: repeat(4,auto);
+            grid-template-rows: repeat(3,auto);
+            gap: 13px;
+            padding: 20px;
+            box-sizing: border-box;
+
+            .activityBlock {
+                width: 263px;
+                height: auto;
+                border-radius: 5px;
+                box-shadow: 2px 2px 5px rgb(0,0,0,20%);
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+
+                a {
+                    width: 263px;
+                    height: 180px;
+
+                    .activityPic {
+                        width: 263px;
+                        height: 180px;  
+                    }
+                }
+               
+                .activityinfo {
+                    width: 100%;
+                    height: 41px;
+                    background: $linear_5;
+                    border-radius: 0 0 5px 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 10px;
+                    box-sizing: border-box;
+
+                    .info {
+                        width: 100%;
+                        height: 14px;
+                        text-decoration: none;
+
+                        p {
+                            color: $fontColor_1;
+                        }
+                    }
+
+                    .arrow {
+                        width: 21px;
+                        height: 20px;
+                    }
+                }
+
+                &:hover,&:active,&.active {
+                    .activityPic {
+                        filter: brightness(0.8);
+                    } 
                 }
             }
         }
@@ -3049,90 +3236,218 @@
                 .bottom {
                     width: 100%;
                     height: 631px;
-                    padding: 16px 0 0 27px;
+                    padding: 16px 27px;
                     background: $backgroundColor_3;
                     box-shadow: 0 5px 10px -5px $boxShadow_3;
                     border-radius: 5px;
                     box-sizing: border-box;
 
-                    .title {
-                        font-size: 17px;
-                        letter-spacing: 2px;
-                        color: $fontColor_3;
-                        font-weight: bold;
-                    }
+                    &>div {
+                        display: none;
 
-                    .content {
-                        margin-top: 26px;
-
-                        form {
-                            width: 100%;
-                            height: auto;
-
-                            .row {
-                                display: flex;
-                                align-items: center;
-                                height: 41px;
-                                margin-bottom: 22px;
-                                font-weight: bold;
-                                font-size: 16px;
-                                color: $fontColor_2;
-                                position: relative;
-
-                                i {
-                                    font-size: 16px;
-                                    color: $fontColor_4;
-                                    margin-right: 5px;
-                                }
-
-                                select {
-                                    width: 257px;
-                                    height: 41px;
-                                    margin-left: 26px;
-                                    @include selectStyle_1;
-                                }
-
-                                input {
-                                    width: 257px;
-                                    height: 41px;
-                                    margin-left: 26px;
-                                    @include inputStyle_3;
-                                }
-
-                                .remind {
-                                    position: absolute;
-                                    bottom: -25px;
-                                    left: 108px;
-                                    font-size: 12px;
-                                    letter-spacing: 1px;
-                                    color: $fontColor_7;
-                                }
-                            }
-
-                            button {
-                                width: 257px;
-                                height: 41px;
-                                margin: 46px 0 0 108px;
-                                @include buttonStyle_3;
-                            }
+                        &.display {
+                            display: block;
                         }
 
-                        .remindBox {
-                            width: 839px;
-                            height: auto;
-                            padding: 15px 19px;
-                            margin: 39px 0 0 -10px;
-                            border: solid 1px $borderColor_9;
-                            box-sizing: border-box;
+                        .title {
+                            font-size: 17px;
+                            letter-spacing: 2px;
+                            color: $fontColor_3;
+                            font-weight: bold;
+                        }
 
-                            div {
-                                color: $fontColor_10;
-                                font-size: 13px;
-                                letter-spacing: 1px;
-                                margin-bottom: 11px;
+                        .red {
+                            color: $fontColor_4;
+                        }
+    
+                        .content {
+                            margin-top: 26px;
+    
+                            form {
+                                width: 100%;
+                                height: auto;
+    
+                                .row {
+                                    display: flex;
+                                    align-items: center;
+                                    height: 41px;
+                                    margin-bottom: 38px;
+                                    font-weight: bold;
+                                    font-size: 16px;
+                                    color: $fontColor_2;
+                                    position: relative;
+    
+                                    &.noTitle {
+                                        margin-left: 82px;
+                                    }
+    
+                                    i {
+                                        font-size: 16px;
+                                        color: $fontColor_4;
+                                        margin-right: 5px;
+                                    }
+    
+                                    select {
+                                        width: 257px;
+                                        height: 41px;
+                                        margin-left: 26px;
+                                        @include selectStyle_1;
+                                    }
+    
+                                    input {
+                                        width: 257px;
+                                        height: 41px;
+                                        margin-left: 26px;
+                                        @include inputStyle_3;
+                                    }
+    
+                                    .remind {
+                                        position: absolute;
+                                        bottom: -25px;
+                                        left: 108px;
+                                        font-size: 12px;
+                                        letter-spacing: 1px;
+                                        color: $fontColor_7;
 
-                                &.title {
-                                    color: $fontColor_9;
+                                        &.sp {
+                                            color: $fontColor_15;
+                                        }
+                                    }
+                                }
+    
+                                button {
+                                    width: 257px;
+                                    height: 41px;
+                                    margin: 46px 0 0 108px;
+                                    @include buttonStyle_3;
+                                }
+                            }
+                            
+                            .depoCheck {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+
+                                .left {
+                                    width: 100%;
+                                    height: auto;
+                                    padding: 30px 0 0;
+                                    box-sizing: border-box;
+                                    margin: 0 0 46px;
+
+                                    .row {
+                                        display: flex;
+                                        margin-bottom: 38px;
+                                        position: relative;
+
+                                        &:last-child {
+                                            margin-bottom: 0;
+                                        }
+        
+                                        i {
+                                            font-size: 16px;
+                                            color: $fontColor_4;
+                                            margin-right: 5px;
+                                        }
+        
+                                        .depoInfo {
+                                            width: 64px;
+                                            font-size: 16px;
+                                            font-weight: bolder;
+                                        }
+                                        .bank {
+                                            margin-left: 42px;
+                                        }
+        
+                                        button {
+                                            width: 50px;
+                                            height: 30px;
+                                            @include buttonStyle_8;
+                                            padding: 0 4px;
+                                            position: absolute;
+                                            top: -8px;
+                                            left: 194px;
+                                        }   
+                                    }
+                                }
+                                .NumBox {
+                                    width: 290px;
+                                    height: auto;
+                                    background: $backgroundColor_15;
+                                    border: 1px solid $borderColor_9;
+                                    padding: 28px 26px;
+                                    box-sizing: border-box;
+                                    margin: 0 0 0 19px;
+    
+                                    .up {
+                                        width: 100%;
+                                        height: auto;
+                                        display: flex;
+                                        justify-content: space-between;
+    
+                                        p {
+                                            font-size: 38px;
+                                            font-weight: bold;
+                                        }
+                                        .btnGroup {
+                                            display: flex;
+                                            padding-top: 4px;
+
+                                            button {
+                                                width: 50px;
+                                                height: 30px;
+                                                @include buttonStyle_8;
+                                                padding: 0 4px;
+                                                margin-left: 10px;
+                                            } 
+                                            .change {
+                                                @include buttonStyle_3; 
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            
+                            .remind {
+                                font-size: 12px;
+                                color: $fontColor_4;
+                                text-align: center;
+                                margin-top: 10px;
+
+                                &.forcheck {
+                                    text-align: left;
+                                    margin: 5px 0 5px 56px;
+                                }
+                            }
+                            .tranferChecked {
+                                width: 238px;
+                                height: 41px;
+                                margin: 24px 0 2px 46px;
+                                @include buttonStyle_3;
+                            }
+                            .remindBox {
+                                width: 839px;
+                                height: auto;
+                                padding: 15px 19px;
+                                margin: 39px 0 0 -10px;
+                                border: solid 1px $borderColor_9;
+                                box-sizing: border-box;
+    
+                                div {
+                                    color: $fontColor_10;
+                                    font-size: 13px;
+                                    letter-spacing: 1px;
+                                    margin-bottom: 11px;
+                                    line-height: 18px;
+    
+                                    &.title {
+                                        color: $fontColor_9;
+                                    }
+
+                                    .remind {
+                                        color: $fontColor_15;
+                                    }
                                 }
                             }
                         }
@@ -3517,6 +3832,12 @@
                             box-sizing: border-box;
     
                             .smallTitle {
+                                width: 100%;
+                                height: 28px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                position: relative;
     
                                 p {
                                     display: flex;
@@ -3528,6 +3849,7 @@
     
                                     &.limit {
                                         color: $fontColor_8;
+
                                     }
                                     &.canUse {
                                         color: $fontColor_13;
@@ -3539,6 +3861,22 @@
                                         height: 16px;
                                         margin-left: 6px;
                                     }
+                                }
+
+                                .notice {
+                                    width: 18px;
+                                    height: 18px;
+                                    position: absolute;
+                                    top: 5px;
+                                    left: 80px;
+                                    cursor: pointer;
+                                }
+
+                                .reBtn {
+                                    width: auto;
+                                    height: 28px;
+                                    @include buttonStyle_3;
+                                    padding: 0 10px;
                                 }
                             }
     
@@ -3757,16 +4095,454 @@
                         div {
                             margin-bottom: 11px;
                             font-size: 13px;
+                            line-height: 18px;
                             letter-spacing: 1px;
                             color: $fontColor_10;
                             font-weight: bold;
+
+                            &.remind {
+                                color: $fontColor_15;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //fixingTime
+        .fixingWrap {
+            width: 1140px;
+
+            .top {
+                width: 100%;
+                height: 50px;
+                background: $backgroundColor_3;
+                box-shadow: 0 5px 10px -5px $boxShadow_3;
+                color: $fontColor_3;
+                display: flex;
+                align-items: center;
+                box-sizing: border-box;
+                padding: 0 22px;
+                font-weight: bold;
+                font-size: 20px;
+                letter-spacing: 2px;
+                border-radius: 5px;
+            }
+
+            .bottom {
+                width: 100%;
+                height: auto;
+                margin-top: 20px;
+                border-radius: 5px;
+                background: $backgroundColor_3;
+                box-shadow: 0 5px 10px -5px $boxShadow_3;
+                box-sizing: border-box;
+                padding: 35px 35px 80px;
+
+                table {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    box-shadow: 0 0 0 1px $borderColor_8;
+                    
+                    tr {
+                        border-bottom: solid 1px $borderColor_2;
+
+                        &:first-child,
+                        &:last-child {
+                            border: none;
                         }
 
+                        th {
+                            background: $backgroundColor_2;
+                            height: 40px;
+                            vertical-align: middle;
+
+                            p {
+                                color: $fontColor_1;
+                                font-size: 16px;
+                                font-weight: bold;
+                            }
+                        }
+
+                        td {
+                            width: 33%;
+                            height: 40px;
+                            vertical-align: middle;
+                            border-right: solid 1px $borderColor_2;
+
+                            &:last-child {
+                                border: none;
+                            }
+
+                            p {
+                                width: 100%;
+                                text-align: center;
+                                color: $fontColor_2;
+                                font-size: 14px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //friend
+        .friendWrap {
+            width: 1140px;
+            height: auto;
+            padding: 15px 0 28px;
+            background: $backgroundColor_3;
+            box-shadow: 0 5px 10px -5px $boxShadow_3;
+            border-radius: 5px;
+
+            form {
+                width: 100%;
+                height: auto;
+
+                .title {
+                    padding-left: 23px;
+                    margin-bottom: 28px;
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                    color: $fontColor_3;
+                    font-weight: bold;
+                }
+                
+                .timeGroup {
+                    width: 100%;
+                    height: auto;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 19px 0 25px;
+                    margin-bottom: 25px;
+
+                    .timeBox {
+                        display: flex;
+                        align-items: center;
+                        
                         p {
-                            display: inline;
-                            color: $fontColor_4;
-                            font-size: 13px;
+                            margin-right: 25px;
+                            font-size: 14px;
                             letter-spacing: 1px;
+                            color: $fontColor_2;
+                            font-weight: bold;
+
+                            &.remind {
+                                color: $fontColor_4;
+                            }
+                        }
+
+                        input {
+                            width: 287px;
+                            height: 43px;
+                            margin-right: 30px;
+                            @include inputStyle_3;
+                        }
+
+                        .btnBox {
+
+                            button {
+                                width: 72px;
+                                height: 43px;
+                                margin-right: 8px;
+                                @include buttonStyle_11;
+
+                                &:last-child {
+                                    margin-right: 15px;
+                                }
+                            }
+                        }
+                    }
+
+                    .checkBtn {
+                        width: 152px;
+                        height: 43px;
+                        @include buttonStyle_3;
+                    }
+                }
+            }
+
+            .fakeTable {
+                width: 100%;
+                height: auto;
+                margin: 15px 0 20px;
+
+                ul {
+                    width: 100%;
+                    height: auto;
+
+                    li {
+                        width: 100%;
+                        height: 40px;
+                        border-bottom: solid 1px $borderColor_2;
+
+                        &.title {
+                            border-bottom: solid 1px $borderColor_8; 
+
+                            p {
+                                
+                                &::before {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        &.active {
+                            height: auto;
+
+                            .wordWrap {
+                                height: 40px;
+                                border-bottom: solid 10px $borderColor_2;
+                            }
+
+                            table {
+                                display: table;
+                            }
+                        }
+
+                        .wordWrap {
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            height: 100%;
+
+                            p {
+                                position: relative;
+                                color: $fontColor_2;
+                                font-weight: bold;
+                                font-size: 14px;
+                                text-align: center;
+    
+                                &:nth-of-type(1),
+                                &:nth-of-type(2),
+                                &:nth-of-type(3),
+                                &:nth-of-type(4){
+                                    width: 25%;
+                                }
+    
+                                &.result {
+                                    color: $fontColor_4;
+                                }
+    
+                                .arrow_ic {
+                                    display: block;
+                                    width: 9px;
+                                    height: 16px;
+                                    transform: rotate(-90deg);
+                                }
+                            }
+                        }
+
+                        table {
+                            display: none;
+                            width: 100%;
+                            overflow: hidden;
+                            background: $backgroundColor_3;
+                            border-radius: 5px;
+                            border-bottom: solid 1px $borderColor_2;
+
+                            tr {
+
+                                &:last-child {
+
+                                    td {
+                                        border: none;
+                                    }
+                                }
+
+                                th {
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    background: $backgroundColor_2;
+                                    color: $fontColor_1;
+                                    text-align: center;
+                                    height: 40px;
+                                    vertical-align: middle;
+                                }
+                                
+                                td {
+                                    font-weight: bold;
+                                    font-size: 14px;
+                                    color: $fontColor_10;
+                                    text-align: center;
+                                    height: 40px;
+                                    vertical-align: middle;
+                                    border-bottom: solid 1px $borderColor_2;
+
+                                    &:nth-of-type(1),
+                                    &:nth-of-type(2),
+                                    &:nth-of-type(3),
+                                    &:nth-of-type(4) {
+                                        width: 25%;
+                                    }
+
+                                    p {
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        color: $fontColor_2;
+                                        text-align: center;
+                                        position: relative;
+
+                                        &::before {
+                                            content: "";
+                                            position: absolute;
+                                            right: 0px;
+                                            width: 1px;
+                                            height: 19px;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            background: $backgroundColor_8;
+                                        }
+                                        &.open {
+                                            text-decoration: underline;
+                                            color: $fontColor_14;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                   
+            
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+            //邀請碼+推廣網址
+            .recInfo {
+                display: flex;
+                
+                ul {
+                    width: 50%;
+                    height: auto;
+
+                    li {
+                        width: 100%;
+                        height: 41px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        
+                        position: relative;
+                        margin-bottom: 20px;
+
+                        p {
+                            font-size: 14px;
+                            color: $fontColor_2;
+                            font-weight: bold;
+                        }
+
+                        .copy {
+                            width: auto;
+                            height: 30px;
+                            position: absolute;
+                            right: 0px;
+                            top: 50%;
+                            justify-content: flex-end;
+                            transform: translateY(-50%);
+                            @include buttonStyle_8;
+                        }
+                    }
+
+                    label {
+                        display: inline-block;
+                        width: 80px;
+                        height: auto;
+                        text-align: left;
+                        margin: 0 26px 0 25px;
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                        color: $fontColor_2;
+                        font-weight: bold;
+                    }
+
+                    input {
+                        width: 310px;
+                        height: 41px;
+                        @include inputStyle_3;
+                    }
+
+                }
+
+                .qrCode {
+                    width: 50%;
+                    display: flex;
+
+                    .text {
+                        width: 65%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        p {
+                            font-size: 14px;
+                            line-height: 25px;
+                            font-weight: bold;
+                        }
+                    }
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        object-fit: contain;
+                        margin-top: 5px;
+                    }
+                }
+            }
+            //推薦好友活動說明
+            .eventInfo {
+                width: 95%;
+                height: auto;
+                padding: 25px;
+                margin-top: 35px;
+
+                .mainTitle {
+                    font-size: 20px;
+                    color: $fontColor_4;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                }
+                .subTitle {
+                    font-size: 16px;
+                    color: $fontColor_4;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+                .textBox {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 35px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .content {
+                        font-size: 14px;
+                        line-height: 30px;
+
+                        span {
+                            font-size: 14px;
+                            color: $fontColor_4;
+                            font-weight: bold;
+                        }
+
+                        ul {
+                            margin-left: 15px;
+                            li {
+                                list-style:decimal;
+                                line-height: 30px;
+                            }
+                        }
+
+                        .remind {
+                            color: $fontColor_4;
+                            font-size: 17px;
                             font-weight: bold;
                         }
                     }
