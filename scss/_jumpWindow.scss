@@ -1,12 +1,12 @@
-.filter {
-    display: none;
-    position: fixed;
+.coverBg {
     width: 100%;
     height: 100%;
-    z-index: 10;
-    background: $backgroundColor_7;
-    top: 0px;
-    left: 0px;
+    background: $coverBg;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
     align-items: center;
     justify-content: center;
 
@@ -15,574 +15,876 @@
     }
 
     .jumpWindow {
-        width: 480px;
+        width: 100%;
         height: auto;
-        background: $backgroundColor_3;
-        border-radius: 5px;
-        overflow: hidden;
+        background: $jpWBG;
+        border: solid 1px $jpW_OuterBorder;
+        border-radius: 10px;
+        display: none;
 
-        &.forgetPassword {
-            display: none;
+        &.display {
+            display: block;
+        }
 
-            &.display {
-                display: block;
+        .titleArea {
+            width: 100%;
+            height: 50px;
+            background: $jpW_TitleBG;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .title {
+                color: $jpW_Title;
+                font-size: 20px;
+                font-weight: bold;
             }
 
-            form {
+            .closeBtn {
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                right: 22px;
                 display: flex;
                 align-items: center;
-                flex-direction: column;
-    
-    
-                input {
-                    width: 322px;
-                    height: 42px;
-                    margin-top: 20px;
-                    @include inputStyle_2;
+                justify-content: center;
+                cursor: pointer;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 2px;
+                    height: 100%;
+                    background: $jpW_Title;
                 }
-    
-                button {
-                    width: 322px;
-                    height: 42px;
-                    margin-top: 15px;
-                    @include buttonStyle_3;
+
+                &::before {
+                    transform: rotate(45deg);
                 }
-    
-                p {
-                    font-size: 14px;
-                    margin: 30px 0;
-                    color: $fontColor_7;
+                &::after {
+                    transform: rotate(-45deg);
                 }
             }
         }
 
+        //--最新消息--
         &.news {
-            display: none;
             width: 840px;
-            min-height: 250px;
             height: auto;
 
-            &.display {
-                display: block;
-            }
-
-            .title {
-                
-                p {
-                    font-size: 21px;
-                }
-
-                i {
-                    width: 20px;
-                    height: 20px;
-                }
-            }
-
-            .nav {
-                margin: 30px 15px 8px;
-                border-bottom: solid 1px $borderColor_2;
+            .tabs {
+                width: 100%;
+                height: auto;
                 display: flex;
-
+                padding: 29px 25px 0;
+    
                 li {
-                    position: relative;
-                    height: 28px;
-                    font-size: 16px;
-                    font-weight: bold;
-                    letter-spacing: 2px;
-                    padding: 0 40px;
-                    cursor: pointer;
-                    border-bottom: solid 3px transparent;
-                    color: $fontColor_7;
-                    display: flex;
-                    align-items: center;
-
-                    &:hover,&:active,&.active {
-                        color: $fontColor_4;
-                        border-color: $borderColor_8;
-                    }
-
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        width: 2px;
-                        height: 15px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        right: -1px;
-                        background: $backgroundColor_8;
-                    }
+                    width: auto;
+                    height: auto;
+                    @include pageBtn;
+                    margin-right: 3px;
                 }
             }
 
-            .content {
+            //消息內容
+            .tabsContent {
+                width: 100%;
+                height: 100%;
+                padding: 0 25px 29px;
                 display: none;
-                margin: 0px 15px 20px;
-
+    
                 &.display {
                     display: block;
                 }
-
-                li {
-                    width: 100%;
-                    height: 45px;
-                    padding: 0 5px;
-                    display: flex;
-                    align-items: center;
-                    border-bottom: solid 1px $borderColor_2;
-
-                    div {
-                        width: 100%;
-                        height: auto;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-
-                        p {
-                            font-weight: bold;
-
-                            &.text {
-                                white-space: nowrap;
-                                text-overflow: ellipsis;
-                                overflow: hidden;
-                                max-width: 670px;
-                                color: $fontColor_10;
-                                font-size: 16px;
-                            }
-
-                            &.date {
-                                color: $fontColor_7;
-                                font-size: 14px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        &.plsGo {
-            display: none;
-
-            &.display {
-                display: block;
-            }
-
-            .content {
-                color: $fontColor_3;
-                font-size: 16px;
-                padding: 24px 80px;
-                letter-spacing: 1px;
-                font-weight: bold;
-                text-align: center;
-            }
-
-            .btnBox {
-                text-align: center;
-                padding: 20px 0;
-
-                button {
-                    width: 322px;
-                    height: 42px;
-                    @include buttonStyle_3;
-                }
-            }
-        }
-
-        &.score {
-            display: none;
-            width: 400px;
-
-            &.display {
-                display: block;
-            }
-
-            .total {
-                display: flex;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding: 15px 0;
-                border-bottom: solid 1px $borderColor_2;
-                font-size: 16px;
-                color: $fontColor_2;
-
-                p {
-                    color: $fontColor_4;
-                    font-size: 26px;
-                    font-weight: bold;
-                    margin-top: 8px;
-                }
-            }
-
-            ul {
-                max-height: 300px;
-                overflow-y: scroll;
-
-                li {
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-                    width: 100%;
-                    height: 48px;
-                    border-bottom: solid 1px $borderColor_2;
-
-                    &:last-child {
-
-                        .point {
-
-                            .notice {
-                                top: -40px;
-                                bottom: unset;
-    
-                                p {
-    
-                                    i {
-                                        top: unset;
-                                        bottom: -8px;
-                                        border-width: 8px 6px 0px;
-                                    }
-                                }
-                            }
-                        }
-                    }
                     
-                    div {
-                        font-size: 14px;
-                        color: $fontColor_2;
-
-                        &.name {
-                            width: 152px;
-                            border-right: solid 1px $borderColor_2;
-                            padding-left: 30px;
-                        }
-
-                        &.point {
-                            width: 100%;
-                            height: 100%;
-                            display: flex;
-                            align-items: center;
-                            padding-left: 25px;
-                            position: relative;
-
-                            &:hover,&:active,&.active {
-                                
-                                .notice {
-                                    display: block;
-                                }
-                            }
-
-                            .notice {
-                                display: none;
-                                position: absolute;
-                                left: 30px;
-                                bottom: -40px;
-                                width: 139px;
-                                height: 47px;
-                                z-index: 1;
-
-                                p {
-                                    width: 100%;
-                                    height: 100%;
-                                    background: $backgroundColor_13;
-                                    border-radius: 3px;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    color: $fontColor_1;
-
-                                    i {
-                                        display: block;
-                                        position: absolute;
-                                        top: -8px;
-                                        left: 15px;
-                                        width: 0px;
-                                        height: 0px;
-                                        border-style: solid;
-                                        border-width: 0px 6px 8px;
-                                        border-color: $borderColor_9 transparent;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        &.passwordWindow {
-
-            form {
-                
-                .content {
+                ul {
                     width: 100%;
                     height: auto;
-                    box-sizing: border-box;
-                    padding: 24px 80px;
 
                     li {
                         width: 100%;
-                        height: auto;
-                        margin-bottom: 30px;
+                        height: 50px;
+                        border-bottom: 1px solid $main-Border_1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 0 6px;
+    
+                        &:first-child {
+                            border-top: solid 1px $main-Border_1;
+                        }
 
-                        &:last-child {
-                            margin: 0;
+                        p {
+                            width: 80%;
+                            color: $main-font;
+                            font-size: 16px;
+                            font-weight: bold;
+                            @include textHidden;
+
+                            &.date {
+                                width: auto;
+                                color: $subs-font;
+                            }
+                        }
+                    }
+                }
+            }  
+        }
+
+        //登入/帳密提示
+        &.clickWindow {
+            width: 420px;
+
+            .tabsContent {
+                width: 100%;
+                height: auto;
+                padding: 32px 82px;
+
+                p {
+                    color: $main-font;
+                    font-size: 16px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                button {
+                    width: 250px;
+                    height: 42px;
+                    @include mainBtn;
+                    margin-top: 30px;
+                }
+            }
+
+            &.rule {
+                width: 820px;
+
+                .ruleCnt {
+                    width: 100%;
+                    height: auto;
+                    padding: 24px 32px;
+
+                    .ruleBox {
+                        width: 100%;
+                        height: auto;
+                        max-height: 500px;
+                        overflow-y: auto;
+                        @include scrollBar;
+
+                        .title {
+                            @include innerTitleStyle;
+                            border: none;
+                            padding: 0;
+                        }
+
+                        p:not(.title) {
+                            color: $subs-font;
+                            font-size: 14px;
+                            font-weight: bold;
+                            line-height: 20px;
+                            margin-bottom: 10px;
+
+                            &:last-child {
+                                margin: 0;
+                            }
+                        }
+                    }
+
+                    button {
+                        width: 240px;
+                        height: 42px;
+                        @include mainBtn;
+                        display: block;
+                        margin: 24px auto 0;
+                    }
+                }
+            }
+        }
+
+        //忘記密碼
+        &.forgotPw {
+            width: 420px;
+
+            .tabsContent {
+                width: 100%;
+                height: auto;
+                padding: 27px 69px;
+
+                .inputBox {
+                    width: 280px;
+                    height: auto;
+                    margin-bottom: 15px;
+
+                    input {
+                        width: 280px;
+                        height: 42px;
+                        @include mainInput;
+                    }
+                }
+
+                .checkBtn {
+                    width: 100%;
+                    height: 42px;
+                    @include mainBtn;
+                }
+                
+                //紅字提醒訊息
+                .remind {
+                    color: $remind;
+                    font-size: 14px;
+                    margin-top: 30px;
+                }
+            
+             }
+            
+        }
+
+        //快速轉帳
+        &.quickTransfer {
+            width: 420px;
+
+            .tabsContent {
+                width: 100%;
+                height: auto;
+                padding: 27px 40px 0;
+
+                .Line {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+
+                    .mainFont {
+                        width: 100px;
+                        color: $main-font;
+                        font-size: 16px;
+                        flex-shrink: 0;
+                    }
+
+                    .transPlatform {
+                        width: 100%;
+                        color: $title_1;
+                        font-size: 28px;
+                        font-weight: bolder;
+                    }
+
+                    .iconBox {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        justify-content: center;
+
+                        .transfer {
+                            width: 27px;
+                            height: 23px;
+                            transform: rotate(90deg);
                         }
                     }
 
                     input {
                         width: 100%;
                         height: 42px;
-                        @include inputStyle_3;
+                        @include mainInput;
+                    }
+
+                    .btnBox {
+                        width: 100%;
+                        height: auto;
+    
+                        .moneyBtn {
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            gap: 6px;
+                            margin-bottom: 12px;
+    
+                            .myBlock {
+                                @include secondBtn;
+                                width: auto;
+                                height: 30px;
+                                font-size: 15px;
+                                text-align: center;
+                            }
+                        }
                     }
                 }
+             }
+             
+             .checkBtn {
+                width: 100%;
+                height: 42px;
+                @include mainBtn;
+            }
 
-                .btnBox {
-                    padding-bottom: 43px;
-                    text-align: center;
+            .bottom {
+                padding: 16px 69px;
+                border-top: 1px solid $main-Border_1;
+            }
+        }
 
-                    button {
-                        width: 322px;
-                        height: 42px;
-                        @include buttonStyle_3;
+        //紅利會員彈窗
+        &.pointWindow {
+            width: 580px;
+            
+            .content {
+                width: 100%;
+                height: auto;
+                padding: 24px;
+
+                table {
+                    width: 100%;
+                    height: auto;
+                    @include bgStyle_3;
+
+                    tr {
+
+                        &:last-child {
+
+                            td {
+                                border-bottom: none;
+                            }
+                        }
+
+                        th {
+                            height: 36px;
+                            vertical-align: middle;
+                            border-bottom: solid 1px $main-Border_2;
+
+                            &:last-child {
+
+                                p {
+                                    border: none;
+                                }
+                            }
+                            
+                            p {
+                                width: 100%;
+                                height: 24px;
+                                border-right: solid 1px $main-Border_1;
+                                color: $main-font;
+                                font-size: 14px;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                @include textHidden;
+                            }
+                        }
+
+                        td {
+                            width: 50%;
+                            height: 36px;
+                            vertical-align: middle;
+                            border-bottom: solid 1px $main-Border_1;
+
+                            &:last-child {
+
+                                p {
+                                    border: none;
+                                }
+                            }
+                            
+                            p {
+                                width: 100%;
+                                height: 24px;
+                                border-right: solid 1px $main-Border_1;
+                                color: $subs-font;
+                                font-size: 14px;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                @include textHidden;
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+        &.detail {
+            width: 650px;
+
+            .content {
+                width: 100%;
+                height: auto;
+                padding: 24px;
+
+                table {
+                    width: 100%;
+                    height: auto;
+                    @include bgStyle_3;
+
+                    tr {
+
+                        &:last-child {
+
+                            td {
+                                border-bottom: none;
+                            }
+                        }
+
+                        th {
+                            height: 36px;
+                            vertical-align: middle;
+                            border-bottom: solid 1px $main-Border_2;
+
+                            &:last-child {
+
+                                p {
+                                    border: none;
+                                }
+                            }
+                            
+                            p {
+                                width: 100%;
+                                height: 24px;
+                                border-right: solid 1px $main-Border_1;
+                                color: $main-font;
+                                font-size: 14px;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                @include textHidden;
+                            }
+                        }
+
+                        td {
+                            width: 30%;
+                            height: 36px;
+                            vertical-align: middle;
+                            border-bottom: solid 1px $main-Border_1;
+
+                            &:last-child {
+
+                                p {
+                                    border: none;
+                                }
+                            }
+                            
+                            p {
+                                width: 100%;
+                                height: 24px;
+                                border-right: solid 1px $main-Border_1;
+                                color: $subs-font;
+                                font-size: 14px;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                @include textHidden;
+                            }
+                        }
                     }
                 }
             }
         }
 
-        &.walletRecord {
-            width: 976px;
 
-            .title {
-                height: 70px;
-                background: none;
-                box-sizing: border-box;
-                padding: 0 30px;
-
-                p {
-                    font-size: 24px;
-                    text-align: left;
-                    color: $fontColor_2;
-                }
-
-                i {
-                    width: 29px;
-                    height: 29px;
-                }
-            }
+        //注單明細
+        &.waterWindow {
+            width: 840px;
 
             .content {
+                width: 100%;
                 height: auto;
-                padding: 0 30px 23px;
+                padding: 0 24px 24px;
 
-                .num {
-                    font-size: 20px;
+                .title {
+                    width: 100%;
+                    height: auto;
+                    padding: 10px 0;
+                    color: $light-font;
+                    font-size: 16px;
                     letter-spacing: 2px;
-                    color: $fontColor_2;
                 }
 
                 table {
                     width: 100%;
-                    margin-top: 18px;
+                    height: auto;
+                    @include bgStyle_3;
 
                     tr {
 
+                        &:last-child {
+                            
+                            td {
+                                border: none;
+                            }
+                        }
+
                         th {
-                            width: 25%;
+                            height: 36px;
                             vertical-align: middle;
-                            height: 35px;
-                            border-bottom: solid 2px $borderColor_5;
-                            font-size: 12px;
-                            color: $fontColor_2;
+                            border-bottom: solid 1px $main-Border_2;
+
+                            &:last-child {
+
+                                p {
+                                    border: none;
+                                }
+                            }
+
+                            p {
+                                width: 100%;
+                                height: 24px;
+                                border-right: solid 1px $main-Border_1;
+                                color: $main-font;
+                                font-size: 14px;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                @include textHidden;
+                            }
+                        }
+
+                        td {
+                            width: 10%;
+                            height: 36px;
+                            vertical-align: middle;
+                            border-bottom: solid 1px $main-Border_1;
+
+                            &:last-child {
+
+                                p {
+                                    border: none;
+                                }
+                            }
+
+                            p {
+                                width: 100%;
+                                height: 24px;
+                                border-right: solid 1px $main-Border_1;
+                                color: $subs-font;
+                                font-size: 14px;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                @include textHidden;
+                            }
                         }
                     }
                 }
-
-                .noData {
-                    height: 80px;
-                    padding: 0 30px 30px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    letter-spacing: 1px;
-                    font-weight: bold;
-                    color: $fontColor_7;
-                }
             }
         }
-
-        &.checkEvent {
-            display: none;
+        //回補明細
+        &.replenishmentWindow {
             width: 840px;
-
-            &.display {
-                display: block;
-            }
 
             .content {
                 width: 100%;
                 height: auto;
-                box-sizing: border-box;
-                padding: 28px 47px;
+                padding: 0 24px 24px;
 
-                .imgBox {
-                    overflow-x: auto;
-                }
-
-                p {
+                .title {
+                    width: 100%;
+                    height: auto;
+                    padding: 10px 0;
+                    color: $light-font;
                     font-size: 16px;
-                    letter-spacing: 1px;
-                    color: $fontColor_3;
-                    margin-top: 10px;
+                    letter-spacing: 2px;
                 }
-            }
 
-            .btnBox {
-                width: 100%;
-                height: auto;
-                padding: 18px 0;
-                text-align: center;
+                table {
+                    width: 100%;
+                    height: auto;
+                    @include bgStyle_3;
 
-                button {
-                    width: 322px;
-                    height: 42px;
-                    @include buttonStyle_3;
+                    tr {
+
+                        &:last-child {
+                            
+                            td {
+                                border: none;
+                            }
+                        }
+
+                        th {
+                            height: 36px;
+                            vertical-align: middle;
+                            border-bottom: solid 1px $main-Border_2;
+
+                            &:last-child {
+
+                                p {
+                                    border: none;
+                                }
+                            }
+
+                            p {
+                                width: 100%;
+                                height: 24px;
+                                border-right: solid 1px $main-Border_1;
+                                color: $main-font;
+                                font-size: 14px;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                @include textHidden;
+                            }
+                        }
+
+                        td {
+                            width: 10%;
+                            height: 36px;
+                            vertical-align: middle;
+                            border-bottom: solid 1px $main-Border_1;
+
+                            &:last-child {
+
+                                p {
+                                    border: none;
+                                }
+                            }
+
+                            p {
+                                width: 100%;
+                                height: 24px;
+                                border-right: solid 1px $main-Border_1;
+                                color: $subs-font;
+                                font-size: 14px;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                @include textHidden;
+                            }
+                        }
+                    }
                 }
             }
         }
 
-        &.betWindow {
-            display: none;
-            padding-top: 54px;
-            flex-direction: column;
-            position: relative;
-
-            &.display {
-                display: flex;
-            }
-
-            .close_ic {
-                position: absolute;
-                top: 24px;
-                right: 24px;
-                width: 25px;
-                height: 25px;
-                cursor: pointer;
-            }
-
-            .betTitle {
-                width: 100%;
-                height: auto;
-                box-sizing: border-box;
-                padding-left: 45px;
-                font-size: 29px;
-                font-weight: bold;
-            }
+        //更變密碼
+        &.passwordWindow {
+            width: 400px;
 
             form {
                 width: 100%;
                 height: auto;
-                box-sizing: border-box;
-                margin-top: 40px;
-                padding: 0 45px;
+                padding: 24px 48px;
 
-                .row {
-                    display: flex;
-                    align-items: center;
+                .content {
                     width: 100%;
-                    height: 42px;
-                    margin-bottom: 10px;
-                    justify-content: center;
-
-                    &.forBtn {
-                        justify-content: flex-end;
-                        height: auto;
-                    }
-
-                    p {
-                        width: 120px;
-                        font-size: 16px;
-                        font-weight: bold;
-                        color: $fontColor_2;
-                    }
-
-                    input {
-                        width: 267px;
-                        height: 42px;
-                        @include inputStyle_3;
-                    }
-
-                    .trans_arrow {
-                        display: block;
-                        width: 24px;
-                        height: 21px;
-                        transform: rotate(90deg);
-                        margin-left: 120px;
-                    }
-
-                    .btnBox {
-                        width: 267px;
+                    height: auto;
+                    
+                    ul {
+                        width: 100%;
                         height: auto;
 
-                        button {
-                            width: 85px;
-                            height: 32px;
-                            @include buttonStyle_11;
-                            margin: 0 2px 6px 0;
+                        li {
+                            width: 100%;
+                            height: auto;
 
-                            &:nth-of-type(3n) {
-                                margin-right: 0;
+                            input {
+                                width: 100%;
+                                height: 42px;
+                                @include mainInput;
+                                margin-bottom: 16px;
+                            }
+
+                            button {
+                                width: 100%;
+                                height: 42px;
+                                @include mainBtn;
                             }
                         }
                     }
-                    
-                    .check {
-                        width: 267px;
-                        height: 42px;
-                        @include buttonStyle_3;
-                        margin-bottom: 20px;
-                    }
-                }
-            }
-
-            .enterGame {
-                width: 100%;
-                height: auto;
-                text-align: center;
-                padding: 20px 0;
-                border-top: solid 1px $borderColor_2;
-
-                button {
-                    width: 351px;
-                    height: 42px;
-                    @include buttonStyle_3;
                 }
             }
         }
 
-        .title {
-            width: 100%;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            background: $backgroundColor_2;
-            position: relative;
+        //更變手機
+        &.phoneWindow {
+            width: 400px;
 
-            p {
-                color: $fontColor_1;
-                font-size: 18px;
-                font-weight: bold;
-                text-align: center;
+            form {
                 width: 100%;
-            }
+                height: auto;
+                padding: 0 48px 24px;
 
-            i {
-                position: absolute;
-                width: 15px;
-                height: 15px;
-                top: 50%;
-                right: 15px;
-                transform: translateY(-50%);
-                cursor: pointer;
+                .title {
+                    width: 100%;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    color: $remind;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+
+                ul {
+                    width: 100%;
+                    height: auto;
+
+                    li {
+                        width: 100%;
+                        height: auto;
+                        position: relative;
+                        margin-bottom: 16px;
+
+                        input {
+                            width: 100%;
+                            height: 42px;
+                            @include mainInput;
+                        }
+
+                        button {
+                            position: absolute;
+                            top: 50%;
+                            right: 5px;
+                            transform: translateY(-50%);
+                            width: auto;
+                            height: 32px;
+                            @include secondBtn;
+                            padding: 0 15px;
+                        }
+                    }
+                }
+
+                .btnBox {
+                    width: 100%;
+                    height: auto;
+
+                    button {
+                        width: 100%;
+                        height: 42px;
+                        @include mainBtn;
+                    }
+
+                    .remind {
+                        width: 100%;
+                        color: $remind;
+                        font-size: 14px;
+                        font-weight: bold;
+                        text-align: center;
+                        margin-top: 16px;
+                    }
+                }
+            }
+        }
+
+        //任務詳情
+        &.checkEvent {
+            width: 640px;
+
+            .content {
+                width: 100%;
+                height: auto;
+                padding: 24px 32px;
+
+                &>div {
+                    width: 100%;
+                    height: auto;
+                    max-height: 400px;
+                    overflow-y: auto;
+                    @include scrollBar;
+
+                    img {
+                        width: 100%;
+                        object-fit: contain;
+                        margin-bottom: 20px;
+                    }
+    
+                    ul {
+                        width: 100%;
+                        height: auto;
+    
+                        li {
+                            width: 100%;
+                            height: auto;
+                            margin-bottom: 16px;
+    
+                            &:last-child {
+                                margin: 0;
+                            }
+    
+                            .title {
+                                color: $main-font;
+                                font-size: 14px;
+                                font-weight: bold;
+                                margin-bottom: 6px;
+    
+                                &.sp {
+                                    display: inline-block;
+                                    margin-right: 10px;
+                                }
+                            }
+    
+                            p:not(.title) {
+                                display: inline;
+                                color: $subs-font;
+                                font-size: 14px;
+                                font-weight: bold;
+                                line-height: 18px;
+                            }
+                        }
+                    }
+                }
+
+                button {
+                    width: 180px;
+                    height: 42px;
+                    @include mainBtn;
+                    display: block;
+                    margin: 24px auto 0;
+                }
+            }
+        }
+
+        //優惠申請視窗
+        &.applyWindow {
+            width: 400px;
+
+            .content {
+                width: 100%;
+                height: auto;
+                padding: 24px 32px;
+
+                p {
+                    color: $main-font;
+                    font-size: 16px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                button {
+                    width: 180px;
+                    height: 42px;
+                    @include mainBtn;
+                    display: block;
+                    margin: 24px auto 0;
+                }
+            }
+        }
+        //優惠申請視窗
+        &.numHint {
+            width: 400px;
+
+            .content {
+                width: 100%;
+                height: auto;
+                padding: 24px 32px;
+
+                p {
+                    color: $main-font;
+                    font-size: 16px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                button {
+                    width: 180px;
+                    height: 42px;
+                    @include mainBtn;
+                    display: block;
+                    margin: 24px auto 0;
+                }
             }
         }
     }

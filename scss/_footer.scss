@@ -1,87 +1,65 @@
-footer {
+footer{
     width: 100%;
     height: auto;
-    background: $backgroundColor_1;
+    background: $footerBG;
 
-    //上部
     .top {
         width: 100%;
-        height: 80px;
+        height: 50px;
+        background: $footer_Top_BG;
 
-        .center {
-            width: 1400px;
+        ul{
+            width: 628px;
             height: 100%;
-            margin: 0 auto;
             display: flex;
-            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto;
 
-            button {
-                width: 25px;
-                height: 100%;
-                position: relative;
-                background: none;
+            li{
+                width: auto;
+                height: auto;
+                color: $footer_Top_Word;
+                cursor: pointer;
 
-                &::before {
-                    content: "";
-                    position: absolute;
-                    width: 10px;
-                    height: 18px;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%,-50%);
-                }
-
-                &.next {
-                    
-                    &::before {
-                        transform: translate(-50%,-50%) scaleX(-1);
-                    }
-                }
-            }
-
-            .partnerBox {
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-
-                .partners {
-                    display: flex;
-                    width: auto;
-                    height: 100%;
-                    align-items: center;
-                    transition: 0.6s ease;
-
-                    i {
-                        width: 170px;
-                        height: 55px;
-                        margin: 0 10px;
-                        opacity: 0.6;
-                    }
+                &:hover,&:active,&.active {
+                    color: $footer_Top_Active;
                 }
             }
         }
     }
 
-    //下部
-    .footerList {
+    .bottom-platform{
+        width: 1200px;
+        height: 130px;
+        margin: 0 auto;
+        
+
+        ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            li {
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+
+    .bottom-copy {
         width: 100%;
         height: auto;
-        background: $backgroundColor_2;
+        padding: 25px 0;
 
-        .center {
-            width: 1000px;
-            height: 80px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            a {
-                color: $fontColor_1;
-                font-size: 16px;
-                font-weight: bold;
-                text-decoration: none;
-            }
+        p {
+            color: $footer_Bottom_Word;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
         }
     }
 }
+    

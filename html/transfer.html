@@ -2,397 +2,254 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.25">
-    <title>Document</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=0.25"> -->
+    <link rel="icon" href="../images/favicon64x64.ico" sizes="16x16">
+    <title>大黃金</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
-    <script src="../js/javascript.js"></script>
-    <link rel="shortcut icon" href="../images/myIco.ico" type="image/x-icon">
+    <script type="module" src="../js/javascript.js"></script>
 </head>
 <body>
+    <!--header-->
     <header>
-        <div class="top">
-            <div class="langBox">
-                <select>
-                    <option>繁體中文</option>
-                    <option>简体中文</option>
-                    <option>ENGLISH</option>
-                    <option>日本語</option>
-                </select>
+        <!--上部-->
+        <section class="top">
+            <!--logo-->
+            <div class="logo">
+                <a href="#">
+                    <img src="../images/logo.png" alt="">
+                </a>
             </div>
-            <ul class="user userInfo">
-                <li class="loginPart">
-                    <form class="loginForm">
-                        <div>
-                            <i class="acc_ic"></i>
-                            <input type="text" placeholder="帳號或手機號碼">
-                        </div>
-                        <div>
-                            <i class="pass_ic"></i>
-                            <input type="password" placeholder="密碼">
-                            <i class="forget"></i>
-                        </div>
-                        <button class="loginBtn" type="button">登入</button>
-                    </form>
-                </li>
-                <li class="loginPart register">
-                    <i class="register_ic"></i>
-                    註冊
-                </li>
-                <li class="infoPart">
-                    <span class="lv">VIP20</span>
-                    userName
-                </li>
-                <li class="infoPart moneyTotal">
-                    <span class="total">9999</span>
-                    <i class="money_arrow"></i>
-                    <ul class="transferInfo">
-                        <li class="platform">
-                            <div>
-                                <p>BNG娛樂</p>
-                                <p class="money">
-                                    <i></i>
-                                    <span>0</span>
-                                </p>
-                            </div>
+            <div class="accountBox">
+                <!--會員資訊列-->
+                <div class="member">
+                    <p class="level">一般會員</p>
+                    <p class="memberId">opp122</p>
+                </div>
+                <!--滑入錢包-->
+                <div class="moneyBox">
+                    <p class="moneyBtn">
+                        1000
+                        <i class="arrow_ic"></i>
+                    </p>
+                    <ul class="moneyList">
+                        <li>
+                            BNG
+                            <p class="num">0</p>
                         </li>
-                        <li class="platform">
-                            <div>
-                                <p>pls</p>
-                                <p class="money">
-                                    <i></i>
-                                    <span>0</span>
-                                </p>
-                            </div>
+                        <li>
+                            BWIN
+                            <p class="num">0</p>
                         </li>
-                        <li class="platform">
-                            <div>
-                                <p>SimplePlay</p>
-                                <p class="money">
-                                    <i></i>
-                                    <span>0</span>
-                                </p>
-                            </div>
+                        <li>
+                            DG真人
+                            <p class="num">0</p>
                         </li>
-                        <li class="platform">
-                            <div>
-                                <p>歐博</p>
-                                <p class="money">
-                                    <i></i>
-                                    <span>0</span>
-                                </p>
-                            </div>
+                        <li>
+                            歐博
+                            <p class="num">0</p>
                         </li>
-                        <li class="platform">
-                            <div>
-                                <p>SG</p>
-                                <p class="money">
-                                    <i></i>
-                                    <span>0</span>
-                                </p>
-                            </div>
+                        <li>
+                            WM
+                            <p class="num">0</p>
                         </li>
-                        <li class="platform">
-                            <div>
-                                <p>RTG</p>
-                                <p class="money">
-                                    <i></i>
-                                    <span>0</span>
-                                </p>
-                            </div>
+                        <li>
+                            RSG
+                            <p class="num">0</p>
                         </li>
-                        <li class="platform">
-                            <div>
-                                <p>IFUN</p>
-                                <p class="money">
-                                    <i></i>
-                                    <span>0</span>
-                                </p>
-                            </div>
+                        <li>
+                            GR
+                            <p class="num">0</p>
                         </li>
-                        <li class="platform">
-                            <div>
-                                <p>WM</p>
-                                <p class="money">
-                                    <i></i>
-                                    <span>0</span>
-                                </p>
-                            </div>
+                        <li>
+                            福星電子
+                            <p class="num">0</p>
                         </li>
-                        <li class="platform">
-                            <div>
-                                <p>GS</p>
-                                <p class="money">
-                                    <i></i>
-                                    <span>0</span>
-                                </p>
-                            </div>
+                        <li>
+                            京彩
+                            <p class="num">0</p>
                         </li>
-                        <li class="platform">
-                            <div>
-                                <p>必贏</p>
-                                <p class="money">
-                                    <i></i>
-                                    <span>0</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="platform">
-                            <div>
-                                <p>36588體育</p>
-                                <p class="money">
-                                    <i></i>
-                                    <span>0</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="platform">
-                            <div>
-                                <p>RSG</p>
-                                <p class="money">
-                                    <i></i>
-                                    <span>0</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="platform">
-                            <div>
-                                <p>PNG</p>
-                                <p class="money">
-                                    <i></i>
-                                    <span>0</span>
-                                </p>
-                            </div>
+                        <li>
+                            SG88
+                            <p class="num">0</p>
                         </li>
                     </ul>
-                </li>
-                <li class="infoPart" onclick="window.location.href='./deposit.html'">
-                    存款
-                </li>
-                <li class="infoPart" onclick="window.location.href='./transfer.html'">
-                    轉帳
-                </li>
-                <li class="infoPart" onclick="window.location.href='./withdrawal.html'">
-                    提款
-                </li>
-                <li class="infoPart" onclick="window.location.href='./member.html'">
-                    <i class="icon member_ic"></i>
-                    會員中心
-                </li>
-                <li class="infoPart" onclick="window.location.href='./mail.html'">
-                    <i class="icon mail_ic"></i>
-                    站內信
-                </li>
-                <li class="infoPart logoutBtn" onclick="window.location.href='../index.html'">
-                    <i class="icon logout_ic"></i>
-                    登出
-                </li>
-                <li class="service">
-                    <a href="#">線上客服</a>
-                </li>
-            </ul>
-        </div>
-        <div class="gameNav">
-            <div class="center">
-                <img class="logo" src="../images/icon/svg/logo.svg">
-                <ul>
-                    <li class="menu" onclick="window.location.href='../index.html'">首頁</li>
-                    <li class="sportBtn" onclick="window.location.href='./sportPage.html'">體育賽事</li>
-                    <li class="liveBtn" onclick="window.location.href='./livePage.html'">真人娛樂</li>
-                    <li class="slotBtn" onclick="window.location.href='./slotPage.html'">老虎機</li>
-                    <li class="lotteryBtn" onclick="window.location.href='./lotteryPage.html'">彩票</li>
-                    <li class="fishBtn" onclick="window.location.href='./fishPage.html'">捕魚機</li>
-                    <li class="boardBtn" onclick="window.location.href='./boardPage.html'">棋牌遊戲</li>
-                    <!-- <li class="activeWallet">活動錢包</li> -->
-                    <li class="event" onclick="window.location.href='./event.html'">優惠</li>
-                    <li class="vip" onclick="window.location.href='./vip.html'">VIP會員</li>
-                </ul>
-            </div>
-        </div>
-        <div class="marqueeArea">
-            <div class="center">
-                <div class="marqueeWrap">
-                    <i class="marquee_ic"></i>
-                    <div class="marquee">
-                        <pre>
-                            <p>測試跑馬燈</p>
-                        </pre>
-                    </div>
+                </div>
+                <!--按鈕-->
+                <div class="btnLine">
+                    <button class="save" onclick="window.location.href='./deposit.html'">存款</button>
+                    <button class="transfer" onclick="window.location.href='./transfer.html'">轉帳</button>
+                    <button class="withdrawal" onclick="window.location.href='./withdrawal.html'">提款</button>
+                    <button class="memberCenter" onclick="window.location.href='./member.html'">
+                        <i class="member_ic"></i>
+                        會員中心
+                    </button>
+                    <button class="message" onclick="window.location.href='./mail.html'">
+                        <i class="mail_ic"></i>
+                        站內信
+                        <div class="messageAlarm">
+                            99+
+                        </div>
+                    </button>
+                    <button class="logout" onclick="window.location.href='../index.html'">登出</button>
                 </div>
             </div>
-        </div>
-        <div class="topGameList">
-             <div class="listWrap">
-                 <div class="center">
-                     <i class="prev"></i>
-                     <div class="container">
-                        <ul class="sport">
-                            <li onclick="openSportGame()">
-                                <div>
-                                    <img src="../images/platform/sport/36588.png">
-                                </div>
-                                <p>36588體育</p>
+        </section>
+        <!--導航列-->
+        <section class="nav">
+            <ul>
+                <li>
+                    <a href="./indexInner.html">首頁</a>
+                </li>
+                <li>
+                    <a href="./sportPage.html">體育賽事</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox callSport">
+                                <img src="../images/dropDown/SPORT/36588.png">
+                                <p>36588</p>
+                            </li>   
+                        </ol>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./livePage.html">真人娛樂</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox callLive">
+                                <img src="../images/dropDown/LIVE/AB.png">
+                                <p>歐博真人娛樂</p>
                             </li>
-                        </ul>
-                        <ul class="live">
-                           <li onclick="openLiveGame()">
-                               <div>
-                                   <img src="../images/platform/live/allbet.png">
-                               </div>
-                               <p>歐博真人娛樂</p>
-                           </li>
-                           <li onclick="openLiveGame()">
-                               <div>
-                                   <img src="../images/platform/live/sa.png">
-                               </div>
-                               <p>沙龍真人娛樂</p>
-                           </li>
-                           <li onclick="openLiveGame()">
-                               <div>
-                                   <img src="../images/platform/live/dg.png">
-                               </div>
-                               <p>DG真人娛樂</p>
-                           </li>
-                           <li onclick="openLiveGame()">
-                               <div>
-                                   <img src="../images/platform/live/rcg.png">
-                               </div>
-                               <p>RCG</p>
-                           </li>
-                           <li onclick="openLiveGame()">
-                               <div>
-                                   <img src="../images/platform/live/wm.png">
-                               </div>
-                               <p>WM真人娛樂</p>
-                           </li>
-                        </ul>
-                        <ul class="slot">
-                           <li onclick="window.location.href='./slotPage.html'">
-                               <div>
-                                   <img src="../images/platform/slot/px.png">
-                               </div>
-                               <p>鳳凰棋牌</p>
-                           </li>
-                           <li onclick="window.location.href='./slotPage.html'">
-                               <div>
-                                   <img src="../images/platform/slot/bwin.png">
-                               </div>
-                               <p>必贏電子娛樂</p>
-                           </li>
-                           <li onclick="window.location.href='./slotPage.html'">
-                               <div>
-                                   <img src="../images/platform/slot/ifun.png">
-                               </div>
-                               <p>iFUN電子娛樂</p>
-                           </li>
-                           <li onclick="window.location.href='./slotPage.html'">
-                               <div>
-                                   <img src="../images/platform/slot/sp.png">
-                               </div>
-                               <p>SP電子娛樂</p>
-                           </li>
-                           <li onclick="window.location.href='./slotPage.html'">
-                               <div>
-                                   <img src="../images/platform/slot/pls.png">
-                               </div>
-                               <p>PLS電子娛樂</p>
-                           </li>
-                        </ul>
-                        <ul class="lottery">
-                           <li onclick="openLotteryGame()">
-                               <div>
-                                   <img src="../images/platform/lottery/sg.png">
-                               </div>
-                               <p>SG六和大樂539</p>
-                           </li>
-                           <li onclick="openLotteryGame()">
-                               <div>
-                                   <img src="../images/platform/lottery/gs.png">
-                               </div>
-                               <p>京彩彩票</p>
-                           </li>
-                        </ul>
-                        <ul class="fish">
-                           <li onclick="window.location.href='./fishPage.html'">
-                               <div>
-                                   <img src="../images/platform/fish/px.png">
-                               </div>
-                               <p>鳳凰棋牌</p>
-                           </li>
-                           <li onclick="window.location.href='./fishPage.html'">
-                               <div>
-                                   <img src="../images/platform/fish/rsg.png">
-                               </div>
-                               <p>RSG電子娛樂</p>
-                           </li>
-                           <li onclick="window.location.href='./fishPage.html'">
-                               <div>
-                                   <img src="../images/platform/fish/bwin.png">
-                               </div>
-                               <p>必贏電子娛樂</p>
-                           </li>
-                           <li onclick="window.location.href='./fishPage.html'">
-                               <div>
-                                   <img src="../images/platform/fish/sp.png">
-                               </div>
-                               <p>SP電子娛樂</p>
-                           </li>
-                        </ul>
-                        <ul class="board">
-                           <li onclick="window.location.href='./boardPage.html'">
-                               <div>
-                                   <img src="../images/platform/board/px.png">
-                               </div>
-                               <p>鳳凰棋牌</p>
-                           </li>
-                           <li onclick="window.location.href='./boardPage.html'">
-                               <div>
-                                   <img src="../images/platform/board/ifun.png">
-                               </div>
-                               <p>iFUN電子娛樂</p>
-                           </li>
-                        </ul>
-                    </div>
-                     <i class="next"></i>
-                 </div>
-             </div>
-        </div>
+                            <li class="platformBox callLive">
+                                <img src="../images/dropDown/LIVE/DG.png">
+                                <p>DG真人娛樂</p>
+                            </li>
+                            <li class="platformBox callLive">
+                                <img src="../images/dropDown/LIVE/WM.png">
+                                <p>WM真人娛樂</p>
+                            </li>
+                        </ol>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./lotteryPage.html">彩票</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox callLottery">
+                                <img src="../images/dropDown/LOTTERY/京彩.png">
+                                <p>京彩彩票</p>
+                            </li>
+                            <li class="platformBox callLottery">
+                                <img src="../images/dropDown/LOTTERY/SG88.png">
+                                <p>SG88六合、大樂、539</p>
+                            </li>
+                        </ol>
+                    </ul>
+                 </li>
+                <li>
+                    <a href="./slotPage.html">老虎機</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox" onclick="window.location.href='./slotPage_gameList.html'">
+                                <img src="../images/dropDown/SLOT/BNG.png">
+                                <p>BNG電子娛樂</p>
+                            </li>
+                            <li class="platformBox" onclick="window.location.href='./slotPage_gameList.html'">
+                                <img src="../images/dropDown/SLOT/BWIN.png">
+                                <p>BWIN電子娛樂</p>
+                            </li>
+                            <li class="platformBox" onclick="window.location.href='./slotPage_gameList.html'">
+                                <img src="../images/dropDown/SLOT/GR.png">
+                                <p>好路電子娛樂</p>
+                            </li>
+                            <li class="platformBox" onclick="window.location.href='./slotPage_gameList.html'">
+                                <img src="../images/dropDown/SLOT/RSG.png">
+                                <p>RSG電子娛樂</p>
+                            </li>
+                            <li class="platformBox" onclick="window.location.href='./slotPage_gameList.html'">
+                                <img src="../images/dropDown/SLOT/FUNTA.png">
+                                <p>福星電子娛樂</p>
+                            </li>
+                        </ol>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./fishPage.html">捕魚機</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox disabled">
+                                <img src="../images/dropDown/toBeContinue.png">
+                                <p>敬請期待!</p>
+                            </li>
+                            <li class="platformBox disabled">
+                                <img src="../images/dropDown/toBeContinue.png">
+                                <p>敬請期待!</p>
+                            </li>
+                        </ol>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./chessPage.html">棋牌遊戲</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox disabled">
+                                <img src="../images/dropDown/toBeContinue.png">
+                                <p>敬請期待!</p>
+                            </li>
+                            <li class="platformBox disabled">
+                                <img src="../images/dropDown/toBeContinue.png">
+                                <p>敬請期待!</p>
+                            </li>
+                        </ol>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./eventPage.html">優惠中心</a>
+                </li>
+            </ul>
+        </section>
     </header>
+    <!--main-->
     <main>
         <div class="innerPage">
+            <!--內容-->
             <div class="center">
+                <!--左列-->
                 <aside class="innerSide">
+                    <!--上部-->
                     <div class="userInfo">
-                        <div>
-                            <p class="account">
-                                bbb123
-                                <span class="lv">VIP20</span>
-                            </p>
-                            <p class="days">加入通博第 799 天</p>
-                            <ul class="quickSelect">
-                                <li onclick="window.location.href='./deposit.html'">
-                                    <p class="btn">存</p>
-                                    <p>存款</p>
-                                </li>
-                                <li onclick="window.location.href='./transfer.html'">
-                                    <p class="btn active">轉</p>
-                                    <p>轉帳</p>
-                                </li>
-                                <li onclick="window.location.href='./withdrawal.html'">
-                                    <p class="btn">提</p>
-                                    <p>提款</p>
-                                </li>
-                            </ul>
-                        </div>
+                        <!--帳號名稱-->
+                        <p class="account">
+                            opp121
+                            <span class="lv">VIP20</span>
+                        </p>
+                        <!--加入天數-->
+                        <p class="days">參加 799 日</p>
+                        <!--快速選單-->
+                        <ul class="quickSelect">
+                            <li onclick="window.location.href='./deposit.html'">
+                                <p class="btn">存</p>
+                                <p>存款</p>
+                            </li>
+                            <li onclick="window.location.href='./transfer.html'">
+                                <p class="btn active">轉</p>
+                                <p>轉帳</p>
+                            </li>
+                            <li onclick="window.location.href='./withdrawal.html'">
+                                <p class="btn">提</p>
+                                <p>提款</p>
+                            </li>
+                        </ul>
                     </div>
+                    <!--下部-->
                     <ul class="innerNav">
                         <li onclick="window.location.href='./member.html'">
-                            <i class="user_ic"></i>
+                            <i class="member_ic"></i>
                             個人資料
+                        </li>
+                        <li onclick="window.location.href='./invite.html'">
+                            <i class="invite_ic"></i>
+                            邀請會員
                         </li>
                         <li onclick="window.location.href='./vip.html'">
                             <i class="vip_ic"></i>
@@ -410,617 +267,424 @@
                             <i class="dealRecord_ic"></i>
                             交易紀錄
                         </li>
+                        <li onclick="window.location.href='./point.html'">
+                            <i class="point_ic"></i>
+                            查詢紅利
+                        </li>
                         <li onclick="window.location.href='./betRecord.html'">
-                            <i class="betRecord_ic"></i>
+                            <i class="bettingRecord_ic"></i>
                             投注紀錄
                         </li>
                         <li onclick="window.location.href='./eventApply.html'">
-                            <i class="event_ic"></i>
+                            <i class="eventApply_ic"></i>
                             優惠申請
                         </li>
                         <li onclick="window.location.href='./mail.html'">
                             <i class="mail_ic"></i>
                             站內信
+                            <!--信件提醒-->
+                            <span class="remind">2</span>
                         </li>
                     </ul>
                 </aside>
                 <section>
                     <div class="transferWrap">
-                        <div class="transferMiddle">
-                            <div class="title">
-                                <div>轉帳</div>
+                        <div class="title">
+                            <p>轉帳</p>
+                        </div>
+                        <!--錢包金額展示-->
+                        <div class="wallet">
+                            <div class="smallTitle">
+                                <p>
+                                    中心錢包
+                                    <i class="re_ic"></i>
+                                </p>
+                                <button>一鍵回收</button>
                             </div>
-                            <hr>
-                            <div class="wallet">
-                                <div class="centerWallet">
-                                    <div class="walletTitle">
-                                        <p>
-                                            中心錢包
-                                            <i class="reset_ic"></i>
-                                        </p>
-                                        <button>一鍵回收</button>
-                                    </div>
-                                    <div class="amount">$9883</div>
-                                </div>
-                                <div class="lin"></div>
-                                <div class="activeWallet">
-                                    <div class="walletTitle">
-                                        <p>活動錢包</p>
-                                    </div>
-                                    <div class="amount">$0</div>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="platform">
-                                <p class="platformTitle">平台錢包</p>
-                                <ul class="active">
-                                    <li>
-                                        <div class="name">BNG娛樂</div>
-                                        <p class="amount">$0</p>
-                                    </li>
-                                    <li>
-                                        <div class="name">BNG娛樂</div>
-                                        <p class="amount">$0</p>
-                                    </li>
-                                    <li>
-                                        <div class="name">BNG娛樂</div>
-                                        <p class="amount">$0</p>
-                                    </li>
-                                    <li>
-                                        <div class="name">BNG娛樂</div>
-                                        <p class="amount">$0</p>
-                                    </li>
-                                    <li>
-                                        <div class="name">BNG娛樂</div>
-                                        <p class="amount">$0</p>
-                                    </li>
-                                    <li>
-                                        <div class="name">BNG娛樂</div>
-                                        <p class="amount">$0</p>
-                                    </li>
-                                    <li>
-                                        <div class="name">BNG娛樂</div>
-                                        <p class="amount">$0</p>
-                                    </li>
-                                    <li>
-                                        <div class="name">BNG娛樂</div>
-                                        <p class="amount">$0</p>
-                                    </li>
-                                    <li>
-                                        <div class="name">BNG娛樂</div>
-                                        <p class="amount">$0</p>
-                                    </li>
-                                    <li>
-                                        <div class="name">BNG娛樂</div>
-                                        <p class="amount">$0</p>
-                                    </li>
-                                    <li>
-                                        <div class="name">BNG娛樂</div>
-                                        <p class="amount">$0</p>
-                                    </li>
-                                    <li>
-                                        <div class="name">BNG娛樂</div>
-                                        <p class="amount">$0</p>
-                                    </li>
-                                    <li>
-                                        <div class="name">BNG娛樂</div>
-                                        <p class="amount">$0</p>
-                                    </li>
-                                    <li>
-                                        <div class="name">BNG娛樂</div>
-                                        <p class="amount">$0</p>
-                                    </li>
-                                    <li>
-                                        <div class="name">BNG娛樂</div>
-                                        <p class="amount">$0</p>
-                                    </li>
-                                    <li>
-                                        <div class="name">BNG娛樂</div>
-                                        <p class="amount">$0</p>
-                                    </li>
-                                </ul>
-                                <div class="open">
-                                    <button>
-                                        展開
-                                        <i class="db_arrow"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <hr>
-                            <form>
-                                <div class="formTitle">
-                                    戶內轉帳
-                                    <p class="remind">轉入/轉出您所屬的金額</p>
-                                </div>
-                                <div class="platformBox">
-                                    <p>錢包</p>
-                                    <select>
-                                        <option>請選擇</option>
-                                    </select>
-                                    <i class="trans_ic"></i>
-                                    <p>遊戲平台</p>
-                                    <select>
-                                        <option>請選擇</option>
-                                    </select>
-                                </div>
-                                <button>確認</button>
-                            </form>
-                            <form>
-                                <div class="platformBox">
-                                    <p>遊戲平台</p>
-                                    <select>
-                                        <option>請選擇</option>
-                                    </select>
-                                    <i class="trans_ic"></i>
-                                    <p>錢包</p>
-                                    <select>
-                                        <option>請選擇</option>
-                                    </select>
-                                </div>
-                                <button disabled>確認</button>
-                            </form>
-                            <hr>
-                            <div class="activeAccount">
-                                <p class="accountTitle">活動錢包帳戶</p>
-                                <ul>
-                                    <li class="listTitle">
-                                        <div>期限</div>
-                                        <div>活動名稱</div>
-                                        <div>餘額</div>
-                                        <div>積分進度</div>
-                                        <div>操作</div>
-                                    </li>
-                                    <p class="noData display">目前無資料</p>
-                                </ul>
+                            <p class="money">$9883</p>
+                        </div>
+                        <!--平臺錢包-->
+                        <div class="platform">
+                            <p class="smallTitle">平臺錢包明細</p>
+                            <ul>
+                                <li>
+                                    <p class="name">BNG電子娛樂</p>
+                                    <p class="money">$0</p>
+                                </li>
+                                <li>
+                                    <p class="name">PLS電子娛樂</p>
+                                    <p class="money">$0</p>
+                                </li>
+                                <li>
+                                    <p class="name">SP電子娛樂</p>
+                                    <p class="money">$0</p>
+                                </li>
+                                </li>
+                                <li>
+                                    <p class="name">歐博真人娛樂</p>
+                                    <p class="money">$0</p>
+                                </li>
+                                <li>
+                                    <p class="name">BNG電子娛樂</p>
+                                    <p class="money">$0</p>
+                                </li>
+                                <li>
+                                    <p class="name">PLS電子娛樂</p>
+                                    <p class="money">$0</p>
+                                </li>
+                                <li>
+                                    <p class="name">SP電子娛樂</p>
+                                    <p class="money">$0</p>
+                                </li>
+                                </li>
+                                <li>
+                                    <p class="name">歐博真人娛樂</p>
+                                    <p class="money">$0</p>
+                                </li>
+                                <li>
+                                    <p class="name">BNG電子娛樂</p>
+                                    <p class="money">$0</p>
+                                </li>
+                                <li>
+                                    <p class="name">PLS電子娛樂</p>
+                                    <p class="money">$0</p>
+                                </li>
+                                <li>
+                                    <p class="name">SP電子娛樂</p>
+                                    <p class="money">$0</p>
+                                </li>
+                            </ul>
+                            <div class="open">
+                                <p>
+                                    展開
+                                    <i class="dbArrow_ic"></i>
+                                </p>
                             </div>
                         </div>
-                        <aside class="rightSide">
-                            <div class="smallBoard">
-                                <div class="title">
-                                    轉帳紀錄
-                                    <p class="more">
-                                        更多
-                                        <i class="arrow"></i>
-                                    </p>
-                                </div>
-                                <ul class="list trans">
-                                    <li class="transList">
-                                        <div class="transTitle">
-                                            提款
-                                            <p>$9999</p>
-                                        </div>
-                                        <div class="text">
-                                            中心錢包
-                                            <i class="trans_arrow go"></i>
-                                            BNG娛樂
-                                        </div>
-                                    </li>
-                                    <li class="transList">
-                                        <div class="transTitle">
-                                            提款
-                                            <p>$9999</p>
-                                        </div>
-                                        <div class="text">
-                                            中心錢包
-                                            <i class="trans_arrow back"></i>
-                                            BNG娛樂
-                                        </div>
-                                    </li>
-                                    <p class="noData">目前無資料</p>
-                                </ul>
+                        <!--戶內轉帳-->
+                        <form>
+                            <div class="smallTitle">
+                                戶內轉帳
+                                <p class="remind">轉入/轉出您所屬的金額</p>
                             </div>
-                        </aside>
+                            <div class="platformBox">
+                                <label>遊戲平台</label>
+                                <div>
+                                    <select>
+                                        <option>請選擇</option>
+                                    </select>
+                                    <i class="trans_ic"></i>
+                                    <select>
+                                        <option>請選擇</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="moneyBox">
+                                <div>
+                                    <label>轉帳金額</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input type="text" placeholder="0">
+                                    <div class="btnBox">
+                                        <button type="button">$100</button>
+                                        <button type="button">$500</button>
+                                        <button type="button">$1000</button>
+                                        <button type="button">$3000</button>
+                                        <button type="button">$5000</button>
+                                        <button type="button">$10000</button>
+                                        <button type="button">全部</button>
+                                    </div>
+                                    <button class="check">確認</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
+                    <aside class="rightSide">
+                        <div class="smallBoard">
+                            <div class="title">
+                                <p>轉帳紀錄</p>
+                                <p class="more" onclick="window.location.href='./dealRecord.html'">
+                                    更多
+                                    <i class="arrow_ic"></i>
+                                </p>
+                            </div>
+                            <ul class="list">
+                                <ul class="list">
+                                    <p class="noData display">目前無資料</p>
+                                </ul>
+                            </ul>
+                        </div>
+                        <div class="smallBoard">
+                            <div class="title">
+                                <p>優惠中心</p>
+                                <p class="more" onclick="window.location.href='./eventApply.html'">
+                                    更多
+                                    <i class="arrow_ic"></i>
+                                </p>
+                            </div>
+                            <ul class="list">
+                                <li class="eventBox" onclick="window.location.href='./event.html'">
+                                    <img src="../images/banner.jpg" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
                 </section>
             </div>
         </div>
     </main>
-    <nav class="sideBar">
-        <p class="download" onclick="window.location.href='./help.html'">
-            <i></i>
+    <!-- 懸浮按鈕 -->
+    <aside>
+        <div class="appD" onclick="window.location.href='./help.html'">
+            <i class="download_ic"></i>
             手機下載
-        </p>
-        <ul class="rightSide">
-            <li class="callCenter" onclick="window.location.href='./help.html'"><i></i></li>
-            <li class="line" onclick="window.location.href='./help.html'"><i></i></li>
-            <li class="weChat" onclick="window.location.href='./help.html'"><i></i></li>
-            <li class="goTop"><i></i></li>
-        </ul>
-    </nav>
+        </div>
+        <div class="cs-service">
+            <button class="cs1" onclick="window.location.href='./help.html'">
+                <i class="service_ic"></i>
+            </button>
+            <button class="cs2" onclick="window.location.href='./help.html'">
+                <i class="line_ic"></i>
+            </button>
+        </div>
+        <div class="bkTop"></div>
+    </aside>
+    <!--footer-->
     <footer>
         <div class="top">
-            <div class="center">
-                <button class="prev"></button>
-                <div class="partnerBox">
-                    <div class="partners">
-                        <i class="bng"></i>
-                        <i class="pls"></i>
-                        <i class="sp"></i>
-                        <i class="allbet"></i>
-                        <i class="sg"></i>
-                        <i class="rtg"></i>
-                        <i class="ifun"></i>
-                        <i class="wm"></i>
-                        <i class="gs"></i>
-                        <i class="iconic"></i>
-                        <i class="i36588"></i>
-                        <i class="rsg"></i>
-                        <i class="png"></i>
-                    </div>
-                </div>
-                <button class="next"></button>
-            </div>
+            <ul>
+                <li class="callNews">最新公告</li>
+                <li onclick="window.location.href='./vip.html'">VIP會員</li>
+                <li onclick="window.location.href='./help.html'">幫助中心</li>
+                <li onclick="window.location.href='./help.html'">關於我們</li>
+                <li>加入我們</li>
+            </ul>
         </div>
-        <div class="footerList">
-            <div class="center">
-                <a href="#">服務條款</a>
-                <a href="#">隱私政策</a>
-                <a href="#">責任博彩</a>
-                <a href="#">安全性</a>
-                <a href="#">免責聲明</a>
-                <a href="#">新手幫助</a>
-                <a href="#">常見問題</a>
-            </div>
+        <div class="bottom-platform">
+            <ul>
+                <li><img class="platform" src="../images/platform/AB.png" alt="AB"></li>
+                <li><img class="platform" src="../images/platform/WM.png" alt="WM"></li>
+                <li><img class="platform" src="../images/platform/DG.png" alt="DG"></li>
+                <li><img class="platform" src="../images/platform/BNG.png" alt="BNG"></li>
+                <li><img class="platform" src="../images/platform/RSG.png" alt="RSG"></li>
+                <li><img class="platform" src="../images/platform/SG88.png" alt="SG88"></li>
+                <li><img class="platform" src="../images/platform/36588.png" alt="36588"></li>
+                <li><img class="platform" src="../images/platform/GR.png" alt="GR"></li>
+                <li><img class="platform" src="../images/platform/bwin.png" alt="BWIN"></li>
+                <li><img class="platform" src="../images/platform/FUNTA.png" alt="FUNTA"></li>
+                <li><img class="platform" src="../images/platform/京彩.png" alt="gintai"></li>
+            </ul>
+        </div>
+        <div class="bottom-copy">
+            <p>&copy&nbsp;2022 BWG.COM ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
-    <div class="filter">
+    <!-- 彈跳視窗 -->
+    <div class="coverBg">
+        <!-- 快速轉帳 -->
+        <div class="jumpWindow quickTransfer sport">
+            <!-- 標題 -->
+            <div class="titleArea">
+                <p class="title">快速轉帳</p>
+                <i class="closeBtn"></i>
+            </div>
+            <!-- 內容 -->
+            <div class="tabsContent">
+                <div class="platform Line">
+                    <p class="mainFont">平台</p>
+                    <p class="transPlatform">36588</p>
+                </div>
+                <div class="wallet Line">
+                    <p class="mainFont">中心錢包</p>
+                    <input class="transfNum" name="" type="text" value="$4700" disabled>
+                </div>
+                <div class="wallet Line">
+                    <p class="mainFont">&ensp;</p>
+                    <div class="iconBox">
+                        <i class="transfer"></i>
+                    </div>
+                </div>
+                <div class="gameName Line">
+                    <p class="mainFont">SG彩票</p>
+                    <input class="transfNum" name="" type="text" value="$0">
+                </div>
+                <div class="transferNum Line">
+                    <p class="mainFont">轉帳金額</p>
+                    <input class="transfNum" name="" type="text" value="$100">
+                </div>
+                <div class="Line">
+                    <p class="mainFont">&ensp;</p>
+                    <div class="btnBox">
+                        <!-- 轉帳金額按鈕塊 -->
+                        <div class="moneyBtn">
+                            <button class="myBlock">$100</button>
+                            <button class="myBlock">$500</button>
+                            <button class="myBlock">$1000</button>
+                            <button class="myBlock">$3000</button>
+                            <button class="myBlock">$5000</button>
+                            <button class="myBlock">$10000</button>
+                            <button class="myBlock">全部</button>
+                        </div>
+                        <button class="checkBtn">確認</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <button class="checkBtn closeBtn">進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow quickTransfer live">
+            <!-- 標題 -->
+            <div class="titleArea">
+                <p class="title">快速轉帳</p>
+                <i class="closeBtn"></i>
+            </div>
+            <!-- 內容 -->
+            <div class="tabsContent">
+                <div class="platform Line">
+                    <p class="mainFont">平台</p>
+                    <p class="transPlatform">AB真人</p>
+                </div>
+                <div class="wallet Line">
+                    <p class="mainFont">中心錢包</p>
+                    <input class="transfNum" name="" type="text" value="$4700" disabled>
+                </div>
+                <div class="wallet Line">
+                    <p class="mainFont">&ensp;</p>
+                    <div class="iconBox">
+                        <i class="transfer"></i>
+                    </div>
+                </div>
+                <div class="gameName Line">
+                    <p class="mainFont">SG彩票</p>
+                    <input class="transfNum" name="" type="text" value="$0">
+                </div>
+                <div class="transferNum Line">
+                    <p class="mainFont">轉帳金額</p>
+                    <input class="transfNum" name="" type="text" value="$100">
+                </div>
+                <div class="Line">
+                    <p class="mainFont">&ensp;</p>
+                    <div class="btnBox">
+                        <!-- 轉帳金額按鈕塊 -->
+                        <div class="moneyBtn">
+                            <button class="myBlock">$100</button>
+                            <button class="myBlock">$500</button>
+                            <button class="myBlock">$1000</button>
+                            <button class="myBlock">$3000</button>
+                            <button class="myBlock">$5000</button>
+                            <button class="myBlock">$10000</button>
+                            <button class="myBlock">全部</button>
+                        </div>
+                        <button class="checkBtn">確認</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <button class="checkBtn closeBtn">進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow quickTransfer lottery">
+            <!-- 標題 -->
+            <div class="titleArea">
+                <p class="title">快速轉帳</p>
+                <i class="closeBtn"></i>
+            </div>
+            <!-- 內容 -->
+            <div class="tabsContent">
+                <div class="platform Line">
+                    <p class="mainFont">平台</p>
+                    <p class="transPlatform">SG彩票</p>
+                </div>
+                <div class="wallet Line">
+                    <p class="mainFont">中心錢包</p>
+                    <input class="transfNum" name="" type="text" value="$4700" disabled>
+                </div>
+                <div class="wallet Line">
+                    <p class="mainFont">&ensp;</p>
+                    <div class="iconBox">
+                        <i class="transfer"></i>
+                    </div>
+                </div>
+                <div class="gameName Line">
+                    <p class="mainFont">SG彩票</p>
+                    <input class="transfNum" name="" type="text" value="$0">
+                </div>
+                <div class="transferNum Line">
+                    <p class="mainFont">轉帳金額</p>
+                    <input class="transfNum" name="" type="text" value="$100">
+                </div>
+                <div class="Line">
+                    <p class="mainFont">&ensp;</p>
+                    <div class="btnBox">
+                        <!-- 轉帳金額按鈕塊 -->
+                        <div class="moneyBtn">
+                            <button class="myBlock">$100</button>
+                            <button class="myBlock">$500</button>
+                            <button class="myBlock">$1000</button>
+                            <button class="myBlock">$3000</button>
+                            <button class="myBlock">$5000</button>
+                            <button class="myBlock">$10000</button>
+                            <button class="myBlock">全部</button>
+                        </div>
+                        <button class="checkBtn">確認</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <button class="checkBtn closeBtn">進入遊戲</button>
+            </div>
+        </div>
+        <!--最新消息-->
         <div class="jumpWindow news">
-            <div class="title">
-                <p>最新公告</p>
-                <i class="close_ic"></i>
+            <div class="titleArea">
+                <p class="title">最新公告</p>
+                <i class="closeBtn"></i>
             </div>
-            <ul class="nav">
-                <li class="hot active">熱門</li>
-                <li class="normal">一般</li>
-                <li class="deposit">存款</li>
+            <ul class="tabs">
+                <li class="active">熱門</li>
+                <li>一般</li>
+                <li>存款</li>
             </ul>
-            <ul class="content forHot display">
-                <li>
-                    <div>
-                        <p class="text">公告測試</p>
+            <div class="tabsContent hot display">
+                <ul>
+                    <li>
+                        <p>親愛的會員您好： 《BGW》營運團隊在此重申打擊外掛的決心，同時也呼籲利用BUG、不法程親愛的會員您好： 《BGW》營運團隊在此重申打擊外掛的決心，同時也呼籲利用BUG、不法程</p>
                         <p class="date">2021/09/26</p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <p class="text">公告測試</p>
+                    </li>
+                    <li>
+                        <p>★敬請注意★ 1.本公司對於任何個人或團體以外掛軟件程式同時在同一項目投注相同內容的注親愛的會員您好： 《BGW》營運團隊在此重申打擊外掛的決心，同時也呼籲利用BUG、不法程</p>
                         <p class="date">2021/09/26</p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <p class="text">公告測試</p>
+                    </li>
+                    <li>
+                        <p>近期有部分有心人士，於網路上張貼惡意連結或是騙取會員的帳號密碼連結</p>
                         <p class="date">2021/09/26</p>
-                    </div>
-                </li>
-            </ul>
-            <ul class="content forNormal">
-                <li>
-                    <div>
-                        <p class="text">公告測試</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabsContent general">
+                <ul>
+                    <li>
+                        <p>親愛的會員您好： 《BGW》營運團隊在此重申打擊外掛的決心，同時也呼籲利用BUG、不法程親愛的會員您好： 《BGW》營運團隊在此重申打擊外掛的決心，同時也呼籲利用BUG、不法程</p>
                         <p class="date">2021/09/26</p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <p class="text">公告測試</p>
+                    </li>
+                    <li>
+                        <p>★敬請注意★ 1.本公司對於任何個人或團體以外掛軟件程式同時在同一項目投注相同內容的注親愛的會員您好： 《BGW》營運團隊在此重申打擊外掛的決心，同時也呼籲利用BUG、不法程</p>
                         <p class="date">2021/09/26</p>
-                    </div>
-                </li>
-            </ul>
-            <ul class="content forDeposit">
-                <li>
-                    <div>
-                        <p class="text">公告測試</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabsContent deposit">
+                <ul>
+                    <li>
+                        <p>親愛的會員您好： 《BGW》營運團隊在此重申打擊外掛的決心，同時也呼籲利用BUG、不法程親愛的會員您好： 《BGW》營運團隊在此重申打擊外掛的決心，同時也呼籲利用BUG、不法程</p>
                         <p class="date">2021/09/26</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="jumpWindow betWindow sportGame01">
-            <i class="close_ic"></i>
-            <div class="betTitle">36588</div>
-            <form>
-                <div class="row">
-                    <p>中心錢包</p>
-                    <input type="text" value="$9999">
-                </div>
-                <div class="row">
-                    <i class="trans_arrow"></i>
-                </div>
-                <div class="row">
-                    <p>BNG電子娛樂</p>
-                    <input type="text" value="$0">
-                </div>
-                <div class="row">
-                    <p>轉帳金額</p>
-                    <input type="text" value="$100">
-                </div>
-                <div class="row forBtn">
-                    <div class="btnBox">
-                        <button>$100</button>
-                        <button>$500</button>
-                        <button>$1000</button>
-                        <button>$3000</button>
-                        <button>$5000</button>
-                        <button>$10000</button>
-                        <button>全部</button>
-                    </div>
-                </div>
-                <div class="row forBtn">
-                    <button class="check">確認</button>
-                </div>
-            </form>
-            <div class="enterGame">
-                <button>進入遊戲</button>
-            </div>
-        </div>
-        <div class="jumpWindow betWindow liveGame01">
-            <i class="close_ic"></i>
-            <div class="betTitle">ALLBET</div>
-            <form>
-                <div class="row">
-                    <p>中心錢包</p>
-                    <input type="text" value="$9999">
-                </div>
-                <div class="row">
-                    <i class="trans_arrow"></i>
-                </div>
-                <div class="row">
-                    <p>歐博真人</p>
-                    <input type="text" value="$0">
-                </div>
-                <div class="row">
-                    <p>轉帳金額</p>
-                    <input type="text" value="$100">
-                </div>
-                <div class="row forBtn">
-                    <div class="btnBox">
-                        <button>$100</button>
-                        <button>$500</button>
-                        <button>$1000</button>
-                        <button>$3000</button>
-                        <button>$5000</button>
-                        <button>$10000</button>
-                        <button>全部</button>
-                    </div>
-                </div>
-                <div class="row forBtn">
-                    <button class="check">確認</button>
-                </div>
-            </form>
-            <div class="enterGame">
-                <button>進入遊戲</button>
-            </div>
-        </div>
-        <div class="jumpWindow betWindow liveGame02">
-            <i class="close_ic"></i>
-            <div class="betTitle">WM</div>
-            <form>
-                <div class="row">
-                    <p>中心錢包</p>
-                    <input type="text" value="$9999">
-                </div>
-                <div class="row">
-                    <i class="trans_arrow"></i>
-                </div>
-                <div class="row">
-                    <p>WM真人</p>
-                    <input type="text" value="$0">
-                </div>
-                <div class="row">
-                    <p>轉帳金額</p>
-                    <input type="text" value="$100">
-                </div>
-                <div class="row forBtn">
-                    <div class="btnBox">
-                        <button>$100</button>
-                        <button>$500</button>
-                        <button>$1000</button>
-                        <button>$3000</button>
-                        <button>$5000</button>
-                        <button>$10000</button>
-                        <button>全部</button>
-                    </div>
-                </div>
-                <div class="row forBtn">
-                    <button class="check">確認</button>
-                </div>
-            </form>
-            <div class="enterGame">
-                <button>進入遊戲</button>
-            </div>
-        </div>
-        <div class="jumpWindow betWindow lotteryGame01">
-            <i class="close_ic"></i>
-            <div class="betTitle">SG</div>
-            <form>
-                <div class="row">
-                    <p>中心錢包</p>
-                    <input type="text" value="$9999">
-                </div>
-                <div class="row">
-                    <i class="trans_arrow"></i>
-                </div>
-                <div class="row">
-                    <p>SG彩票</p>
-                    <input type="text" value="$0">
-                </div>
-                <div class="row">
-                    <p>轉帳金額</p>
-                    <input type="text" value="$100">
-                </div>
-                <div class="row forBtn">
-                    <div class="btnBox">
-                        <button>$100</button>
-                        <button>$500</button>
-                        <button>$1000</button>
-                        <button>$3000</button>
-                        <button>$5000</button>
-                        <button>$10000</button>
-                        <button>全部</button>
-                    </div>
-                </div>
-                <div class="row forBtn">
-                    <button class="check">確認</button>
-                </div>
-            </form>
-            <div class="enterGame">
-                <button>進入遊戲</button>
-            </div>
-        </div>
-        <div class="jumpWindow betWindow lotteryGame02">
-            <i class="close_ic"></i>
-            <div class="betTitle">GS</div>
-            <form>
-                <div class="row">
-                    <p>中心錢包</p>
-                    <input type="text" value="$9999">
-                </div>
-                <div class="row">
-                    <i class="trans_arrow"></i>
-                </div>
-                <div class="row">
-                    <p>GS彩票</p>
-                    <input type="text" value="$0">
-                </div>
-                <div class="row">
-                    <p>轉帳金額</p>
-                    <input type="text" value="$100">
-                </div>
-                <div class="row forBtn">
-                    <div class="btnBox">
-                        <button>$100</button>
-                        <button>$500</button>
-                        <button>$1000</button>
-                        <button>$3000</button>
-                        <button>$5000</button>
-                        <button>$10000</button>
-                        <button>全部</button>
-                    </div>
-                </div>
-                <div class="row forBtn">
-                    <button class="check">確認</button>
-                </div>
-            </form>
-            <div class="enterGame">
-                <button>進入遊戲</button>
-            </div>
-        </div>
-        <div class="jumpWindow betWindow slotGame01">
-            <i class="close_ic"></i>
-            <div class="betTitle">老虎機</div>
-            <form>
-                <div class="row">
-                    <p>中心錢包</p>
-                    <input type="text" value="$9999">
-                </div>
-                <div class="row">
-                    <i class="trans_arrow"></i>
-                </div>
-                <div class="row">
-                    <p>BNG電子娛樂</p>
-                    <input type="text" value="$0">
-                </div>
-                <div class="row">
-                    <p>轉帳金額</p>
-                    <input type="text" value="$100">
-                </div>
-                <div class="row forBtn">
-                    <div class="btnBox">
-                        <button>$100</button>
-                        <button>$500</button>
-                        <button>$1000</button>
-                        <button>$3000</button>
-                        <button>$5000</button>
-                        <button>$10000</button>
-                        <button>全部</button>
-                    </div>
-                </div>
-                <div class="row forBtn">
-                    <button class="check">確認</button>
-                </div>
-            </form>
-            <div class="enterGame">
-                <button>進入遊戲</button>
-            </div>
-        </div>
-        <div class="jumpWindow betWindow fishGame01">
-            <i class="close_ic"></i>
-            <div class="betTitle">捕魚機</div>
-            <form>
-                <div class="row">
-                    <p>中心錢包</p>
-                    <input type="text" value="$9999">
-                </div>
-                <div class="row">
-                    <i class="trans_arrow"></i>
-                </div>
-                <div class="row">
-                    <p>BNG電子娛樂</p>
-                    <input type="text" value="$0">
-                </div>
-                <div class="row">
-                    <p>轉帳金額</p>
-                    <input type="text" value="$100">
-                </div>
-                <div class="row forBtn">
-                    <div class="btnBox">
-                        <button>$100</button>
-                        <button>$500</button>
-                        <button>$1000</button>
-                        <button>$3000</button>
-                        <button>$5000</button>
-                        <button>$10000</button>
-                        <button>全部</button>
-                    </div>
-                </div>
-                <div class="row forBtn">
-                    <button class="check">確認</button>
-                </div>
-            </form>
-            <div class="enterGame">
-                <button>進入遊戲</button>
-            </div>
-        </div>
-        <div class="jumpWindow betWindow boardGame01">
-            <i class="close_ic"></i>
-            <div class="betTitle">棋牌遊戲</div>
-            <form>
-                <div class="row">
-                    <p>中心錢包</p>
-                    <input type="text" value="$9999">
-                </div>
-                <div class="row">
-                    <i class="trans_arrow"></i>
-                </div>
-                <div class="row">
-                    <p>鳳凰棋牌</p>
-                    <input type="text" value="$0">
-                </div>
-                <div class="row">
-                    <p>轉帳金額</p>
-                    <input type="text" value="$100">
-                </div>
-                <div class="row forBtn">
-                    <div class="btnBox">
-                        <button>$100</button>
-                        <button>$500</button>
-                        <button>$1000</button>
-                        <button>$3000</button>
-                        <button>$5000</button>
-                        <button>$10000</button>
-                        <button>全部</button>
-                    </div>
-                </div>
-                <div class="row forBtn">
-                    <button class="check">確認</button>
-                </div>
-            </form>
-            <div class="enterGame">
-                <button>進入遊戲</button>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
+    <!--BG-->
+    <div class="bg"></div>
 </body>
 </html>

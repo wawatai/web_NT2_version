@@ -1,244 +1,297 @@
 .helpPage {
-    width: 100%;
+    width: 1200px;
     height: auto;
-    min-height: 565px;
-    padding-bottom: 42px;
+    margin: 0 auto;
+    padding: 120px 0 28px;
 
-    .center {
-        width: 1400px;
-        margin: 0 auto;
-        padding-top: 25px;
+    .wrap {
         display: flex;
         justify-content: space-between;
-        
-        .nav {
-            background: $backgroundColor_3;
-            width: 390px;
-            height: auto;
-            box-shadow: 0 5px 10px -5px $boxShadow_3;
-            border-radius: 5px;
-            padding: 10px 0 13px;
 
-            li {
+        //左側
+        .leftArea {
+            width: 280px;
+            height: auto;
+
+            .helpList {
                 width: 100%;
                 height: auto;
+                @include bgStyle_1;
 
-                &.title {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    padding-left: 26px;
+                li {
+                    width: 100%;
                     height: 60px;
-                    box-sizing: border-box;
-                    cursor: pointer;
-    
-                    &:hover,&:active,&.active {
-    
-                        .arrow_ic {
-                            transform: rotate(270deg);
+                    flex-direction: column;
+                    position: relative;
+                    overflow: hidden;
+
+                    //新手幫助ICON
+                    .newMember {
+                        width: 21px;
+                        height: 21px;
+                        margin-right: 17px;
+                        background-position-y: 0;
+                    }
+
+                    //常見問題ICON
+                    .commonQA {
+                        width: 21px;
+                        height: 21px;
+                        margin-right: 17px;
+                        background-position-y: 32%;
+                    }
+
+                    //關於我們ICON
+                    .aboutUS {
+                        width: 21px;
+                        height: 21px;
+                        margin-right: 17px;
+                        background-position-y: 66%;
+                    }
+
+                    //APP下載ICON
+                    .appDownload {
+                        width: 21px;
+                        height: 21px;
+                        margin-right: 17px;
+                        background-position-y: 100%;
+                    }
+
+                    &:hover,&:active {
+
+                        p {
+                            
+                            &:first-child {
+
+                                &::before {
+                                    transform: rotate(0deg);
+                                }
+                            }
                         }
                     }
-    
+
+                    &.active {
+                        height: auto;
+
+                        p {
+                            
+                            &:first-child {
+
+                                &::before {
+                                    transform: rotate(90deg);
+                                }
+                            }
+                        }
+                    }
+
                     p {
+                        width: 100%;
+                        height: 45px;
                         display: flex;
                         align-items: center;
-                        color: $fontColor_4;
-                        font-size: 22px;
-                        font-weight: bold;
-    
-                        i {
-                            display: block;
-                            width: 20px;
-                            height: 20px;
-                            margin-right: 23px;
-    
-                            &.bulb {
-                                height: 24px;
-                            }
+                        flex-shrink: 0;
+                        padding: 0 62px;
+                        cursor: pointer;
 
-                            &.aboutUs {
-                                height: 28px;
+                        &:first-child {
+                            height: 60px;
+                            color: $chooseStyle_Word_1;
+                            font-size: 20px;
+                            font-weight: bold;
+                            padding: 0 24px;
+
+                            &::before {
+                                content: "";
+                                width: 9px;
+                                height: 16px;
+                                position: absolute;
+                                right: 24px;
+                                transition: 0.3s all;
                             }
                         }
-                    }
-    
-                    .arrow_ic {
-                        width: 8px;
-                        height: 16px;
-                        transition: 0.3s all;
-                        transform: rotate(180deg);
-                        margin-right: 23px;
-                    }
-                }
 
-                &.box {
-                    display: none;
-
-                    &.display {
-                        display: block;
-                    }
-
-                    ul {
-                        width: 100%;
-                        height: auto;
-                        
-                        li {
-                            width: 100%;
-                            height: 45px;
-                            box-sizing: border-box;
-                            padding-left: 72px;
-                            cursor: pointer;
-                            display: flex;
-                            align-items: center;
+                        &:not(:first-child) {
+                            @include chooseStyle;
+                            border: none;
+                            color: $chooseStyle_Word_2;
                             font-size: 18px;
-                            font-weight: bold;
-                            color: $fontColor_7;
-    
-                            &:hover,&:active,&.active {
-                                background: $backgroundColor_10;
-                                color: $fontColor_4;
-                            }
                         }
                     }
                 }
             }
         }
-        
-        .helpWrap {
-            width: 980px;
-            height: auto;
-            background: $backgroundColor_3;
-            box-shadow: 0px 5px 10px -5px $boxShadow_3;
-            border-radius: 5px;
-            margin-bottom: 40px;
-            box-sizing: border-box;
-            padding: 44px 58px;
 
-            div {
+        //右側
+        .rightArea {
+            width: 900px;
+            height: auto;
+            min-height: 600px;
+            @include bgStyle_1;
+            padding: 35px;
+
+            .helpDetail {
                 display: none;
 
                 &.display {
                     display: block;
                 }
+            }
 
-                h2 {
-                    margin: 49px 0;
-                    color: $fontColor_3;
-                    font-size: 22px;
+            .lineBox {
+                width: 100%;
+                height: auto;
+
+                .helpTitle {
+                    color: $main-font;
+                    font-size: 24px;
                     font-weight: bold;
+                    margin-bottom: 29px;
+                }
 
-                    &:nth-of-type(1) {
-                        margin-top: 0;
+                .content {
+                    margin-bottom: 33px;
+
+                    p {
+                        color: $subs-font;
+                        font-size: 16px;
+                        line-height: 30px;
                     }
-                }
-                
-                h3 {
-                    color: $fontColor_3;
-                    font-size: 15px;
-                    font-weight: bold;
-                    margin-bottom: 13px;
-                }
+                    .sub-title {
+                        color: $subs-font;
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
 
-                p {
-                    margin-bottom: 23px;
-                    color: $fontColor_10;
-                    font-size: 16px;
-                    line-height: 24px;
-                }
+                    ul {
+                        ol {
+                            padding-left: 30px;
+                            margin:15px 0 ;
 
-                a {
-                    color: $fontColor_14;
-                    text-decoration: none;
-                }
-
-                .teachList {
-                    width: 100%;
-                    height: auto;
-                    
-                    li {
-                        width: 100%;
-                        height: auto;
-                        margin-top: 12px;
-
-                        &.active {
-
-                            .title {
-
-                                .arrow_ic {
-                                    transform: rotate(270deg);
+                            li {
+                                color: $subs-font;
+                                font-size: 16px;
+                                line-height: 30px;
+                            
+                                a {
+                                   color: $remind; 
+                                   cursor: pointer;
                                 }
                             }
-
-                            .content {
-                                display: block;
+                        }
+                        .step {
+                            li {
+                                list-style-type: decimal;
                             }
                         }
-
-                        .title {
-                            cursor: pointer;
-                            width: 100%;
-                            height: 44px;
-                            border-radius: 3px;
-                            box-sizing: border-box;
-                            padding: 0 37px 0 14px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-                            background: $backgroundColor_4;
-
-                            p {
-                                color: $fontColor_3;
-                                font-size: 16px;
-                                margin: 0;
-                            }
-
-                            .arrow_ic {
-                                width: 8px;
-                                height: 16px;
-                                transform: rotate(180deg);
-                                transition: 0.3s all;
-                            }
+                        .dot {
+                            li {
+                                list-style-type:disc;
+                            };
                         }
-
-                        .content {
-                            width: 100%;
-                            height: auto;
-                            background: $backgroundColor_4;
+                        .Lrome {
+                            li {
+                                list-style-type:lower-roman;
+                            };
                         }
                     }
-                }
 
-                .img {
-                    display: block;
+                    a {
+                        color: $helpPage_link;
+                        text-decoration: none;
+                        cursor: pointer;
 
-                    &.online01 {
-                        width: 860px;
-                        height: 736px;
+                        &:hover,&:active,&.active {
+                            text-decoration:underline;
+                        }
                     }
 
-                    &.online02 {
-                        width: 862px;
-                        height: 749px;
-                        margin-bottom: 20px;
+                    .sub-tit {
+                        display: flex;
+
+                       .subTi {
+                            color: $main-font;
+                            font-size: 20px;
+                        }
                     }
 
-                    &.online03 {
-                        width: 862px;
-                        height: 957px;
+                    .bold {
+                        color: $subs-font;
+                        font-size: 16px;
+                        font-weight: bold;
                     }
 
-                    &.online04 {
+                    code {
+                        padding: 0.2em 0.4em;
+                        font-family: 'Courier New', Courier, monospace;
+                        background-color: $helpPage_linkBG;
+                        border-radius: 3px;
+                        cursor: text;
+                    }
+
+                    //提款頁說明圖
+                    .applypic {
+                        width: 822px;
+                        height: 964px;
+                    }
+
+                    //轉帳頁說明圖
+                    .transferpic {
+                        width: 820px;
+                        height: 706px;
+                    }
+
+                    //遠端協助頁說明圖
+                    .teamViewer {
                         width: 187px;
                         height: 144px;
                     }
-
-                    &.online05 {
+                    .tvWindow {
                         width: 275px;
                         height: 379px;
-                        margin: 10px 0 20px 55px;
                     }
+                    
+                    //證照展示
+                    .license {
+                        width: 824px;
+                        height: 1097.77px;
+                    }
+
+
+                    //歐博下載按鈕
+                    .AB, .WM {
+                        width: 255px;
+                        height: 39px;
+                    }
+
+                    //沙龍下載按鈕
+                    .SA {
+                        width: 142px;
+                        height: 39px;
+                        font-weight: 600;
+                        margin-left: 15px;
+                    }
+
+                    //沙龍下載標題+按鈕
+                    .downloadBtn {
+                        @include mainBtn;
+
+                        .DLbtn {
+                            color: $dark-font;
+
+                            &:hover,&:active,&.active {
+                                text-decoration: none;
+                            }
+                        }
+                    }
+
                 }
+
             }
+
+            :first-child {
+                margin-top: 0;
+            }
+            
         }
     }
 }

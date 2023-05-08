@@ -2,60 +2,98 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.25">
-    <title>Document</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=0.25"> -->
+    <link rel="icon" href="../images/favicon64x64.ico" sizes="16x16">
+    <title>大黃金</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
-    <script src="../js/javascript.js"></script>
-    <link rel="shortcut icon" href="../images/myIco.ico" type="image/x-icon">
+    <script type="module" src="../js/javascript.js"></script>
 </head>
 <body>
+    <!--main-->
     <main>
         <div class="registerWrap">
             <div class="bigBox">
-                <div class="left">
-                    <img src="../images/icon/svg/logo.svg">
+                <div class="leftWrap">
+                    <div class="img"></div>
                 </div>
-                <form class="right">
+                <form>
                     <div class="title">
-                        <i class="person_ic"></i>
-                        註冊
+                        <i class="user_ic"></i>
+                        <p>註冊</p>
                     </div>
                     <label>
                         <input type="text" placeholder="請輸入帳號">
-                        <p class="err">帳號須包含一個英文字母(大小寫皆可);最少六個字元</p>
+                        <p class="remind">帳號須包含一個英文字母(大小寫皆可);最少六個字元</p>
                     </label>
                     <label>
-                        <input type="password" placeholder="請輸入密碼">
-                        <p class="err">數字英文,及限定的特殊符號(@._$#%^&*+-)可使用</p>
-                        <i class="eye"></i>
+                        <input type="text" placeholder="輸入密碼">
+                        <i class="eye_ic"></i>
+                        <p class="remind">數字英文,及限定的特殊符號(@._$#%^&*+-)可使用</p>
                     </label>
                     <label>
-                        <input type="password" placeholder="密碼確認">
+                        <input type="text" placeholder="密碼確認">
                     </label>
                     <label>
                         <input type="text" placeholder="手機">
-                        <button>傳送驗證碼</button>
-                    </label>
-                    <label>
-                        <input type="text" placeholder="手機驗證碼">
+                        <button type="button" class="codeBtn callnumHint">取得驗證碼</button>
+                        <p class="remindR"><span class="count">10</span>秒後，可重新取得驗證碼</p>
                     </label>
                     <label>
                         <input type="text" placeholder="邀請碼">
                     </label>
-                    <p class="tips">如無推薦的代理可不填寫</p>
-                    <div class="checkBox">
+                    <div class="ruleBox">
                         <input type="checkbox">
-                        <p>已閱讀並同意<span>相關條款與隱私政策</span></p>
+                        <p>
+                            已閱讀並同意
+                            <span class="callrule">相關條款與隱私政策</span>
+                        </p>
                     </div>
-                    <button class="checkBtn">確認</button>
+                    <button class="check" type="button" disabled>確認</button>
+                    <button class="enter" type="button" onclick="window.location.href='../index.html'">進去逛逛</button>
                 </form>
             </div>
         </div>
     </main>
+    <!-- 彈跳視窗 -->
+    <div class="coverBg">
+        <!--相關條款彈窗-->
+        <div class="jumpWindow clickWindow rule">
+            <div class="titleArea">
+                <p class="title">提示</p>
+                <i class="closeBtn"></i>
+            </div>
+            <div class="ruleCnt">
+                <div class="ruleBox">
+                    <p class="title">遵守會員規範及法律規定</p>
+                    <p>您瞭解您註冊成為會員後，即可使用本公司所提供之各項服務(以下稱本服務)。當會員使用本服務時，即表示除了同意遵守本服務條款外，還同意接受本公司對會員規範(包括各項遊戲規則、球賽投注規則、公告及注意事項等)及相關法令規定之拘束，本公司BGW所有產品與客戶服務、軟件系統、網絡架構等相關業務事宜，請使用本服務之會員請遵守使用者當地法令之許可，如有違反之情事恕非本服務之負責範圍。</p>
+                    <p class="title">服務簡介</p>
+                    <p>本公司旨在創造一個『安全可靠』、『即時便利』、『公平公正』、『專業營運』的優質娛樂服務平台，強調的讓會員不受時空的限制，24小時隨時上線就可以參與一個公平公正的遊戲，亦可以享受到與世界各地玩家切磋的樂趣，我們秉持以客為尊的態度，不斷開發創新及了解客戶需求是本公司引以為傲的經營理念，翼望能創造出嶄新的娛樂價值以及達到多方普及的目的，成為具有領導指標性的娛樂網站。2.虛擬貨幣銀行服務：本公司提供網路金流付費平台，你所購買的點數將可享受符合本公司平台的服務。若您使用虛偽不正之方式進行「儲值」，本公司也將保留隨時終止您會員資格及使用各項服務之權利。</p>
+                    <p class="title">遵守會員規範及法律規定</p>
+                    <p>您瞭解您註冊成為會員後，即可使用本公司所提供之各項服務(以下稱本服務)。當會員使用本服務時，即表示除了同意遵守本服務條款外，還同意接受本公司對會員規範(包括各項遊戲規則、球賽投注規則、公告及注意事項等)及相關法令規定之拘束，本公司BGW所有產品與客戶服務、軟件系統、網絡架構等相關業務事宜，請使用本服務之會員請遵守使用者當地法令之許可，如有違反之情事恕非本服務之負責範圍。</p>
+                    <p class="title">服務簡介</p>
+                    <p>本公司旨在創造一個『安全可靠』、『即時便利』、『公平公正』、『專業營運』的優質娛樂服務平台，強調的讓會員不受時空的限制，24小時隨時上線就可以參與一個公平公正的遊戲，亦可以享受到與世界各地玩家切磋的樂趣，我們秉持以客為尊的態度，不斷開發創新及了解客戶需求是本公司引以為傲的經營理念，翼望能創造出嶄新的娛樂價值以及達到多方普及的目的，成為具有領導指標性的娛樂網站。2.虛擬貨幣銀行服務：本公司提供網路金流付費平台，你所購買的點數將可享受符合本公司平台的服務。若您使用虛偽不正之方式進行「儲值」，本公司也將保留隨時終止您會員資格及使用各項服務之權利。</p>
+                    <p class="title">遵守會員規範及法律規定</p>
+                    <p>您瞭解您註冊成為會員後，即可使用本公司所提供之各項服務(以下稱本服務)。當會員使用本服務時，即表示除了同意遵守本服務條款外，還同意接受本公司對會員規範(包括各項遊戲規則、球賽投注規則、公告及注意事項等)及相關法令規定之拘束，本公司BGW所有產品與客戶服務、軟件系統、網絡架構等相關業務事宜，請使用本服務之會員請遵守使用者當地法令之許可，如有違反之情事恕非本服務之負責範圍。</p>
+                    <p class="title">服務簡介</p>
+                    <p>本公司旨在創造一個『安全可靠』、『即時便利』、『公平公正』、『專業營運』的優質娛樂服務平台，強調的讓會員不受時空的限制，24小時隨時上線就可以參與一個公平公正的遊戲，亦可以享受到與世界各地玩家切磋的樂趣，我們秉持以客為尊的態度，不斷開發創新及了解客戶需求是本公司引以為傲的經營理念，翼望能創造出嶄新的娛樂價值以及達到多方普及的目的，成為具有領導指標性的娛樂網站。2.虛擬貨幣銀行服務：本公司提供網路金流付費平台，你所購買的點數將可享受符合本公司平台的服務。若您使用虛偽不正之方式進行「儲值」，本公司也將保留隨時終止您會員資格及使用各項服務之權利。</p>
+                </div>
+                <button class="closeBtn">同意</button>
+            </div>
+        </div>
+        <!--取得驗證碼>提示-->
+        <div class="jumpWindow numHint">
+            <div class="titleArea">
+                <p class="title">提示</p>
+                <i class="closeBtn"></i>
+            </div>
+            <div class="content">
+                <p>電話號碼必須為10個數字</p>
+                <button class="closeBtn">同意</button>
+            </div>
+        </div>
+    </div>
+    <!--BG-->
+    <div class="bg register"></div>
 </body>
 </html>

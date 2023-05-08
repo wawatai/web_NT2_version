@@ -1,0 +1,257 @@
+//deposit
+.depositWrap {
+    width: 100%;
+    height: auto;
+
+    //上部
+    .top {
+        width: 100%;
+        height: auto;
+        @include bgStyle_2;
+        margin-bottom: 15px;
+
+        .title {
+            @include innerTitleStyle;
+            justify-content: space-between;
+            padding-right: 16px;
+
+            button {
+                width: auto;
+                height: 32px;
+                @include secondBtn;
+                padding: 0 10px;
+
+                &:hover,&:active,&.active {
+
+                    i {
+                        background: none;
+
+                        &::before {
+                            display: block;
+                        }
+                    }
+                }
+
+                i {
+                    width: 16px;
+                    height: 16px;
+                    margin: 0 5px -2px 0;
+                    position: relative;
+
+                    &::before {
+                        display: none;
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        //種類按鈕
+        .list {
+            width: 100%;
+            height: auto;
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .prev,
+            .next {
+                width: 9px;
+                height: 16px;
+                cursor: pointer;
+
+                &.prev {
+                    transform: scaleX(-1);
+                }
+            }
+
+            .box {
+                width: 95%;
+                height: auto;
+                overflow: hidden;
+
+                ul {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+
+                    li {
+                        width: auto;
+                        height: 32px;
+                        @include secondBtn;
+                        margin-right: 15px;
+                        padding: 0 10px;
+
+                        &:hover,&:active,&.active {
+                            
+                            i {
+                                background: none;
+
+                                &::before {
+                                    display: block;
+                                }
+                            }
+                        }
+
+                        i {
+                            width: 16px;
+                            height: 16px;
+                            margin-right: 5px;
+                            position: relative;
+
+                            &::before {
+                                display: none;
+                                content: "";
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                left: 0;
+                                top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //下部
+    .bottom {
+        width: 100%;
+        height: auto;
+        @include bgStyle_2;
+
+        .fakeTable {
+            width: 100%;
+            height: auto;
+            display: none;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                @include innerTitleStyle;
+                font-size: 16px;
+                border: none;
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+                margin-top: 10px;
+                padding: 0 16px;
+
+                li {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    margin-bottom: 40px;
+
+                    label {
+                        width: 120px;
+                        height: auto;
+                        color: $main-font;
+                        font-size: 14px;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+
+                        &.sp {
+                            color: $subs-font;
+                        }
+
+                        &.short {
+                            width: 60px;
+                        }
+
+                        em {
+                            color: $remind;
+                            font-size: 14px;
+                            margin-right: 5px;
+                        }
+                    }
+
+                    input {
+                        width: 257px;
+                        height: 42px;
+                        @include mainInput;
+                    }
+
+                    select {
+                        width: 257px;
+                        height: 42px;
+                        @include mainSelect;
+                    }
+
+                    .name {
+                        width: 120px;
+                        color: $subs-font;
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+
+                    .copy {
+                        width: auto;
+                        height: 32px;
+                        @include secondBtn;
+                        padding: 0 10px;
+                    }
+
+                    .remind {
+                        width: auto;
+                        color: $remind;
+                        font-size: 14px;
+                        font-weight: bold;
+                        position: absolute;
+                        left: 120px;
+                        top: 50px;
+                    }
+                }
+            }
+
+            .check {
+                width: 257px;
+                height: 42px;
+                @include mainBtn;
+                margin-left: 136px;
+            }
+
+            .remindBox {
+                width: 96%;
+                height: auto;
+                @include bgStyle_3;
+                border-radius: 0;
+                margin: 150px auto 16px;
+                padding: 16px;
+    
+                .smallTitle {
+                    color: $main-font;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 16px;
+                }
+    
+                p:not(.smallTitle) {
+                    color: $subs-font;
+                    font-size: 14px;
+                    font-weight: bold;
+                    line-height: 20px;
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

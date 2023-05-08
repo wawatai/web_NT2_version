@@ -1,0 +1,429 @@
+//member
+.memberWrap {
+    width: 100%;
+    height: auto;
+
+    //上部
+    .top {
+        width: 100%;
+        height: auto;
+        @include bgStyle_2;
+        margin-bottom: 56px;
+
+        .title {
+            @include innerTitleStyle;
+        }
+
+        .content {
+            width: 100%;
+            height: auto;
+            padding: 16px 18px;
+
+            p {
+                color: $main-font;
+                font-size: 14px;
+                font-weight: bold;
+                letter-spacing: 1px;
+
+                &.remind {
+                    color: $subs-font;
+                    margin-top: 6px;
+                }
+
+                em {
+
+                    &.low {
+                        color: $sercurity_low;
+                    }
+
+                    &.middle {
+                        color: $sercurity_middle;
+                    }
+
+                    &.high {
+                        color: $sercurity_high;
+                    }
+                }
+            }
+
+            .level {
+                margin-top: 14px;
+                display: flex;
+
+                li {
+                    color: $main-font;
+                    font-size: 13px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    display: flex;
+                    align-items: center;
+                    margin-right: 27px;
+
+                    &.active {
+
+                        i {
+                            background: $sercurity_Check;
+                        }
+                    }
+
+                    i {
+                        width: 31px;
+                        height: 31px;
+                        background-color: $sercurity_noCheck;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            left: 0;
+                            top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //下部
+    .bottom {
+        width: 100%;
+        height: auto;
+        position: relative;
+
+        .tabs {
+            width: 100%;
+            height: auto;
+            display: flex;
+            position: absolute;
+            top: -35px;
+            left: 0;
+            padding: 0 24px;
+
+            li {
+                min-width: 105px;
+                height: 35px;
+                margin-right: 7px;
+                @include innerPageBtn;
+            }
+        }
+
+        //基本資料
+        .dataWrap {
+            display: none;
+            width: 100%;
+            height: auto;
+            @include bgStyle_2;
+
+            &.display {
+                display: block;
+            }
+
+            .content {
+                width: 100%;
+                height: auto;
+                border-bottom: solid 1px $main-Border_1;
+
+                .title {
+                    @include innerTitleStyle;
+                    font-size: 16px;
+                    border: none;
+                }
+
+                .fakeTable {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: space-between;
+
+                    &>li {
+                        width: 48%;
+                        padding-right: 24px;
+
+                        form {
+                            width: 100%;
+                            height: auto;
+
+                            ul {
+                                width: 100%;
+                                height: auto;
+
+                                li {
+                                    width: 100%;
+                                    height: auto;
+                                    display: flex;
+                                    align-items: center;
+                                    position: relative;
+                                    margin-bottom: 40px;
+
+                                    label {
+                                        width: 120px;
+                                        height: auto;
+                                        color: $main-font;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        letter-spacing: 1px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-end;
+                                        flex-shrink: 0;
+                                        margin-right: 20px;
+
+                                        em {
+                                            color: $remind;
+                                            font-size: 14px;
+                                            margin-right: 5px;
+                                        }
+                                    }
+    
+                                    input {
+                                        width: 100%;
+                                        height: 42px;
+                                        @include mainInput;
+
+                                        &.sp {
+                                            background: none;
+                                            border: none;
+                                            padding: 0;
+                                        }
+                                    }
+
+                                    .remind {
+                                        width: auto;
+                                        color: $remind;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        position: absolute;
+                                        left: 140px;
+                                        top: 50px;
+                                        white-space: nowrap;
+
+                                        &.sp {
+                                            color: $subs-font;
+                                            bottom: -20px;
+
+                                            span {
+                                                color: $remind;
+                                                text-decoration: underline;
+                                                cursor: pointer;
+                                            }
+                                        }
+                                    }
+
+                                    .date_ic {
+                                        width: 16px;
+                                        height: 16px;
+                                        position: absolute;
+                                        right: 10px;
+                                        pointer-events: none;
+                                    }
+
+                                    .box {
+                                        width: 100%;
+                                        height: auto;
+                                        display: flex;
+                                        align-items: center;
+
+                                        button {
+                                            width: auto;
+                                            height: 32px;
+                                            @include mainBtn;
+                                            padding: 0 20px;
+                                            margin-left: 8px;
+                                            flex-shrink: 0;
+
+                                            &.copy {
+                                                @include secondBtn;
+                                                padding: 0 10px;
+                                            }
+                                        }
+                                    }
+
+                                    .check {
+                                        width: 257px;
+                                        height: 42px;
+                                        @include mainBtn;
+                                        margin-left: 140px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .changePassword {
+                margin-bottom: 60px;
+                
+                .title {
+                    @include innerTitleStyle;
+                    font-size: 16px;
+                    border: none;
+                }
+
+                ul {
+                    width: 100%;
+                    height: auto;
+
+                    li {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+
+                        label {
+                            width: 120px;
+                            height: auto;
+                            color: $main-font;
+                            font-size: 14px;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                            text-align: right;
+                            margin-right: 20px;
+                        }
+
+                        .box {
+                            width: 257px;
+                            height: auto;
+                            display: flex;
+                            align-items: center;
+
+                            input {
+                                width: 100%;
+                                height: 42px;
+                                @include mainInput;
+                                border: none;
+                                background: none;
+                            }
+
+                            button {
+                                width: auto;
+                                height: 42px;
+                                @include mainBtn;
+                                padding: 0 20px;
+                                margin-left: 8px;
+                                flex-shrink: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //平臺帳號密碼
+        .platformWrap {
+            display: none;
+            width: 100%;
+            height: auto;
+            min-height: 500px;
+            @include bgStyle_2;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                @include innerTitleStyle;
+                font-size: 16px;
+                border: none;
+            }
+
+            //目前無資料
+            .noData {
+                display: none;
+                width: 100%;
+                height: 530px;
+                justify-content: center;
+                align-items: center;
+                letter-spacing: 1px;
+                color: $subs-font;
+                font-size: 16px;
+                font-weight: bold;
+
+                &.display {
+                    display: flex;
+                }
+            }
+
+            table {
+                width: 100%;
+                height: auto;
+                margin-top: 20px;
+
+                tr {
+
+                    th {
+                        height: 50px;
+                        vertical-align: middle;
+                        border-bottom: solid 1px $main-Border_2;
+
+                        &:last-child {
+
+                            p {
+                                border: none;
+                            }
+                        }
+
+                        p {
+                            width: 100%;
+                            height: 24px;
+                            color: $main-font;
+                            font-size: 14px;
+                            font-weight: bold;
+                            border-right: solid 1px $main-Border_1;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            @include textHidden;
+                        }
+                    }
+
+                    td {
+                        width: 16.7%;
+                        height: 50px;
+                        vertical-align: middle;
+                        border-bottom: solid 1px $main-Border_1;
+
+                        &:last-child {
+
+                            p {
+                                border: none;
+                            }
+                        }
+
+                        p {
+                            width: 100%;
+                            height: 24px;
+                            color: $subs-font;
+                            font-size: 14px;
+                            font-weight: bold;
+                            border-right: solid 1px $main-Border_1;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            @include textHidden;
+
+                            &.id {
+                                color: $remind;
+                            }
+
+                            &.status {
+                                
+                                &.active {
+                                    color: $remind_sp;
+                                }
+
+                                &.lock {
+                                    color: $remind;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

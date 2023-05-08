@@ -1,0 +1,247 @@
+//transfer
+.transferWrap {
+    width: 100%;
+    height: auto;
+    @include bgStyle_2;
+
+    .title {
+        @include innerTitleStyle;
+    }
+
+    //錢包金額展示
+    .wallet {
+        width: 100%;
+        height: auto;
+        border-bottom: solid 1px $main-Border_1;
+        padding: 16px;
+
+        .smallTitle {
+            width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+                color: $main-font;
+                font-size: 16px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+
+                i {
+                    width: 16px;
+                    height: 16px;
+                    margin-left: 5px;
+                }
+            }
+            
+            button {
+                width: auto;
+                height: 28px;
+                @include mainBtn;
+                padding: 0 10px;
+            }
+        }
+
+        .money {
+            color: $light-font;
+            font-size: 32px;
+            font-weight: bold;
+            padding-left: 10px;
+            margin-top: 16px;
+        }
+    }
+
+    //平臺錢包
+    .platform {
+        width: 100%;
+        height: auto;
+        border-bottom: solid 1px $main-Border_1;
+        
+        .smallTitle {
+            @include innerTitleStyle;
+            border: none;
+            font-size: 16px;
+        }
+
+        ul {
+            width: 100%;
+            height: 98px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+            padding: 0 16px;
+            
+            &.active {
+                height: auto;
+            }
+
+            li {
+                width: auto;
+                height: auto;
+                @include bgStyle_3;
+                padding: 24px 16px;
+
+                .name {
+                    color: $main-font;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+
+                .money {
+                    color: $light-font;
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .open {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.active {
+
+                p {
+
+                    i {
+                        transform: scaleY(-1);
+                    }
+                }
+            }
+
+            p {
+                color: $subs-font;
+                font-size: 15px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                i {
+                    width: 16px;
+                    height: 16px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    //戶內轉帳
+    form {
+        width: 100%;
+        height: auto;
+
+        .smallTitle {
+            @include innerTitleStyle;
+            font-size: 16px;
+            border: none;
+
+            .remind {
+                color: $remind;
+                font-size: 14px;
+                font-weight: bold;
+                margin-left: 10px;
+            }
+        }
+
+        .platformBox {
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 0 16px;
+
+            label {
+                width: 80px;
+                color: $main-font;
+                font-size: 14px;
+                font-weight: bold;
+                flex-shrink: 0;
+            }
+
+            div {
+                width: 600px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                select {
+                    width: 257px;
+                    height: 42px;
+                    @include mainSelect;
+                }
+    
+                .trans_ic {
+                    display: block;
+                    width: 27px;
+                    height: 23px;
+                }
+            }
+        }
+
+        .moneyBox {
+            width: auto;
+            height: auto;
+            display: flex;
+            padding: 0 16px;
+
+            label {
+                width: 80px;
+                height: 42px;
+                color: $main-font;
+                font-size: 14px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                flex-shrink: 0;
+            }
+
+            .inputBox {
+                width: 257px;
+                height: auto;
+
+                input {
+                    width: 100%;
+                    height: 42px;
+                    @include mainInput;
+                }
+
+                .btnBox {
+                    width: 100%;
+                    height: auto;
+                    display: grid;
+                    grid-template-columns: repeat(3,1fr);
+                    gap: 6px;
+                    margin-top: 20px;
+
+                    button {
+                        width: auto;
+                        height: 32px;
+                        @include secondBtn;
+
+                        &.check {
+                            width: 256px;
+                            height: 42px;
+                            // @include mainBtn;
+                            margin: 15px 0 0 0;
+                        }
+                    }
+                }
+
+                .check {
+                    width: 257px;
+                    height: 42px;
+                    @include mainBtn;
+                    margin: 32px 0;
+                }
+            }
+        }
+    }
+}

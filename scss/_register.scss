@@ -2,109 +2,115 @@
     width: 100%;
     height: 100%;
     position: fixed;
-    left: 0;
     top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
 
     .bigBox {
-        display: flex;
-        border-radius: 17px;
-        overflow: hidden;
-        box-shadow: 0 5px 10px -5px $boxShadow_3;
+        width: 862px;
+        height: auto;
+        @include registerBG;
 
-        .left {
-            width: 432px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .leftWrap {
+            width: 50%;
+            height: 664px;
+
+            .img {
+                width: 100%;
+                height: 100%;
+            }
         }
 
-        .right {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 432px;
-            padding: 32px 0 37px;
-            background: $backgroundColor_3;
+        form {
+            width: 50%;
+            height: auto;
+            padding: 0 40px;
 
             .title {
+                width: 100%;
+                height: 100px;
                 display: flex;
                 align-items: center;
-                margin-bottom: 25px;
                 justify-content: center;
-                width: 100%;
-                height: auto;
-                font-size: 25px;
+                color: $dark-font;
+                font-size: 24px;
                 font-weight: bold;
-                letter-spacing: 2px;
 
-                .person_ic {
-                    width: 44px;
-                    height: 44px;
-                    margin-right: 15px;
+                i {
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 10px;
                 }
             }
 
             label {
+                display: block;
+                width: 100%;
+                height: auto;
                 position: relative;
-                margin-bottom: 19px;
-                display: flex;
-                justify-content: center;
+                margin-bottom: 24px;
+
+                &:last-child {
+                    margin: 0;
+                }
 
                 input {
-                    width: 332px;
-                    height: 41px;
-                    @include inputStyle_3;
+                    width: 100%;
+                    height: 42px;
+                    @include mainInput;
                 }
 
-                .err {
-                    position: absolute;
-                    bottom: -15px;
-                    left: 0;
+                .remind {
+                    width: auto;
+                    color: $remind;
                     font-size: 12px;
                     font-weight: bold;
-                    color: $fontColor_4;
+                    position: absolute;
+                    left: 0;
+                    bottom: -15px;
+                }
+                .remindR {
+                    width: auto;
+                    color: $remind;
+                    font-size: 12px;
+                    font-weight: bold;
+                    position: absolute;
+                    right: 0;
+                    bottom: -15px;
                 }
 
-                .eye {
+                .eye_ic {
+                    position: absolute;
                     display: block;
-                    width: 23px;
+                    width: 25px;
                     height: 17px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 10px;
+                }
+                
+                .codeBtn {
+                    width: auto;
+                    height: 32px;
+                    @include secondBtn;
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
-                    right: 20px;
-                    cursor: pointer;
-                }
-
-                button {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    width: 86px;
-                    height: 29px;
-                    right: 11px;
-                    @include buttonStyle_8;
+                    right: 5px;
+                    font-size: 12px;
+                    padding: 0 15px;
                 }
             }
 
-            .tips {
-                width: 332px;
-                font-size: 12px;
-                font-weight: bold;
-                color: $fontColor_7;
-                text-align: left;
-            }
-
-            .checkBox {
-                width: 332px;
-                height: auto;
+            .ruleBox {
+                width: 100%;
+                height: 50px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin: 23px 0 32px;
+                margin-bottom: 20px;
 
                 input {
                     width: 16px;
@@ -113,20 +119,31 @@
                 }
 
                 p {
+                    color: $dark-font;
                     font-size: 16px;
                     font-weight: bold;
-                    color: $fontColor_2;
 
                     span {
-                        color: $fontColor_9;
+                        color: $remind;
+                        text-decoration: underline;
+                        cursor: pointer;
                     }
                 }
             }
 
-            .checkBtn {
-                width: 332px;
-                height: 41px;
-                @include buttonStyle_3;
+            button {
+                width: 100%;
+                height: 42px;
+                margin-bottom: 10px;
+                @include secondBtn;
+
+                &:hover,&:active,&.active {
+                    border-color: $dark-font;
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
             }
         }
     }

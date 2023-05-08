@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=0.25"> -->
+    <link rel="icon" href="../images/favicon64x64.ico" sizes="16x16">
+    <title>大黃金</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="js/slick-1.8.1/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="module" src="./js/javascript.js"></script>
+</head>
+<body>
+    <!--header-->
+    <header>
+        <!--上部-->
+        <section class="top">
+            <!--logo-->
+            <div class="logo">
+                <a href="#">
+                    <img src="./images/logo.png" alt="">
+                </a>
+            </div>
+            <!--帳號密碼未登入-->
+            <div class="accountBox">
+                <label class="account">
+                    <input type="text" placeholder="帳號">
+                </label>
+                <label class="password">
+                    <input type="password" placeholder="密碼">
+                </label>
+                <button class="login" onclick="window.location.href='./html/indexInner.html'">登入</button>
+                <button class="signup">立即註冊</button>
+            </div>
+        </section>
+        <!--導航列-->
+        <section class="nav">
+            <ul>
+                <li class="active">
+                    <a href="./index.html">首頁</a>
+                </li>
+                <li>
+                    <a href="./html/sportPage.html">體育賽事</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox">
+                                <img src="./images/dropDown/SPORT/36588.png">
+                                <p>36588</p>
+                            </li>
+                        </ol>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./html/livePage.html">真人娛樂</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox">
+                                <img src="./images/dropDown/LIVE/AB.png">
+                                <p>歐博真人娛樂</p>
+                            </li>
+                            <li class="platformBox">
+                                <img src="./images/dropDown/LIVE/DG.png">
+                                <p>DG真人娛樂</p>
+                            </li>
+                            <li class="platformBox">
+                                <img src="./images/dropDown/LIVE/WM.png">
+                                <p>WM真人娛樂</p>
+                            </li>
+                        </ol>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./html/lotteryPage.html">彩票</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox">
+                                <img src="./images/dropDown/LOTTERY/京彩.png">
+                                <p>京彩彩票</p>
+                            </li>
+                            <li class="platformBox">
+                                <img src="./images/dropDown/LOTTERY/SG88.png">
+                                <p>SG88六合、大樂、539</p>
+                            </li>
+                        </ol>
+                    </ul>
+            </li>
+                </li>
+                <li >
+                    <a href="./html/slotPage.html">老虎機</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox">
+                                <img src="./images/dropDown/SLOT/BNG.png">
+                                <p>BNG電子娛樂</p>
+                            </li>
+                            <li class="platformBox">
+                                <img src="./images/dropDown/SLOT/BWIN.png">
+                                <p>BWIN電子娛樂</p>
+                            </li>
+                            <li class="platformBox">
+                                <img src="./images/dropDown/SLOT/GR.png">
+                                <p>好路電子娛樂</p>
+                            </li>
+                            <li class="platformBox">
+                                <img src="./images/dropDown/SLOT/RSG.png">
+                                <p>RSG電子娛樂</p>
+                            </li>
+                            <li class="platformBox">
+                                <img src="./images/dropDown/SLOT/FUNTA.png">
+                                <p>福星電子娛樂</p>
+                            </li>
+                        </ol>
+                    </ul>
+            </li>
+                </li>
+                <li>
+                    <a href="./html/fishPage.html">捕魚機</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox">
+                                <img src="./images/dropDown/toBeContinue.png">
+                                <p>敬請期待!</p>
+                            </li>
+                            <li class="platformBox">
+                                <img src="./images/dropDown/toBeContinue.png">
+                                <p>敬請期待!</p>
+                            </li>
+                        </ol>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./html/chessPage.html">棋牌遊戲</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox">
+                                <img src="./images/dropDown/toBeContinue.png">
+                                <p>敬請期待!</p>
+                            </li>
+                            <li class="platformBox">
+                                <img src="./images/dropDown/toBeContinue.png">
+                                <p>敬請期待!</p>
+                            </li>
+                        </ol>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">優惠中心</a>
+                </li>
+            </ul>
+        </section>
+        
+    </header>
+    <!--main-->
+    <main>
+        <article class="homeWrap">
+            <!--消息列-->
+            <div class="ad">
+                <!--圖片輪播-->
+                <section class="single-item">
+                    <img src="./images/banner.jpg">
+                    <img src="./images/banner.jpg">
+                </section>
+                <!-- 跑馬燈 -->
+                <div class="marquee">
+                    <p class="title">最新消息</p>
+                    <div class="textBox">
+                        <p>
+                            最新消息:我是跑馬燈，測試測試...
+                            <br>
+                            AAA123123測試...
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 遊戲種類 -->
+            <div class="gameType">
+                <div class="gameBlock sport">
+                    <div class="list_ic sport"></div>
+                    <div class="gT-text">
+                        <p>體育賽事</p>
+                        <span>SPORTS</span>
+                    </div>
+                    <i class="arrow_ic"></i>
+                </div>
+                <div class="gameBlock live">
+                    <div class="list_ic live"></div>
+                    <div class="gT-text">
+                        <p>真人娛樂</p>
+                        <span>LIVE</span>
+                    </div>
+                    <i class="arrow_ic"></i>
+                </div>
+                <div class="gameBlock lottery">
+                    <div class="list_ic lottery"></div>
+                    <div class="gT-text">
+                        <p>彩票</p>
+                        <span>LOTTERY</span>
+                    </div>
+                    <i class="arrow_ic"></i>
+                </div>
+                <div class="gameBlock slot">
+                    <div class="list_ic slot"></div>
+                    <div class="gT-text">
+                        <p>老虎機</p>
+                        <span>SLOT</span>
+                    </div>
+                    <i class="arrow_ic"></i>
+                </div>
+                <div class="gameBlock fish">
+                    <div class="list_ic fish"></div>
+                    <div class="gT-text">
+                        <p>捕魚機</p>
+                        <span>FISHING</span>
+                    </div>
+                    <i class="arrow_ic"></i>
+                </div>
+                <div class="gameBlock poker">
+                    <div class="list_ic poker"></div>
+                    <div class="gT-text">
+                        <p>棋牌遊戲</p>
+                        <span>POKER</span>
+                    </div>
+                    <i class="arrow_ic"></i>
+                </div>
+            </div>
+            <!-- 服務列 -->
+            <div class="service">
+                <div class="servBlock">
+                    <div class="textBlock">
+                        <p>免費開戶</p>
+                        <span>JOIN US</span>
+                    </div>
+                    <div class="img joinUs"></div>
+                </div>
+                <div class="servBlock">
+                    <div class="textBlock">
+                        <p>精彩活動</p>
+                        <span>PROMOTIONS</span>
+                    </div>
+                    <div class="img promotions"></div>
+                </div>
+                <div class="servBlock">
+                    <div class="textBlock">
+                        <p>線上客服</p>
+                        <span>CUSTOMER SERVICE</span>
+                    </div>
+                    <div class="img custom"></div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <!-- 懸浮按鈕 -->
+    <aside>
+        <div class="appD">
+            <button></button>
+        </div>
+        <div class="cs-service">
+            <button class="cs1"></button>
+            <button class="cs2"></button>
+        </div>
+        <div class="bkTop">
+            <button></button>
+        </div>
+    </aside>
+    <!--footer-->
+    <footer>
+        <div class="top">
+            <ul>
+                <li class="callNews">最新公告</li>
+                <li>VIP會員</li>
+                <li onclick="window.location.href='./html/help.html'">幫助中心</li>
+                <li onclick="window.location.href='./html/help.html'">關於我們</li>
+                <li>加入我們</li>
+            </ul>
+        </div>
+        <div class="bottom-platform">
+            <ul>
+                <li><img class="platform" src="./images/platform/AB.png" alt="AB"></li>
+                <li><img class="platform" src="./images/platform/WM.png" alt="WM"></li>
+                <li><img class="platform" src="./images/platform/DG.png" alt="DG"></li>
+                <li><img class="platform" src="./images/platform/BNG.png" alt="BNG"></li>
+                <li><img class="platform" src="./images/platform/RSG.png" alt="RSG"></li>
+                <li><img class="platform" src="./images/platform/SG88.png" alt="SG88"></li>
+                <li><img class="platform" src="./images/platform/36588.png" alt="36588"></li>
+                <li><img class="platform" src="./images/platform/GR.png" alt="GR"></li>
+                <li><img class="platform" src="./images/platform/bwin.png" alt="BWIN"></li>
+                <li><img class="platform" src="./images/platform/FUNTA.png" alt="FUNTA"></li>
+                <li><img class="platform" src="./images/platform/京彩.png" alt="gintai"></li>
+            </ul>
+        </div>
+        <div class="bottom-copy">
+            <p>&copy&nbsp;2022 BWG.COM ALL RIGHTS RESERVED.</p>
+        </div>
+
+    </footer>
+    <!-- 彈跳視窗 -->
+    <div class="coverBg">
+        <!--請先登入-->
+        <div class="jumpWindow clickWindow plsLogin">
+            <div class="titleArea">
+                <p class="title">提示</p>
+                <i class="closeBtn"></i>
+            </div>
+            <div class="tabsContent">
+                <p>請先登入</p>
+                <button class="closeBtn">確認</button>
+            </div>
+        </div>
+        <!--帳號密碼必填-->
+        <div class="jumpWindow clickWindow needAcc">
+            <div class="titleArea">
+                <p class="title">提示</p>
+                <i class="closeBtn"></i>
+            </div>
+            <div class="tabsContent">
+                <p>帳號 為必填 密碼 為必填</p>
+                <button class="closeBtn">確認</button>
+            </div>
+        </div>
+        <!--帳密不存在-->
+        <div class="jumpWindow clickWindow noneAcc">
+            <div class="titleArea">
+                <p class="title">提示</p>
+                <i class="closeBtn"></i>
+            </div>
+            <div class="tabsContent">
+                <p>會員不存在</p>
+                <button class="closeBtn">確認</button>
+            </div>
+        </div>
+        <!--忘記密碼-->
+        <div class="jumpWindow forgotPw">
+            <div class="titleArea">
+                <p class="title">忘記密碼</p>
+                <i class="closeBtn"></i>
+            </div>
+            <div class="tabsContent">
+                <div class="inputBox">
+                    <input class="phoneNum" type="text" placeholder="請輸入您的手機號碼" requset>
+                </div>
+                <button class="checkBtn closeBtn">重置密碼</button>
+                <p class="remind">我們將發送新的密碼至您的手機，請查收簡訊</p>
+            </div>
+        </div>
+    </div>
+    <!--BG-->
+    <div class="bg"></div>
+</body>
+</html>
