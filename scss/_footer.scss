@@ -66,7 +66,7 @@ footer {
     .footerList {
         width: 100%;
         height: auto;
-        background: $backgroundColor_2;
+        background: $backgroundColor_1;
 
         .center {
             width: 1000px;
@@ -78,9 +78,27 @@ footer {
 
             a {
                 color: $fontColor_1;
-                font-size: 16px;
+                font-size: 18px;
                 font-weight: bold;
                 text-decoration: none;
+
+                &:hover,&:active,&.active {
+                    color: $fontColor_6;
+                }
+            }
+        }
+
+        .bottomText {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            padding-bottom: 20px;
+            
+            p {
+                color: $fontColor_1;
+                font-size: 14px;
+                font-weight: bold;
+                letter-spacing: 1px;
             }
         }
     }

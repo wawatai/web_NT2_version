@@ -1,4 +1,12 @@
-//header 未登入input_ic
+//header
+header .gameNav {
+    background: url('../images/headerBottom.png') no-repeat;
+    background-size: cover;
+}
+header .topGameList {
+    background: url('../images/headerList.jpg');
+    // background-color: #efefef;
+}
 header .acc_ic {
     background: url('../images/icon/svg/id.svg') no-repeat;
     background-size: 100%;
@@ -11,21 +19,35 @@ header .forget {
     background: url('../images/icon/svg/question.svg') no-repeat;
     background-size: 100%;
 }
-
-//註冊
 header .register_ic {
     background: url('../images/icon/svg/register.svg') no-repeat;
     background-size: 100%;
 }
-
-//跑馬燈
 header .marquee_ic {
     background: url('../images/icon/svg/marquee.svg') no-repeat;
     background-size: 100%;
 }
+header .member_ic {
+    background: url('../images/icon/svg/member.svg') no-repeat;
+    background-size: 100%;
+}
+header .mail_ic {
+    background: url('../images/icon/svg/letter.svg') no-repeat;
+    background-size: 100%;
+}
+header .logout_ic {
+    background: url('../images/icon/svg/signout.svg') no-repeat;
+    background-size: 100%;
+}
+
+//mainWrap
 .mainWrap .marquee_ic {
     background: url('../images/icon/svg/marquee.svg') no-repeat;
     background-size: 100%;
+}
+.mainWrap .downBox i {
+    background: url('../images/icon/downBox.png') no-repeat;
+    background-size: 500%;
 }
 
 //下拉選單 topGameList arrow
@@ -61,23 +83,37 @@ header .marquee_ic {
     background: url('../images/icon/svg/gotop.svg') no-repeat;
     background-size: 100%;
 }
+.rightSide .SEBtn button {
+    background: url('../images/icon/sharetoEarnBtn.png') no-repeat;
+    background-size: 100%;
+}
+
+//.rightSide .smallBoard .arrow
+.rightSide .smallBoard .arrow {
+    background: url('../images/icon/svg/arrow_r.svg') no-repeat;
+    background-size: 100%;
+}
 
 //首頁下方教學列 .downBar icon
-.downBar .depositTeach {
+.downBar i {
+    background: url('../images/icon/barBtn.png') no-repeat;
+    background-size: 500%;
+}
+.downBar.inner .depositTeach {
     background: url('../images/icon/svg/deposit_t.svg') no-repeat;
-    background-size: 100%;
+    background-size: contain;
 }
-.downBar .withdrawalTeach {
+.downBar.inner .withdrawalTeach {
     background: url('../images/icon/svg/withdrawal_t.svg') no-repeat;
-    background-size: 100%;
+    background-size: contain;
 }
-.downBar .walletTeach {
+.downBar.inner .walletTeach {
     background: url('../images/icon/svg/wallet_t.svg') no-repeat;
-    background-size: 100%;
+    background-size: contain;
 }
-.downBar .vip {
+.downBar.inner .vip {
     background: url('../images/icon/svg/vip.svg') no-repeat;
-    background-size: 100%;
+    background-size: contain;
 }
 
 //footer .top arrow
@@ -87,101 +123,81 @@ footer .top button::before {
 }
 //footer 夥伴圖
 .partnerBox .bng {
-    background: url('../images/icon/bng.png') no-repeat;
+    background: url('../images/icon/partnerName/bng.png') no-repeat;
     background-size: 100%;
 }
 .partnerBox .pls {
-    background: url('../images/icon/pls.png') no-repeat;
+    background: url('../images/icon/partnerName/pls.png') no-repeat;
     background-size: 100%;
 }
 .partnerBox .sp {
-    background: url('../images/icon/sp.png') no-repeat;
+    background: url('../images/icon/partnerName/sp.png') no-repeat;
     background-size: 100%;
 }
 .partnerBox .allbet {
-    background: url('../images/icon/allbet.png') no-repeat;
+    background: url('../images/icon/partnerName/allbet.png') no-repeat;
     background-size: 100%;
 }
 .partnerBox .sg {
-    background: url('../images/icon/sg.png') no-repeat;
+    background: url('../images/icon/partnerName/sg.png') no-repeat;
     background-size: 100%;
 }
 .partnerBox .rtg {
-    background: url('../images/icon/rtg.png') no-repeat;
+    background: url('../images/icon/partnerName/rtg.png') no-repeat;
     background-size: 100%;
 }
 .partnerBox .ifun {
-    background: url('../images/icon/ifun.png') no-repeat;
+    background: url('../images/icon/partnerName/ifun.png') no-repeat;
     background-size: 100%;
 }
 .partnerBox .wm {
-    background: url('../images/icon/wm.png') no-repeat;
+    background: url('../images/icon/partnerName/wm.png') no-repeat;
     background-size: 100%;
 }
 .partnerBox .gs {
-    background: url('../images/icon/gs.png') no-repeat;
+    background: url('../images/icon/partnerName/gs.png') no-repeat;
     background-size: 100%;
 }
 .partnerBox .iconic {
-    background: url('../images/icon/iconic.png') no-repeat;
+    background: url('../images/icon/partnerName/iconic.png') no-repeat;
     background-size: 100%;
 }
 .partnerBox .i36588 {
-    background: url('../images/icon/36588.png') no-repeat;
+    background: url('../images/icon/partnerName/36588.png') no-repeat;
     background-size: 100%;
 }
 .partnerBox .rsg {
-    background: url('../images/icon/rsg.png') no-repeat;
+    background: url('../images/icon/partnerName/rsg.png') no-repeat;
     background-size: 100%;
 }
 .partnerBox .png {
-    background: url('../images/icon/png.png') no-repeat;
+    background: url('../images/icon/partnerName/png.png') no-repeat;
     background-size: 100%;
 }
 .partnerBox .px {
-    background: url('../images/icon/px.png') no-repeat;
+    background: url('../images/icon/partnerName/px.png') no-repeat;
     background-size: 100%;
 }
 .partnerBox .sa {
-    background: url('../images/icon/sa.png') no-repeat;
+    background: url('../images/icon/partnerName/sa.png') no-repeat;
     background-size: 100%;
 }
 .partnerBox .tc {
-    background: url('../images/icon/tc.png') no-repeat;
+    background: url('../images/icon/partnerName/tc.png') no-repeat;
     background-size: 100%;
 }
 .partnerBox .dg {
-    background: url('../images/icon/dg.png') no-repeat;
+    background: url('../images/icon/partnerName/dg.png') no-repeat;
     background-size: 100%;
 }
 .partnerBox .og {
-    background: url('../images/icon/og.png') no-repeat;
-    background-size: 100%;
-}
-
-//footer .footerList button i
-.footerList button i {
-    background: url('../images/icon/svg/notice.svg') no-repeat;
+    background: url('../images/icon/partnerName/og.png') no-repeat;
     background-size: 100%;
 }
 
 //header 登入後下選單旋轉圖
 .transferInfo .money i {
     background: url('../images/icon/svg/loading_g.svg') no-repeat;
-    background-size: 100%;
-}
-
-//hedader登入後按鈕icon
-header .member_ic {
-    background: url('../images/icon/svg/member.svg') no-repeat;
-    background-size: 100%;
-}
-header .mail_ic {
-    background: url('../images/icon/svg/letter.svg') no-repeat;
-    background-size: 100%;
-}
-header .logout_ic {
-    background: url('../images/icon/svg/signout.svg') no-repeat;
     background-size: 100%;
 }
 
@@ -194,18 +210,19 @@ header .logout_ic {
     background: url('../images/icon/svg/close_gray.svg') no-repeat;
     background-size: 100%;
 }
+//jumpWindow.betWindow .cancel_ic
+.jumpWindow.betWindow .close_ic {
+    background: url('../images/icon/svg/close_gray.svg') no-repeat;
+    background-size: 100%;
+}
+.jumpWindow.betWindow .trans_arrow {
+    background: url('../images/icon/svg/transfer_arrow.svg') no-repeat;
+    background-size: 100%;
+}
 
 //gameWrap background
-.sportPage {
-    background: url('../images/sport_background.png') no-repeat top center;
-    background-size: cover;
-}
-.livePage {
-    background: url('../images/live_background.png') no-repeat top center;
-    background-size: cover;
-}
-.lotteryPage {
-    background: url('../images/lotto_background.png') no-repeat top center;
+.gameWrap .content {
+    background: url('../images/innerBG.png') no-repeat;
     background-size: cover;
 }
 
@@ -213,11 +230,6 @@ header .logout_ic {
 .slotBody .search_ic {
     background: url('../images/icon/svg/search.svg') no-repeat top center;
     background-size: cover;
-}
-//.slotBody .pfName 各廠商ic
-.slotBody .pfName .bng_ic {
-    background: url('../images/icon/bng_pf.png') no-repeat;
-    background-size: 100%;
 }
 //.slotBody .pfName .back
 .slotBody .pfName .back {
@@ -248,7 +260,7 @@ header .logout_ic {
 }
 //eventBody .side li i
 .eventBody .event_ic {
-    background: url('../images/icon/svg/entire.svg') no-repeat;
+    background: url('../images/icon/svg/event.svg') no-repeat;
     background-size: 100%;
 }
 //eventDetail .back
@@ -286,9 +298,21 @@ header .logout_ic {
     background: url('../images/icon/svg/innerNav_event.svg') no-repeat;
     background-size: 100%;
 }
+.innerNav .special_ic {
+    background: url('../images/icon/svg/special.svg') no-repeat;
+    background-size: 100%;
+}
 .innerNav .mail_ic {
     background: url('../images/icon/svg/innerNav_mail.svg') no-repeat;
     background-size: 100%;
+}
+.innerNav .fixing_ic {
+    background: url('../images/icon/svg/fixing.svg') no-repeat;
+    background-size: contain;
+}
+.innerNav .recFriend_ic {
+    background: url('../images/icon/svg/innerNav_recFriend.svg') no-repeat;
+    background-size: contain;
 }
 
 //.memberWrap .level i
@@ -312,7 +336,7 @@ header .logout_ic {
 //.vipWrap .medal
 .vipHeader .medal {
     background: url('../images/icon/medal.png') no-repeat;
-    background-size: 100%;
+    background-size: contain;
 }
 //.vipWrap .detailTitle .back
 .vipWrap .detailTitle .back {
@@ -329,14 +353,34 @@ header .logout_ic {
     background: url('../images/icon/vip_card.png') no-repeat;
     background-size: 100%;
 }
-.vipWrap .detailCardBox .cardBg.active {
-    background: url('../images/icon/vip_card_red.png') no-repeat;
-    background-size: 100%;
-}
 //.vipWrap .detailCardBox .medal
 .vipWrap .detailCardBox .medal {
     background: url('../images/icon/medal.png') no-repeat;
-    background-size: 100%;
+    background-size: contain;
+}
+.vipWrap .detailCardBox .medal.v2 {
+    background: url('../images/icon/medal_2.png') no-repeat;
+    background-size: contain;
+}
+.vipWrap .detailCardBox .medal.v3 {
+    background: url('../images/icon/medal_3.png') no-repeat;
+    background-size: contain;
+}
+.vipWrap .detailCardBox .medal.v4 {
+    background: url('../images/icon/medal_4.png') no-repeat;
+    background-size: contain;
+}
+.vipWrap .detailCardBox .medal.v5 {
+    background: url('../images/icon/medal_5.png') no-repeat;
+    background-size: contain;
+}
+.vipWrap .detailCardBox .medal.v6 {
+    background: url('../images/icon/medal_6.png') no-repeat;
+    background-size: contain;
+}
+.vipWrap .detailCardBox .medal.v7 {
+    background: url('../images/icon/medal_7.png') no-repeat;
+    background-size: contain;
 }
 
 //walletMiddle .totalTitle .icon
@@ -353,12 +397,6 @@ header .logout_ic {
 //.cardMiddle .addCard_ic
 .cardMiddle .card .addCard_ic {
     background: url('../images/icon/svg/addCard.svg') no-repeat;
-    background-size: 100%;
-}
-
-//.rightSide .smallBoard .arrow
-.rightSide .smallBoard .arrow {
-    background: url('../images/icon/svg/arrow_r.svg') no-repeat;
     background-size: 100%;
 }
 
@@ -388,6 +426,14 @@ header .logout_ic {
 .depositWrap .list .card_ic {
     background: url('../images/icon/svg/card.svg') no-repeat;
     background-size: 100%;
+}
+.depositWrap .list .usdt_ic {
+    background: url('../images/icon/svg/usdt.svg') no-repeat;
+    background-size: contain;
+}
+.depositWrap .list .atm_ic {
+    background: url('../images/icon/svg/atm.svg') no-repeat;
+    background-size: contain;
 }
 .depositWrap .list .shop_ic {
     background: url('../images/icon/svg/shop.svg') no-repeat;
@@ -457,10 +503,12 @@ header .logout_ic {
     background-size: 100%;
 }
 //helpPage .img
-.helpPage .img.online01 {
-    background: url('../images/help/online01.png') no-repeat;
-    background-size: 100%;
-}
+// .helpPage .img.online01 {
+//     background: url('../images/help/online01.png') no-repeat;
+//     background-size: 100%;
+// }
+
+
 .helpPage .img.online02 {
     background: url('../images/help/online02.png') no-repeat;
     background-size: 100%;
@@ -478,14 +526,273 @@ header .logout_ic {
     background-size: 100%;
 }
 
-//jumpWindow.betWindow .cancel_ic
-.jumpWindow.betWindow .close_ic {
-    background: url('../images/icon/svg/close_gray.svg') no-repeat;
-    background-size: 100%;
+.helpPage .img.download01 {
+    background: url('../images/help/download01.jpg');
 }
-.jumpWindow.betWindow .trans_arrow {
-    background: url('../images/icon/svg/transfer_arrow.svg') no-repeat;
-    background-size: 100%;
+.helpPage .img.download02 {
+    background: url('../images/help/download02.jpg');
+}
+.helpPage .img.download03 {
+    background: url('../images/help/download03.jpg');
+}
+.helpPage .img.download04 {
+    background: url('../images/help/download04.jpg');
+}
+.helpPage .img.download05 {
+    background: url('../images/help/download05.jpg');
+}
+.helpPage .img.download06 {
+    background: url('../images/help/download06.jpg');
+}
+.helpPage .img.license {
+    background: url('../images/help/license.jpg') no-repeat;
+}
+
+.helpPage .helpIMG {
+    display: block !important;
+    margin-bottom: 30px;
+}
+.helpPage .h-signip01 {
+    background: url('../images/help_New/05.jpg') no-repeat;
+}
+.helpPage .h-signip02 {
+    background: url('../images/help_New/06.jpg') no-repeat;
+}
+.helpPage .h-signip03 {
+    background: url('../images/help_New/07.jpg') no-repeat;
+}
+.helpPage .h-PW01 {
+    background: url('../images/help_New/13.JPG') no-repeat;
+}
+.helpPage .h-PW02 {
+    background: url('../images/help_New/14.jpg') no-repeat;
+}
+.helpPage .h-PW03 {
+    background: url('../images/help_New/15.jpg') no-repeat;
+}
+.helpPage .h-PW04 {
+    background: url('../images/help_New/16.jpg') no-repeat;
+}
+.helpPage .h-changePW01 {
+    background: url('../images/help_New/21.jpg') no-repeat;
+}
+.helpPage .h-changePW02 {
+    background: url('../images/help_New/22.jpg') no-repeat;
+}
+.helpPage .h-changePW03 {
+    background: url('../images/help_New/23.jpg') no-repeat;
+}
+.helpPage .h-changePW04 {
+    background: url('../images/help_New/24.jpg') no-repeat;
+}
+.helpPage .h-changePW05 {
+    background: url('../images/help_New/25.jpg') no-repeat;
+}
+.helpPage .h-depositCV01 {
+    background: url('../images/help_New/31.jpg') no-repeat;
+}
+.helpPage .h-depositCV02 {
+    background: url('../images/help_New/32.jpg') no-repeat;
+}
+.helpPage .h-depositCV03 {
+    background: url('../images/help_New/33.jpg') no-repeat;
+}
+.helpPage .h-virtualAC-01 {
+    background: url('../images/help_New/39.jpg') no-repeat;
+}
+.helpPage .h-virtualAC-02 {
+    background: url('../images/help_New/40.jpg') no-repeat;
+}
+.helpPage .h-virtualAC-03 {
+    background: url('../images/help_New/41.jpg') no-repeat;
+}
+.helpPage .h-ATM-01 {
+    background: url('../images/help_New/47.jpg') no-repeat;
+}
+.helpPage .h-ATM-02 {
+    background: url('../images/help_New/48.jpg') no-repeat;
+}
+.helpPage .h-ATM-03 {
+    background: url('../images/help_New/49.jpg') no-repeat;
+}
+.helpPage .h-banktransfer-01 {
+    background: url('../images/help_New/77.jpg') no-repeat;
+}
+.helpPage .h-banktransfer-02 {
+    background: url('../images/help_New/78.jpg') no-repeat;
+    background-size: contain;
+}
+.helpPage .h-banktransfer-03 {
+    background: url('../images/help_New/79.jpg') no-repeat;
+    background-size: contain;
+}
+.helpPage .h-withdraw-01 {
+    background: url('../images/help_New/56.jpg') no-repeat;
+}
+.helpPage .h-withdraw-02 {
+    background: url('../images/help_New/57.jpg') no-repeat;
+}
+.helpPage .h-withdraw-03 {
+    background: url('../images/help_New/58.jpg') no-repeat;
+    background-size: contain;
+}
+.helpPage .h-transfer-01 {
+    background: url('../images/help_New/88.jpg') no-repeat;
+}
+.helpPage .h-transfer-02 {
+    background: url('../images/help_New/89.jpg') no-repeat;
+}
+.helpPage .h-dealRecord-01 {
+    background: url('../images/help_New/63.jpg') no-repeat;
+}
+.helpPage .h-dealRecord-02 {
+    background: url('../images/help_New/64.jpg') no-repeat;
+}
+.helpPage .h-dealRecord-03 {
+    background: url('../images/help_New/65.jpg') no-repeat;
+    background-size: contain;
+}
+.helpPage .h-betRecord-01 {
+    background: url('../images/help_New/70.jpg') no-repeat;
+}
+.helpPage .h-betRecord-02 {
+    background: url('../images/help_New/71.jpg') no-repeat;
+}
+.helpPage .h-betRecord-03 {
+    background: url('../images/help_New/72.jpg') no-repeat;
+    background-size: contain;
+}
+.helpPage .h-message-01 {
+    background: url('../images/help_New/83.jpg') no-repeat;
+}
+.helpPage .h-message-02 {
+    background: url('../images/help_New/84.jpg') no-repeat;
+    background-size: contain;
+}
+.helpPage .h-message-03 {
+    background: url('../images/help_New/85.jpg') no-repeat;
+    background-size: contain;
+}
+.helpPage .h-bankcard-01 {
+    background: url('../images/help_New/96.jpg') no-repeat;
+}
+.helpPage .h-bankcard-02 {
+    background: url('../images/help_New/97.jpg') no-repeat;
+}
+.helpPage .h-bankcard-03 {
+    background: url('../images/help_New/98.jpg') no-repeat;
+}
+.helpPage .h-bankcard-04 {
+    background: url('../images/help_New/99.jpg') no-repeat;
+}
+.helpPage .usdt-01 {
+    background: url('../images/help_New/usdt-01.jpg') no-repeat;
+}
+.helpPage .usdt-02 {
+    background: url('../images/help_New/usdt-02.jpg') no-repeat;
+}
+.helpPage .usdt-03 {
+    background: url('../images/help_New/usdt-03.jpg') no-repeat;
+}
+.helpPage .android.img_1 {
+    background: url('../images/download_new/1-1.png') no-repeat center;
+    background-size: contain;
+}
+.helpPage .android.img_2 {
+    background: url('../images/download_new/1-2.png') no-repeat center;
+    background-size: contain;
+}
+.helpPage .android.img_3 {
+    background: url('../images/download_new/1-3.png') no-repeat center;
+    background-size: contain;
+}
+.helpPage .android.img_4 {
+    background: url('../images/download_new/1-4.png') no-repeat center;
+    background-size: contain;
+}
+.helpPage .android.img_5 {
+    background: url('../images/download_new/1-5.png') no-repeat center;
+    background-size: contain;
+}
+.helpPage .android.img_6 {
+    background: url('../images/download_new/1-6.png') no-repeat center;
+    background-size: contain;
+}
+.helpPage .android.img_7 {
+    background: url('../images/download_new/1-7.png') no-repeat center;
+    background-size: contain;
+}
+.helpPage .android.img_8 {
+    background: url('../images/download_new/1-8.png') no-repeat center;
+    background-size: contain;
+}
+.helpPage .android.img_9 {
+    background: url('../images/download_new/1-9.png') no-repeat center;
+    background-size: contain;
+}
+.helpPage .android.img_10 {
+    background: url('../images/download_new/1-10.png') no-repeat center;
+    background-size: contain;
+}
+.helpPage .ios.img_1 {
+    background: url('../images/download_new/2-1.jpg') no-repeat center;
+    background-size: contain;
+}
+.helpPage .ios.img_2 {
+    background: url('../images/download_new/2-2.jpg') no-repeat center;
+    background-size: contain;
+}
+.helpPage .ios.img_3 {
+    background: url('../images/download_new/2-3.jpg') no-repeat center;
+    background-size: contain;
+}
+.helpPage .ios.img_4 {
+    background: url('../images/download_new/2-4.jpg') no-repeat center;
+    background-size: contain;
+}
+.helpPage .ios.img_5 {
+    background: url('../images/download_new/2-5.jpg') no-repeat center;
+    background-size: contain;
+}
+.helpPage .ios.img_6 {
+    background: url('../images/download_new/2-6.jpg') no-repeat center;
+    background-size: contain;
+}
+.helpPage .ios.img_7 {
+    background: url('../images/download_new/2-7.jpg') no-repeat center;
+    background-size: contain;
+}
+.helpPage .ios.img_8 {
+    background: url('../images/download_new/2-8.jpg') no-repeat center;
+    background-size: contain;
+}
+.helpPage .ios.img_9 {
+    background: url('../images/download_new/2-9.jpg') no-repeat center;
+    background-size: contain;
+}
+.helpPage .ios.img_10 {
+    background: url('../images/download_new/2-10.jpg') no-repeat center;
+    background-size: contain;
+}
+.helpPage .ios.img_11 {
+    background: url('../images/download_new/2-11.jpg') no-repeat center;
+    background-size: contain;
+}
+.helpPage .ios.img_12 {
+    background: url('../images/download_new/2-12.jpg') no-repeat center;
+    background-size: contain;
+}
+.helpPage .ios.img_13 {
+    background: url('../images/download_new/2-13.jpg') no-repeat center;
+    background-size: contain;
+}
+.helpPage .ios.img_14 {
+    background: url('../images/download_new/2-14.jpg') no-repeat center;
+    background-size: contain;
+}
+.helpPage .ios.img_15 {
+    background: url('../images/download_new/2-15.jpg') no-repeat center;
+    background-size: contain;
 }
 
 //register
@@ -507,10 +814,63 @@ header .logout_ic {
     background-size: cover;
 }
 
+//specialActivity特別企劃
+.specialWrap .arrow {
+    background: url(../images/specialPage/arrow.png) no-repeat;
+    background-size: cover;
+}
+.specialWrap .activityPic.vip {
+    background: url('../images/specialPage/vip01.jpg') no-repeat center;
+    background-size: cover;
+}
+.specialWrap .activityPic.mario {
+    background: url('../images/specialPage/mario02.jpg') no-repeat center;
+    background-size: cover;
+}
+.specialWrap .activityPic.roulette {
+    background: url('../images/specialPage/roulette03.jpg') no-repeat center;
+    background-size: cover;
+}
+.specialWrap .activityPic.slot {
+    background: url('../images/specialPage/slot04.jpg') no-repeat center;
+    background-size: cover;
+}
+.specialWrap .activityPic.baccarat {
+    background: url('../images/specialPage/baccarat05.jpg') no-repeat center;
+    background-size: cover;
+}
+.specialWrap .activityPic.baccaratLose {
+    background: url('../images/specialPage/baccaratLose06.jpg') no-repeat center;
+    background-size: cover;
+}
+.specialWrap .activityPic.fish {
+    background: url('../images/specialPage/fish07.jpg') no-repeat center;
+    background-size: cover;
+}
+.specialWrap .activityPic.av18 {
+    background: url('../images/specialPage/av18.jpg') no-repeat center;
+    background-size: cover;
+}
+.specialWrap .activityPic.score {
+    background: url('../images/specialPage/score09.jpg') no-repeat center;
+    background-size: cover;
+}
+
+//流水限制提示ICON
+.innerPage .walletWrap .walletMiddle .top .content .lock .notice,
+.innerPage .center .withdrawalWrap .withdrawalMiddle .top .walletBox .smallBox .smallTitle .notice {
+    background: url('../images/icon/svg/problem_red.svg') no-repeat;
+    background-size: 100%;
+}
 
 ////////img↓↓↓↓↓↓↓↓↓
 
 
+//logo
+header .logo {
+    width: 119px;
+    height: 53px;
+}
 //header 下拉選單
 header .topGameList div {
     width: 220px;
@@ -530,41 +890,16 @@ header .topGameList div {
 }
 
 //入口頁中央遊戲enter .mainWrap .img
-.mainWrap .typeList .img {
-    width: 452px;
-    height: 317px;
-}
-.mainWrap .typeList .sport .img {
-    background: url('../images/enter/sport.png') no-repeat;
-    background-size: 100%;
-}
-.mainWrap .typeList .live .img {
-    background: url('../images/enter/live.png') no-repeat;
-    background-size: 100%;
-}
-.mainWrap .typeList .slot .img {
-    background: url('../images/enter/slot.png') no-repeat;
-    background-size: 100%;
-}
-.mainWrap .typeList .lottery .img {
-    background: url('../images/enter/lottery.png') no-repeat;
-    background-size: 100%;
-}
-.mainWrap .typeList .fish .img {
-    background: url('../images/enter/fish.png') no-repeat;
-    background-size: 100%;
-}
-.mainWrap .typeList .board .img {
-    background: url('../images/enter/board.png') no-repeat;
-    background-size: 100%;
+.mainWrap .typeList img {
+    width: 100%;
 }
 
-//gameWrap .mainImg左圖
+//gameWrap
 .gameWrap .mainImg {
     width: 675px;
     height: 732px;
+    flex-shrink: 0;
 }
-//sport右小圖
 .gameWrap .btnBox .innBox li {
     width: 189px;
     height: 185px;
@@ -593,13 +928,14 @@ header .topGameList div {
 .eventBox {
     
     .imgBox {
-        width: 719px;
-        height: 296px;
-
+        width: 100%;
+        height: auto;
+        
         img {
             width: 100%;
-            height: 100%;
             object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
         }
     }
 }
@@ -608,11 +944,9 @@ header .topGameList div {
 
     .imgBox {
         width: 100%;
-        height: 423px;
 
         img {
             width: 100%;
-            height: 100%;
             object-fit: cover;
         }
     }
@@ -631,12 +965,6 @@ header .topGameList div {
             object-fit: cover;
         }
     }
-}
-
-//logo
-header .logo {
-    width: 119px;
-    height: 53px;
 }
 
 //register .logo

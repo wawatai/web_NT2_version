@@ -350,6 +350,7 @@
         }
 
         &.walletRecord {
+            display: none;
             width: 976px;
 
             .title {
@@ -559,6 +560,197 @@
             }
         }
 
+        &.pointWindow {
+            display: none;
+            flex-direction: column;
+            position: relative;
+
+            &.display {
+                display: flex;
+            }
+
+            .close_ic {
+                position: absolute;
+                top: 24px;
+                right: 24px;
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+
+            .betTitle {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                padding-left: 45px;
+                font-size: 29px;
+                font-weight: bold;
+            }
+            .content {
+                padding: 24px;
+
+                table {
+                    width: 100%;
+                    height: auto;
+                    box-shadow: 0 0 0 1px $borderColor_2;
+
+                    tr {
+                        border-bottom: solid 1px $borderColor_2;
+
+                        &:first-child {
+                            border-bottom: solid 1px $borderColor_8; 
+                        }
+                        &:last-child {
+                            border: none;
+                        }
+
+                        th {
+                            vertical-align: middle;
+                            height: 40px;
+
+                            &:last-child {
+
+                                p {
+                                    border: none;
+                                }
+                            }
+
+                            p {
+                                font-size: 14px;
+                                font-weight: bold;
+                                color: $fontColor_2;
+                                border-right: solid 1px $borderColor_2;
+                            }
+                        }
+
+                        td {
+                            width: 50%;
+                            vertical-align: middle;
+                            height: 40px;
+                     
+                            p {
+                                font-size: 14px;
+                                font-weight: bold;
+                                color: $fontColor_3;
+                                border-right: solid 1px $borderColor_2;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+            &.memberData {
+                width: 706px;
+
+                table {
+                    width: 100%;
+                    height: auto;
+                    box-shadow: 0 0 0 1px $borderColor_2;
+
+                    tr {
+                        border-bottom: solid 1px $borderColor_2;
+
+                        &:first-child {
+                            border-bottom: solid 1px $borderColor_8; 
+                        }
+                        &:last-child {
+                            border: none;
+                        }
+
+                        th {
+                            vertical-align: middle;
+                            height: 40px;
+
+                            &:last-child {
+
+                                p {
+                                    border: none;
+                                }
+                            }
+
+                            p {
+                                font-size: 14px;
+                                font-weight: bold;
+                                color: $fontColor_2;
+                                border-right: solid 1px $borderColor_2;
+                            }
+                        }
+
+                        td {
+                            width: 30%;
+                            vertical-align: middle;
+                            height: 40px;
+                     
+                            p {
+                                font-size: 14px;
+                                font-weight: bold;
+                                color: $fontColor_3;
+                                border-right: solid 1px $borderColor_2;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+            .noData {
+                width: 100%;
+                height: 250px;
+                padding: 0;
+                p {
+                    color: $fontColor_16;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+        
+        &.noticeWindow {
+            display: none;
+            flex-direction: column;
+            position: relative;
+
+            &.display {
+                display: flex;
+            }
+
+            .close_ic {
+                position: absolute;
+                top: 26px;
+                right: 17px;
+                width: 15px;
+                height: 15px;
+                cursor: pointer;
+            }
+            .content {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                padding: 28px 47px;
+
+                p {
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    color: $fontColor_3;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 24px;
+                }
+            }
+            .btnBox {
+                width: 100%;
+                height: auto;
+                padding: 0 0 18px;
+                text-align: center;
+
+                button {
+                    width: 322px;
+                    height: 42px;
+                    @include buttonStyle_3;
+                }
+            }
+        }
+        
         .title {
             width: 100%;
             height: 50px;
